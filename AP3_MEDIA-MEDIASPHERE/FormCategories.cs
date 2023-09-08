@@ -12,6 +12,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace AP3_MEDIA
 {
+//test
     public partial class FormCategories : Form
     {
         private Categorie C = new Categorie();
