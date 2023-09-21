@@ -37,6 +37,9 @@ namespace AP3_MEDIA
 
 
             dgvRessources.DataSource = bsRessources;
+            dgvRessources.Columns["Idressource"].Visible = false;
+            dgvRessources.Columns["Idcategorie"].Visible = false;
+
 
         }
 
@@ -61,6 +64,12 @@ namespace AP3_MEDIA
 
                 dgvExemplaires.DataSource = bsExemplaires;
                 dgvExemplaires.Visible = true;
+                dgvExemplaires.Columns["Idexemplaire"].Visible = false;
+                dgvExemplaires.Columns["Dateentree"].Width = 95;
+                dgvExemplaires.Columns["Libelleetat"].Width = 105;
+
+
+
             }
             else
             {
@@ -82,6 +91,16 @@ namespace AP3_MEDIA
         private void dgvRessources_Click(object sender, EventArgs e)
         {
             dgvExemplaires.Visible = false;
+        }
+
+        private void dgvExemplaires_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void bsRessources_CurrentChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

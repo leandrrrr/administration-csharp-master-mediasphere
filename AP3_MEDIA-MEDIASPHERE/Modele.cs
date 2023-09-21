@@ -29,6 +29,11 @@ namespace AP3_MEDIA
             return monModele.Categories.ToList();
         }
 
+        public static List<Emprunteur> getListEmprunteur()
+        {
+            return monModele.Emprunteurs.ToList();
+        }
+
         /// <summary>
         /// Fonction qui retourne la liste des ressources
         /// </summary>

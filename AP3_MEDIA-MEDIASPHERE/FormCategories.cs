@@ -12,7 +12,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace AP3_MEDIA
 {
-//test
+    //test
     public partial class FormCategories : Form
     {
         private Categorie C = new Categorie();
@@ -115,6 +115,17 @@ namespace AP3_MEDIA
             {
                 MessageBox.Show("ERREUR : Sélectionner la catégorie à supprimer", "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void lbCategories_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void tbLibelle_TextChanged(object sender, EventArgs e)
+        {
+            btnModifier.Enabled = true;
+            btnSupprimer.Enabled = true;
         }
     }
 }
