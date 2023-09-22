@@ -252,6 +252,27 @@ namespace AP3_MEDIA
             return vretour;
         }
 
+
+        public static bool SupprimerRessource(int idC)
+        {
+            Ressource uneCategorie;
+            bool vretour = true;
+            try
+            {
+                // récupération de la categorie à supprimer
+                uneCategorie = RecupererRessource(idC);
+                monModele.Ressources.Remove(uneCategorie);
+                monModele.SaveChanges();
+
+            }
+            catch (Exception ex)
+            {
+                vretour = false;
+                MessageBox.Show("Suppression impossible, lien existant avec des ressources");
+            }
+            return vretour;
+        }
+
         /// <summary>
         /// Fonction qui retourne l'objet Categorie correspond à son identifiant passé en paramètre
         /// </summary>

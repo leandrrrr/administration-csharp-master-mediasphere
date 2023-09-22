@@ -71,5 +71,10 @@ namespace AP3_MEDIA
         {
             openChildForm(new FormEmprunteurs());
         }
+
+        private void supressionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormGestionRessources(EtatGestion.Delete));
+        }
     }
 }

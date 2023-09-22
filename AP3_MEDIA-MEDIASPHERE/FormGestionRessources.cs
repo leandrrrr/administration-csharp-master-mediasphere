@@ -14,7 +14,8 @@ namespace AP3_MEDIA
     public enum EtatGestion
     {
         Create,
-        Update
+        Update,
+        Delete
     }
     public partial class FormGestionRessources : Form
     {
@@ -22,7 +23,8 @@ namespace AP3_MEDIA
         public FormGestionRessources(EtatGestion etat)
         {
             InitializeComponent();
-            this.etat = etat; // pour savoir si on est en create ou update 
+            this.etat = etat; // pour savoir si on est en create ou update ou delete
+
         }
 
         private void btnFermer_Click(object sender, EventArgs e)
@@ -68,13 +70,31 @@ namespace AP3_MEDIA
                 cbRessources.Visible = false;
 
             }
-            else // cas etat update
+            else if(etat == EtatGestion.Update) // cas etat update
             {
                 label1.Text = "Modification d'une ressource";
                 btnAjouter.Text = "MODIFIER";
                 btnAjouter.Visible = false;
                 gbInfo.Visible = false;
                 cbRessources.Visible = true;
+                remplirListeRessources();
+            }
+            else if (etat == EtatGestion.Delete) // cas etat update
+            {
+                label1.Text = "Supression d'une ressource";
+                btnAjouter.Text = "Supprimer";
+                btnAjouter.Visible = false;
+                gbInfo.Visible = false;
+                cbRessources.Visible = true;
+
+                tbAnnee.ReadOnly = true;
+                tbLangue.ReadOnly = true;
+                tbImage.ReadOnly = true;
+                tbIsbn.ReadOnly = true; 
+                tbDescription.ReadOnly = true;  
+                tbTitre.ReadOnly = true;
+                
+
                 remplirListeRessources();
             }
         }
@@ -154,6 +174,18 @@ namespace AP3_MEDIA
                         if (Modele.ModificationRessource(R.Idressource, titre, description, image, annee, langue, isbn, idCat))
                         {
                             MessageBox.Show("Ressource modifiée");
+                            gbInfo.Visible = false;
+                            btnAjouter.Visible = false;
+                            cbRessources.SelectedIndex = -1;
+                            // Annuler();
+                        }
+                    }
+                    if (etat == EtatGestion.Delete) // cas de la mise à jour
+                    {
+                        Ressource R = (Ressource)bsRessources.Current;
+                        if (Modele.SupprimerRessource(R.Idressource))
+                        {
+                            MessageBox.Show("Ressource DELETE !");
                             gbInfo.Visible = false;
                             btnAjouter.Visible = false;
                             cbRessources.SelectedIndex = -1;
