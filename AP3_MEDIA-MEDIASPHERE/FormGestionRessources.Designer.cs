@@ -234,7 +234,7 @@
             btnAjouter.Location = new Point(581, 376);
             btnAjouter.Margin = new Padding(3, 4, 3, 4);
             btnAjouter.Name = "btnAjouter";
-            btnAjouter.Size = new Size(114, 57);
+            btnAjouter.Size = new Size(114, 46);
             btnAjouter.TabIndex = 12;
             btnAjouter.Text = "AJOUTER";
             btnAjouter.UseVisualStyleBackColor = false;
@@ -249,7 +249,7 @@
             btnFermer.Location = new Point(720, 376);
             btnFermer.Margin = new Padding(3, 4, 3, 4);
             btnFermer.Name = "btnFermer";
-            btnFermer.Size = new Size(120, 57);
+            btnFermer.Size = new Size(120, 46);
             btnFermer.TabIndex = 4;
             btnFermer.Text = "FERMER";
             btnFermer.UseVisualStyleBackColor = false;
@@ -274,7 +274,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.LightSteelBlue;
+            BackColor = Color.FromArgb(154, 206, 234);
             ClientSize = new Size(914, 449);
             Controls.Add(cbRessources);
             Controls.Add(btnAjouter);

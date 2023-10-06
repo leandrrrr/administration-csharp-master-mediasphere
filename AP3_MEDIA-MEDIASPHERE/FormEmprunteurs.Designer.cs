@@ -59,7 +59,7 @@
             dgvEmprunteurs.ReadOnly = true;
             dgvEmprunteurs.RowHeadersWidth = 51;
             dgvEmprunteurs.RowTemplate.Height = 25;
-            dgvEmprunteurs.Size = new Size(766, 287);
+            dgvEmprunteurs.Size = new Size(766, 277);
             dgvEmprunteurs.TabIndex = 5;
             dgvEmprunteurs.CellContentClick += dgvEmprunteurs_CellContentClick;
             // 
@@ -71,7 +71,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.LightSteelBlue;
+            BackColor = Color.FromArgb(154, 206, 234);
             ClientSize = new Size(896, 397);
             Controls.Add(dgvEmprunteurs);
             Controls.Add(label1);

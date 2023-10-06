@@ -119,7 +119,7 @@ namespace AP3_MEDIA
 
         private void lbCategories_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void tbLibelle_TextChanged(object sender, EventArgs e)

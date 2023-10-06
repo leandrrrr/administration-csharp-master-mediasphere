@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Repos\\AP3_MEDIA-MEDIASPHERE\\AP3_MEDIA.csproj": {}
+    "C:\\Users\\leandRe\\source\\repos\\leandrrrr\\administration-csharp-master-mediasphere\\AP3_MEDIA-MEDIASPHERE\\AP3_MEDIA.csproj": {}
   },
   "projects": {
-    "E:\\Repos\\AP3_MEDIA-MEDIASPHERE\\AP3_MEDIA.csproj": {
+    "C:\\Users\\leandRe\\source\\repos\\leandrrrr\\administration-csharp-master-mediasphere\\AP3_MEDIA-MEDIASPHERE\\AP3_MEDIA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Repos\\AP3_MEDIA-MEDIASPHERE\\AP3_MEDIA.csproj",
+        "projectUniqueName": "C:\\Users\\leandRe\\source\\repos\\leandrrrr\\administration-csharp-master-mediasphere\\AP3_MEDIA-MEDIASPHERE\\AP3_MEDIA.csproj",
         "projectName": "AP3_MEDIA",
-        "projectPath": "E:\\Repos\\AP3_MEDIA-MEDIASPHERE\\AP3_MEDIA.csproj",
-        "packagesPath": "C:\\Users\\micro\\.nuget\\packages\\",
-        "outputPath": "E:\\Repos\\AP3_MEDIA-MEDIASPHERE\\obj\\",
+        "projectPath": "C:\\Users\\leandRe\\source\\repos\\leandrrrr\\administration-csharp-master-mediasphere\\AP3_MEDIA-MEDIASPHERE\\AP3_MEDIA.csproj",
+        "packagesPath": "C:\\Users\\leandRe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\leandRe\\source\\repos\\leandrrrr\\administration-csharp-master-mediasphere\\AP3_MEDIA-MEDIASPHERE\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\micro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\leandRe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -74,7 +74,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

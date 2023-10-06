@@ -15,7 +15,10 @@ namespace AP3_MEDIA
     {
         public FormRessources()
         {
+
             InitializeComponent();
+
+
         }
 
         private void btnFermer_Click(object sender, EventArgs e)
@@ -39,6 +42,7 @@ namespace AP3_MEDIA
             dgvRessources.DataSource = bsRessources;
             dgvRessources.Columns["Idressource"].Visible = false;
             dgvRessources.Columns["Idcategorie"].Visible = false;
+
 
 
         }

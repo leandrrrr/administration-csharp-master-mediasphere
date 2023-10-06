@@ -96,7 +96,7 @@
             lbCategories.Location = new Point(457, 61);
             lbCategories.Margin = new Padding(3, 4, 3, 4);
             lbCategories.Name = "lbCategories";
-            lbCategories.Size = new Size(162, 319);
+            lbCategories.Size = new Size(162, 298);
             lbCategories.TabIndex = 8;
             lbCategories.SelectedIndexChanged += lbCategories_SelectedIndexChanged;
             // 
@@ -106,10 +106,10 @@
             btnFermer.FlatStyle = FlatStyle.Popup;
             btnFermer.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnFermer.ForeColor = Color.White;
-            btnFermer.Location = new Point(723, 333);
+            btnFermer.Location = new Point(674, 312);
             btnFermer.Margin = new Padding(3, 4, 3, 4);
             btnFermer.Name = "btnFermer";
-            btnFermer.Size = new Size(120, 73);
+            btnFermer.Size = new Size(120, 76);
             btnFermer.TabIndex = 9;
             btnFermer.Text = "FERMER";
             btnFermer.UseVisualStyleBackColor = false;
@@ -170,7 +170,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(158, 388);
+            label4.Location = new Point(104, 363);
             label4.Name = "label4";
             label4.Size = new Size(515, 25);
             label4.TabIndex = 12;
@@ -180,7 +180,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.LightSteelBlue;
+            BackColor = Color.FromArgb(154, 206, 234);
             ClientSize = new Size(914, 449);
             Controls.Add(label4);
             Controls.Add(gbCategorie);

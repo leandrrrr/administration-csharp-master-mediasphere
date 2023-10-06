@@ -20,6 +20,8 @@ namespace AP3_MEDIA
 
 
 
+
+
         public Form activeForm = null;
         public void openChildForm(Form formEnfant)
         {
@@ -42,13 +44,16 @@ namespace AP3_MEDIA
             openChildForm(new FormCategories());
 
         }
-        private void listeToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void listeToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             openChildForm(new FormRessources());
+
         }
 
         private void ajoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             openChildForm(new FormGestionRessources(EtatGestion.Create));
         }
 
@@ -75,6 +80,29 @@ namespace AP3_MEDIA
         private void supressionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             openChildForm(new FormGestionRessources(EtatGestion.Delete));
+        }
+
+        private void rESSOURCESToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void formToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            FormPopDGV formPopDGV = new FormPopDGV("uwu");
+            formPopDGV.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormPopDGV formPopDGV = new FormPopDGV("                                               uwu");
+            formPopDGV.Show();
         }
     }
 }

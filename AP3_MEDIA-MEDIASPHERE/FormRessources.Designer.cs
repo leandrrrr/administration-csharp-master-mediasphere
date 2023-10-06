@@ -95,10 +95,10 @@
             btnFermer.FlatStyle = FlatStyle.Popup;
             btnFermer.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnFermer.ForeColor = Color.White;
-            btnFermer.Location = new Point(712, 360);
+            btnFermer.Location = new Point(712, 350);
             btnFermer.Margin = new Padding(3, 4, 3, 4);
             btnFermer.Name = "btnFermer";
-            btnFermer.Size = new Size(120, 73);
+            btnFermer.Size = new Size(120, 61);
             btnFermer.TabIndex = 2;
             btnFermer.Text = "FERMER";
             btnFermer.UseVisualStyleBackColor = false;
@@ -139,8 +139,8 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(914, 449);
+            BackColor = Color.FromArgb(154, 206, 234);
+            ClientSize = new Size(914, 451);
             Controls.Add(dgvExemplaires);
             Controls.Add(label2);
             Controls.Add(btnFermer);

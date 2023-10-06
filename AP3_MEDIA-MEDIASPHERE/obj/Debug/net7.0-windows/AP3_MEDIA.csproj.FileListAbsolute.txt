@@ -38,3 +38,5 @@ E:\Repos\AP3_MEDIA-MEDIASPHERE\obj\Debug\net7.0-windows\refint\AP3_MEDIA.dll
 E:\Repos\AP3_MEDIA-MEDIASPHERE\obj\Debug\net7.0-windows\AP3_MEDIA.pdb
 E:\Repos\AP3_MEDIA-MEDIASPHERE\obj\Debug\net7.0-windows\AP3_MEDIA.genruntimeconfig.cache
 E:\Repos\AP3_MEDIA-MEDIASPHERE\obj\Debug\net7.0-windows\ref\AP3_MEDIA.dll
+E:\Repos\AP3_MEDIA-MEDIASPHERE\obj\Debug\net7.0-windows\AP3_MEDIA.Properties.Resources.resources
+E:\Repos\AP3_MEDIA-MEDIASPHERE\obj\Debug\net7.0-windows\AP3_MEDIA.FormPopDGV.resources

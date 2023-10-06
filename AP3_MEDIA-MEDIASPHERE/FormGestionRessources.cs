@@ -11,6 +11,8 @@ using System.Windows.Forms;
 
 namespace AP3_MEDIA
 {
+
+    
     public enum EtatGestion
     {
         Create,
@@ -70,7 +72,7 @@ namespace AP3_MEDIA
                 cbRessources.Visible = false;
 
             }
-            else if(etat == EtatGestion.Update) // cas etat update
+            else if (etat == EtatGestion.Update) // cas etat update
             {
                 label1.Text = "Modification d'une ressource";
                 btnAjouter.Text = "MODIFIER";
@@ -90,10 +92,10 @@ namespace AP3_MEDIA
                 tbAnnee.ReadOnly = true;
                 tbLangue.ReadOnly = true;
                 tbImage.ReadOnly = true;
-                tbIsbn.ReadOnly = true; 
-                tbDescription.ReadOnly = true;  
+                tbIsbn.ReadOnly = true;
+                tbDescription.ReadOnly = true;
                 tbTitre.ReadOnly = true;
-                
+
 
                 remplirListeRessources();
             }
@@ -103,8 +105,10 @@ namespace AP3_MEDIA
         {
             if ((e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != Convert.ToChar(Keys.Back))
             {
-                MessageBox.Show("Erreur dans le format de saisie de l'année (que des chiffres)", "Erreur", MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
+               string errorText = "Erreur dans le format de saisie de l'année (que des chiffres)" + "Erreur" + MessageBoxButtons.OK + 
+                        MessageBoxIcon.Error;
+                FormPopDGV formPopDGV = new FormPopDGV(errorText);
+                formPopDGV.Show();
                 e.Handled = true; // efface le dernier caractère saisi
             }
         }
@@ -113,8 +117,11 @@ namespace AP3_MEDIA
         {
             if ((e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != Convert.ToChar(Keys.Back))
             {
-                MessageBox.Show("Erreur dans le format de saisie de l'ISBN (que des chiffres)", "Erreur", MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
+                
+                string errorText = "Erreur dans le format de saisie de l'ISBN (que des chiffres)" + "Erreur" + MessageBoxButtons.OK +
+                        MessageBoxIcon.Error;
+                FormPopDGV formPopDGV = new FormPopDGV("                                      AJOUT EFFECTUÉ !");
+                formPopDGV.Show();
                 e.Handled = true; // efface le dernier caractère saisi
             }
         }
@@ -123,8 +130,10 @@ namespace AP3_MEDIA
         {
             if ((e.KeyChar < 'a' || e.KeyChar > 'z') && (e.KeyChar < 'A' || e.KeyChar > 'Z') && e.KeyChar != Convert.ToChar(Keys.Back))
             {
-                MessageBox.Show("Erreur dans le format de saisie de la langue (2 caractères)", "Erreur", MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
+                string errorText = "Erreur dans le format de saisie de la langue (2 caractères)" + "Erreur" + MessageBoxButtons.OK +
+                        MessageBoxIcon.Error;
+                FormPopDGV formPopDGV = new FormPopDGV("                                      AJOUT EFFECTUÉ !");
+                formPopDGV.Show();
                 e.Handled = true; // efface le dernier caractère saisi
             }
         }
@@ -164,7 +173,8 @@ namespace AP3_MEDIA
                     {
                         if (Modele.AjoutRessource(titre, description, image, annee, langue, isbn, idCat))
                         {
-                            MessageBox.Show("Ressource ajoutée " + Modele.RetourneDerniereRessourceSaisie());
+                            FormPopDGV formPopDGV = new FormPopDGV("                                      AJOUT EFFECTUÉ !");
+                            formPopDGV.Show();
                             Annuler();
                         }
                     }

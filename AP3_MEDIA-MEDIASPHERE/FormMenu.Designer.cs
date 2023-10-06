@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             menuStrip1 = new MenuStrip();
             rESSOURCESToolStripMenuItem = new ToolStripMenuItem();
             listeToolStripMenuItem = new ToolStripMenuItem();
@@ -51,8 +52,8 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { rESSOURCESToolStripMenuItem, eMPRUNTEURToolStripMenuItem, cATEGORIESToolStripMenuItem, qUITTERToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new Padding(7, 3, 0, 3);
-            menuStrip1.Size = new Size(914, 30);
+            menuStrip1.Padding = new Padding(7, 10, 0, 10);
+            menuStrip1.Size = new Size(914, 52);
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -60,8 +61,9 @@
             // 
             rESSOURCESToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { listeToolStripMenuItem, ajoutToolStripMenuItem, modificationToolStripMenuItem, supressionToolStripMenuItem });
             rESSOURCESToolStripMenuItem.Name = "rESSOURCESToolStripMenuItem";
-            rESSOURCESToolStripMenuItem.Size = new Size(118, 24);
+            rESSOURCESToolStripMenuItem.Size = new Size(118, 32);
             rESSOURCESToolStripMenuItem.Text = "RESSOURCES";
+            rESSOURCESToolStripMenuItem.Click += rESSOURCESToolStripMenuItem_Click;
             // 
             // listeToolStripMenuItem
             // 
@@ -93,47 +95,53 @@
             // 
             // eMPRUNTEURToolStripMenuItem
             // 
+            eMPRUNTEURToolStripMenuItem.Margin = new Padding(20, 0, 0, 0);
             eMPRUNTEURToolStripMenuItem.Name = "eMPRUNTEURToolStripMenuItem";
-            eMPRUNTEURToolStripMenuItem.Size = new Size(132, 24);
+            eMPRUNTEURToolStripMenuItem.Size = new Size(132, 32);
             eMPRUNTEURToolStripMenuItem.Text = "EMPRUNTEURS";
             eMPRUNTEURToolStripMenuItem.Click += eMPRUNTEURToolStripMenuItem_Click;
             // 
             // cATEGORIESToolStripMenuItem
             // 
+            cATEGORIESToolStripMenuItem.Margin = new Padding(20, 0, 0, 0);
             cATEGORIESToolStripMenuItem.Name = "cATEGORIESToolStripMenuItem";
-            cATEGORIESToolStripMenuItem.Size = new Size(112, 24);
+            cATEGORIESToolStripMenuItem.Size = new Size(112, 32);
             cATEGORIESToolStripMenuItem.Text = "CATEGORIES";
             cATEGORIESToolStripMenuItem.Click += cATEGORIESToolStripMenuItem_Click;
             // 
             // qUITTERToolStripMenuItem
             // 
             qUITTERToolStripMenuItem.Alignment = ToolStripItemAlignment.Right;
+            qUITTERToolStripMenuItem.BackColor = SystemColors.ButtonFace;
+            qUITTERToolStripMenuItem.Font = new Font("Lucida Sans Unicode", 9F, FontStyle.Bold, GraphicsUnit.Point);
             qUITTERToolStripMenuItem.ForeColor = Color.Crimson;
+            qUITTERToolStripMenuItem.Margin = new Padding(0, 0, 20, 0);
             qUITTERToolStripMenuItem.Name = "qUITTERToolStripMenuItem";
-            qUITTERToolStripMenuItem.Size = new Size(32, 24);
+            qUITTERToolStripMenuItem.Padding = new Padding(7, 5, 7, 5);
+            qUITTERToolStripMenuItem.Size = new Size(36, 32);
             qUITTERToolStripMenuItem.Text = "X";
             qUITTERToolStripMenuItem.Click += qUITTERToolStripMenuItem_Click;
             // 
             // panelPrincipal
             // 
-            panelPrincipal.BackColor = Color.LightSteelBlue;
+            panelPrincipal.BackColor = Color.FromArgb(154, 206, 234);
             panelPrincipal.BackgroundImageLayout = ImageLayout.Center;
             panelPrincipal.Controls.Add(label1);
-            panelPrincipal.Location = new Point(0, 28);
+            panelPrincipal.Location = new Point(-9, 47);
             panelPrincipal.Margin = new Padding(3, 4, 3, 4);
             panelPrincipal.Name = "panelPrincipal";
-            panelPrincipal.Size = new Size(914, 449);
+            panelPrincipal.Size = new Size(934, 439);
             panelPrincipal.TabIndex = 2;
             panelPrincipal.Paint += panelPrincipal_Paint;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Oxanium", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
             label1.Location = new Point(277, 173);
             label1.Name = "label1";
-            label1.Size = new Size(417, 41);
+            label1.Size = new Size(416, 37);
             label1.TabIndex = 0;
             label1.Text = "Bienvenue à la Médiathèque";
             // 
@@ -145,10 +153,13 @@
             ControlBox = false;
             Controls.Add(panelPrincipal);
             Controls.Add(menuStrip1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             Margin = new Padding(3, 4, 3, 4);
             Name = "FormMenu";
             Text = "Application MEDIA'TOUT";
+            TransparencyKey = Color.FromArgb(255, 66, 255);
             Load += Form1_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
