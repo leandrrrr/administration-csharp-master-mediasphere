@@ -161,6 +161,7 @@
             Text = "Application MEDIA'TOUT";
             TransparencyKey = Color.FromArgb(255, 66, 255);
             Load += Form1_Load;
+            KeyDown += FormMenu_KeyDown;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             panelPrincipal.ResumeLayout(false);

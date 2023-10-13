@@ -12,7 +12,7 @@ using System.Windows.Forms;
 namespace AP3_MEDIA
 {
 
-    
+
     public enum EtatGestion
     {
         Create,
@@ -52,6 +52,14 @@ namespace AP3_MEDIA
             bsRessources.DataSource = Modele.getListRessources();
             cbRessources.DataSource = bsRessources;
         }
+        private void remplirListeEtat()
+        {
+            // remplir la comboBox des etats
+            cbEtats.ValueMember = "idetat";    //permet de stocker l'identifiant
+            cbEtats.DisplayMember = "libelleetat";
+            bsEtats.DataSource = Modele.getListEtats();
+            cbEtats.DataSource = bsEtats;
+        }
         public void remplirListeCategories()
         {
             // remplir la comboBox des catégories
@@ -62,7 +70,12 @@ namespace AP3_MEDIA
         }
         private void FormGestionRessources_Load(object sender, EventArgs e)
         {
+
             remplirListeCategories();
+            remplirListeEtat();
+
+
+
 
             if (etat == EtatGestion.Create) // cas etat create
             {
@@ -70,6 +83,7 @@ namespace AP3_MEDIA
                 btnAjouter.Text = "AJOUTER";
                 gbInfo.Visible = true;
                 cbRessources.Visible = false;
+                tbAnnee.Text = Convert.ToString(System.DateTime.Now.Year);
 
             }
             else if (etat == EtatGestion.Update) // cas etat update
@@ -98,6 +112,7 @@ namespace AP3_MEDIA
 
 
                 remplirListeRessources();
+                
             }
         }
 
@@ -105,8 +120,8 @@ namespace AP3_MEDIA
         {
             if ((e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != Convert.ToChar(Keys.Back))
             {
-               string errorText = "Erreur dans le format de saisie de l'année (que des chiffres)" + "Erreur" + MessageBoxButtons.OK + 
-                        MessageBoxIcon.Error;
+                string errorText = "Erreur dans le format de saisie de l'année (que des chiffres)" + "Erreur" + MessageBoxButtons.OK +
+                         MessageBoxIcon.Error;
                 FormPopDGV formPopDGV = new FormPopDGV(errorText);
                 formPopDGV.Show();
                 e.Handled = true; // efface le dernier caractère saisi
@@ -117,10 +132,10 @@ namespace AP3_MEDIA
         {
             if ((e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != Convert.ToChar(Keys.Back))
             {
-                
+
                 string errorText = "Erreur dans le format de saisie de l'ISBN (que des chiffres)" + "Erreur" + MessageBoxButtons.OK +
                         MessageBoxIcon.Error;
-                FormPopDGV formPopDGV = new FormPopDGV("                                      AJOUT EFFECTUÉ !");
+                FormPopDGV formPopDGV = new FormPopDGV(errorText);
                 formPopDGV.Show();
                 e.Handled = true; // efface le dernier caractère saisi
             }
@@ -132,7 +147,7 @@ namespace AP3_MEDIA
             {
                 string errorText = "Erreur dans le format de saisie de la langue (2 caractères)" + "Erreur" + MessageBoxButtons.OK +
                         MessageBoxIcon.Error;
-                FormPopDGV formPopDGV = new FormPopDGV("                                      AJOUT EFFECTUÉ !");
+                FormPopDGV formPopDGV = new FormPopDGV(errorText);
                 formPopDGV.Show();
                 e.Handled = true; // efface le dernier caractère saisi
             }
@@ -154,7 +169,7 @@ namespace AP3_MEDIA
             int idCat = -1, annee;
             string titre, description, image, langue, isbn;
 
-            if (tbTitre.Text != "" && cbCategories.SelectedIndex != -1)
+            if (tbTitre.Text != "" && cbCategories.SelectedIndex != -1 && tbAnnee.Text != "")
             {
                 // ajout possible si les champs titre et catégorie sont remplis au moins
                 if (Convert.ToInt32(tbAnnee.Text) >= 1000 && Convert.ToInt32(tbAnnee.Text) <= 2100)
@@ -171,11 +186,20 @@ namespace AP3_MEDIA
 
                     if (etat == EtatGestion.Create) // cas de l'ajout
                     {
-                        if (Modele.AjoutRessource(titre, description, image, annee, langue, isbn, idCat))
+                        //verification de la completion de tout les champs
+                        if (tbAnnee.Text != "" && tbImage.Text != "" && tbIsbn.Text != "" && tbLangue.Text != "" && cbCategories.SelectedIndex != -1 && tbDescription.Text != "" && tbTitre.Text != "" && tbAnnee.Text != " " && tbImage.Text != " " && tbIsbn.Text != " " && tbLangue.Text != " " && tbDescription.Text != " " && tbTitre.Text != " ")
                         {
-                            FormPopDGV formPopDGV = new FormPopDGV("                                      AJOUT EFFECTUÉ !");
+                            if (Modele.AjoutRessource(titre, description, image, annee, langue, isbn, idCat))
+                            {
+                                FormPopDGV formPopDGV = new FormPopDGV("AJOUT EFFECTUÉ !");
+                                formPopDGV.Show();
+                                Annuler();
+                            }
+                        }
+                        else
+                        {
+                            FormPopDGV formPopDGV = new FormPopDGV("VEUILLEZ REMPLIR TOUT LES CHAMP !");
                             formPopDGV.Show();
-                            Annuler();
                         }
                     }
                     if (etat == EtatGestion.Update) // cas de la mise à jour
@@ -205,13 +229,15 @@ namespace AP3_MEDIA
                 }
                 else
                 {
-                    MessageBox.Show("Ajout impossible : problème sur l'année", "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    FormPopDGV formPopDGV = new FormPopDGV("ERREUR AVEC L'ANNÉE !");
+                    formPopDGV.Show();
                 }
 
             }
             else
             {
-                MessageBox.Show("Ajout impossible : Il faut saisir au moins le titre et la catégorie", "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                FormPopDGV formPopDGV = new FormPopDGV("VEUILLEZ REMPLIR TOUS LES CHAMPS !");
+                formPopDGV.Show();
             }
         }
 
@@ -242,6 +268,45 @@ namespace AP3_MEDIA
         private void cbRessources_SelectedIndexChanged(object sender, EventArgs e)
         {
             bsRessources_CurrentChanged(sender, e);
+        }
+
+        private void gbInfo_Enter(object sender, EventArgs e)
+        {
+
+        }
+        public async Task rgbb()
+        {
+            while (true)
+            {
+                await Task.Delay(20);
+                this.BackColor = Color.Blue;
+                await Task.Delay(20);
+                this.BackColor = Color.Red;
+                await Task.Delay(20);
+                this.BackColor = Color.LightGreen;
+                await Task.Delay(20);
+                this.BackColor = Color.Yellow;
+            }
+        }
+
+        private void FormGestionRessources_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void FormGestionRessources_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            rgbb();
+        }
+
+        private void cbCategories_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

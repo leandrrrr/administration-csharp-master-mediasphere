@@ -11,6 +11,7 @@ namespace AP3_MEDIA
 
         private void Form1_Load(object sender, EventArgs e)
         {
+           
         }
 
         private void qUITTERToolStripMenuItem_Click(object sender, EventArgs e)
@@ -104,5 +105,11 @@ namespace AP3_MEDIA
             FormPopDGV formPopDGV = new FormPopDGV("                                               uwu");
             formPopDGV.Show();
         }
+
+        private void FormMenu_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+        }
+
     }
 }

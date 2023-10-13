@@ -37,5 +37,10 @@ namespace AP3_MEDIA
         {
 
         }
+
+        private void btnAjouter_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPopDGV));
             pictureBox1 = new PictureBox();
             richTextBox1 = new RichTextBox();
+            btnAjouter = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -48,16 +49,31 @@
             // 
             // richTextBox1
             // 
-            richTextBox1.Anchor = AnchorStyles.Top;
-            richTextBox1.Font = new Font("Oxanium", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            richTextBox1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             richTextBox1.ForeColor = Color.MidnightBlue;
             richTextBox1.Location = new Point(49, 41);
             richTextBox1.Name = "richTextBox1";
+            richTextBox1.ReadOnly = true;
             richTextBox1.ScrollBars = RichTextBoxScrollBars.Vertical;
             richTextBox1.Size = new Size(426, 356);
             richTextBox1.TabIndex = 2;
             richTextBox1.Text = "";
             richTextBox1.TextChanged += richTextBox1_TextChanged;
+            // 
+            // btnAjouter
+            // 
+            btnAjouter.BackColor = Color.FromArgb(24, 24, 20);
+            btnAjouter.FlatStyle = FlatStyle.Popup;
+            btnAjouter.Font = new Font("Oxanium Medium", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAjouter.ForeColor = Color.White;
+            btnAjouter.Location = new Point(227, 361);
+            btnAjouter.Margin = new Padding(3, 4, 3, 4);
+            btnAjouter.Name = "btnAjouter";
+            btnAjouter.Size = new Size(79, 49);
+            btnAjouter.TabIndex = 13;
+            btnAjouter.Text = "OK";
+            btnAjouter.UseVisualStyleBackColor = false;
+            btnAjouter.Click += btnAjouter_Click;
             // 
             // FormPopDGV
             // 
@@ -67,6 +83,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(525, 435);
+            Controls.Add(btnAjouter);
             Controls.Add(richTextBox1);
             Controls.Add(pictureBox1);
             DoubleBuffered = true;
@@ -83,5 +100,6 @@
 
         private PictureBox pictureBox1;
         private RichTextBox richTextBox1;
+        private Button btnAjouter;
     }
 }

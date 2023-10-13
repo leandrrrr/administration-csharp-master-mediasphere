@@ -48,20 +48,20 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Oxanium", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(49, 27);
             label1.Name = "label1";
-            label1.Size = new Size(272, 32);
+            label1.Size = new Size(264, 29);
             label1.TabIndex = 3;
             label1.Text = "Gestion des catégories";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Font = new Font("Oxanium", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             label3.Location = new Point(457, 35);
             label3.Name = "label3";
-            label3.Size = new Size(117, 23);
+            label3.Size = new Size(126, 21);
             label3.TabIndex = 5;
             label3.Text = "Liste existante";
             // 
@@ -74,23 +74,23 @@
             tbLibelle.Location = new Point(23, 65);
             tbLibelle.Margin = new Padding(3, 4, 3, 4);
             tbLibelle.Name = "tbLibelle";
-            tbLibelle.Size = new Size(269, 27);
+            tbLibelle.Size = new Size(269, 26);
             tbLibelle.TabIndex = 6;
             tbLibelle.TextChanged += tbLibelle_TextChanged;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Font = new Font("Oxanium", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             label2.Location = new Point(23, 39);
             label2.Name = "label2";
-            label2.Size = new Size(63, 23);
+            label2.Size = new Size(65, 21);
             label2.TabIndex = 7;
             label2.Text = "Libellé ";
             // 
             // lbCategories
             // 
-            lbCategories.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lbCategories.Font = new Font("Oxanium", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             lbCategories.FormattingEnabled = true;
             lbCategories.ItemHeight = 21;
             lbCategories.Location = new Point(457, 61);
@@ -104,7 +104,7 @@
             // 
             btnFermer.BackColor = Color.Black;
             btnFermer.FlatStyle = FlatStyle.Popup;
-            btnFermer.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnFermer.Font = new Font("Oxanium", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnFermer.ForeColor = Color.White;
             btnFermer.Location = new Point(674, 312);
             btnFermer.Margin = new Padding(3, 4, 3, 4);
@@ -122,6 +122,7 @@
             gbCategorie.Controls.Add(btnValider);
             gbCategorie.Controls.Add(label2);
             gbCategorie.Controls.Add(tbLibelle);
+            gbCategorie.Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
             gbCategorie.Location = new Point(49, 133);
             gbCategorie.Margin = new Padding(3, 4, 3, 4);
             gbCategorie.Name = "gbCategorie";
@@ -134,6 +135,7 @@
             // btnSupprimer
             // 
             btnSupprimer.Enabled = false;
+            btnSupprimer.Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnSupprimer.Location = new Point(207, 120);
             btnSupprimer.Margin = new Padding(3, 4, 3, 4);
             btnSupprimer.Name = "btnSupprimer";
@@ -146,6 +148,7 @@
             // btnModifier
             // 
             btnModifier.Enabled = false;
+            btnModifier.Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnModifier.Location = new Point(115, 120);
             btnModifier.Margin = new Padding(3, 4, 3, 4);
             btnModifier.Name = "btnModifier";
@@ -157,6 +160,7 @@
             // 
             // btnValider
             // 
+            btnValider.Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnValider.Location = new Point(23, 120);
             btnValider.Margin = new Padding(3, 4, 3, 4);
             btnValider.Name = "btnValider";
@@ -169,12 +173,12 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Font = new Font("Oxanium", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             label4.Location = new Point(104, 363);
             label4.Name = "label4";
-            label4.Size = new Size(515, 25);
+            label4.Size = new Size(501, 23);
             label4.TabIndex = 12;
-            label4.Text = "sélectionner une catégorie pour la modifier ou la supprimer";
+            label4.Text = "Sélectionner une catégorie pour la modifier ou la supprimer";
             // 
             // FormCategories
             // 
