@@ -93,6 +93,7 @@ namespace AP3_MEDIA
                 btnAjouter.Visible = false;
                 gbInfo.Visible = false;
                 cbRessources.Visible = true;
+                cbEtat.Visible = false;
                 remplirListeRessources();
             }
             else if (etat == EtatGestion.Delete) // cas etat update
@@ -109,6 +110,7 @@ namespace AP3_MEDIA
                 tbIsbn.ReadOnly = true;
                 tbDescription.ReadOnly = true;
                 tbTitre.ReadOnly = true;
+                cbEtat.Visible = false;
 
 
                 remplirListeRessources();
