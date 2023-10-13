@@ -49,7 +49,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Oxanium", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(49, 27);
+            label1.Location = new Point(55, 26);
             label1.Name = "label1";
             label1.Size = new Size(264, 29);
             label1.TabIndex = 3;
@@ -59,7 +59,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Oxanium", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(457, 35);
+            label3.Location = new Point(514, 33);
             label3.Name = "label3";
             label3.Size = new Size(126, 21);
             label3.TabIndex = 5;
@@ -71,10 +71,10 @@
             // 
             // tbLibelle
             // 
-            tbLibelle.Location = new Point(23, 65);
+            tbLibelle.Location = new Point(26, 62);
             tbLibelle.Margin = new Padding(3, 4, 3, 4);
             tbLibelle.Name = "tbLibelle";
-            tbLibelle.Size = new Size(269, 26);
+            tbLibelle.Size = new Size(302, 26);
             tbLibelle.TabIndex = 6;
             tbLibelle.TextChanged += tbLibelle_TextChanged;
             // 
@@ -82,7 +82,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Oxanium", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(23, 39);
+            label2.Location = new Point(26, 37);
             label2.Name = "label2";
             label2.Size = new Size(65, 21);
             label2.TabIndex = 7;
@@ -93,10 +93,10 @@
             lbCategories.Font = new Font("Oxanium", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             lbCategories.FormattingEnabled = true;
             lbCategories.ItemHeight = 21;
-            lbCategories.Location = new Point(457, 61);
+            lbCategories.Location = new Point(514, 58);
             lbCategories.Margin = new Padding(3, 4, 3, 4);
             lbCategories.Name = "lbCategories";
-            lbCategories.Size = new Size(162, 298);
+            lbCategories.Size = new Size(182, 277);
             lbCategories.TabIndex = 8;
             lbCategories.SelectedIndexChanged += lbCategories_SelectedIndexChanged;
             // 
@@ -106,10 +106,10 @@
             btnFermer.FlatStyle = FlatStyle.Popup;
             btnFermer.Font = new Font("Oxanium", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnFermer.ForeColor = Color.White;
-            btnFermer.Location = new Point(674, 312);
+            btnFermer.Location = new Point(758, 296);
             btnFermer.Margin = new Padding(3, 4, 3, 4);
             btnFermer.Name = "btnFermer";
-            btnFermer.Size = new Size(120, 76);
+            btnFermer.Size = new Size(135, 72);
             btnFermer.TabIndex = 9;
             btnFermer.Text = "FERMER";
             btnFermer.UseVisualStyleBackColor = false;
@@ -123,11 +123,11 @@
             gbCategorie.Controls.Add(label2);
             gbCategorie.Controls.Add(tbLibelle);
             gbCategorie.Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            gbCategorie.Location = new Point(49, 133);
+            gbCategorie.Location = new Point(55, 126);
             gbCategorie.Margin = new Padding(3, 4, 3, 4);
             gbCategorie.Name = "gbCategorie";
             gbCategorie.Padding = new Padding(3, 4, 3, 4);
-            gbCategorie.Size = new Size(318, 172);
+            gbCategorie.Size = new Size(358, 163);
             gbCategorie.TabIndex = 11;
             gbCategorie.TabStop = false;
             gbCategorie.Text = "A ajouter";
@@ -136,10 +136,10 @@
             // 
             btnSupprimer.Enabled = false;
             btnSupprimer.Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btnSupprimer.Location = new Point(207, 120);
+            btnSupprimer.Location = new Point(233, 114);
             btnSupprimer.Margin = new Padding(3, 4, 3, 4);
             btnSupprimer.Name = "btnSupprimer";
-            btnSupprimer.Size = new Size(86, 31);
+            btnSupprimer.Size = new Size(97, 29);
             btnSupprimer.TabIndex = 10;
             btnSupprimer.Text = "Supprimer";
             btnSupprimer.UseVisualStyleBackColor = true;
@@ -149,10 +149,10 @@
             // 
             btnModifier.Enabled = false;
             btnModifier.Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btnModifier.Location = new Point(115, 120);
+            btnModifier.Location = new Point(129, 114);
             btnModifier.Margin = new Padding(3, 4, 3, 4);
             btnModifier.Name = "btnModifier";
-            btnModifier.Size = new Size(86, 31);
+            btnModifier.Size = new Size(97, 29);
             btnModifier.TabIndex = 9;
             btnModifier.Text = "Modifier";
             btnModifier.UseVisualStyleBackColor = true;
@@ -161,10 +161,10 @@
             // btnValider
             // 
             btnValider.Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btnValider.Location = new Point(23, 120);
+            btnValider.Location = new Point(26, 114);
             btnValider.Margin = new Padding(3, 4, 3, 4);
             btnValider.Name = "btnValider";
-            btnValider.Size = new Size(86, 31);
+            btnValider.Size = new Size(97, 29);
             btnValider.TabIndex = 8;
             btnValider.Text = "Ajouter";
             btnValider.UseVisualStyleBackColor = true;
@@ -174,7 +174,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Oxanium", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(104, 363);
+            label4.Location = new Point(117, 345);
             label4.Name = "label4";
             label4.Size = new Size(501, 23);
             label4.TabIndex = 12;
@@ -182,16 +182,17 @@
             // 
             // FormCategories
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(154, 206, 234);
-            ClientSize = new Size(914, 449);
+            ClientSize = new Size(1028, 427);
             Controls.Add(label4);
             Controls.Add(gbCategorie);
             Controls.Add(btnFermer);
             Controls.Add(lbCategories);
             Controls.Add(label3);
             Controls.Add(label1);
+            Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 4, 3, 4);
             Name = "FormCategories";

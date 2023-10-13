@@ -49,7 +49,7 @@
             // 
             // richTextBox1
             // 
-            richTextBox1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            richTextBox1.Font = new Font("Oxanium", 12F, FontStyle.Regular, GraphicsUnit.Point);
             richTextBox1.ForeColor = Color.MidnightBlue;
             richTextBox1.Location = new Point(49, 41);
             richTextBox1.Name = "richTextBox1";

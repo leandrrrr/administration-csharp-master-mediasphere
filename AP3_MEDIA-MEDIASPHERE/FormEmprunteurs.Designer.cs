@@ -39,10 +39,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(49, 35);
+            label1.Font = new Font("Oxanium", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(55, 33);
             label1.Name = "label1";
-            label1.Size = new Size(267, 32);
+            label1.Size = new Size(261, 29);
             label1.TabIndex = 4;
             label1.Text = "Liste des emprunteurs";
             // 
@@ -53,13 +53,13 @@
             dgvEmprunteurs.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dgvEmprunteurs.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvEmprunteurs.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvEmprunteurs.Location = new Point(49, 71);
+            dgvEmprunteurs.Location = new Point(55, 67);
             dgvEmprunteurs.Margin = new Padding(3, 4, 3, 4);
             dgvEmprunteurs.Name = "dgvEmprunteurs";
             dgvEmprunteurs.ReadOnly = true;
             dgvEmprunteurs.RowHeadersWidth = 51;
             dgvEmprunteurs.RowTemplate.Height = 25;
-            dgvEmprunteurs.Size = new Size(766, 277);
+            dgvEmprunteurs.Size = new Size(862, 263);
             dgvEmprunteurs.TabIndex = 5;
             dgvEmprunteurs.CellContentClick += dgvEmprunteurs_CellContentClick;
             // 
@@ -69,12 +69,13 @@
             // 
             // FormEmprunteurs
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(154, 206, 234);
-            ClientSize = new Size(896, 397);
+            ClientSize = new Size(1008, 377);
             Controls.Add(dgvEmprunteurs);
             Controls.Add(label1);
+            Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 4, 3, 4);
             Name = "FormEmprunteurs";

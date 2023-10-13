@@ -52,8 +52,8 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { rESSOURCESToolStripMenuItem, eMPRUNTEURToolStripMenuItem, cATEGORIESToolStripMenuItem, qUITTERToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new Padding(7, 10, 0, 10);
-            menuStrip1.Size = new Size(914, 52);
+            menuStrip1.Padding = new Padding(8, 10, 0, 10);
+            menuStrip1.Size = new Size(1028, 52);
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -127,10 +127,10 @@
             panelPrincipal.BackColor = Color.FromArgb(154, 206, 234);
             panelPrincipal.BackgroundImageLayout = ImageLayout.Center;
             panelPrincipal.Controls.Add(label1);
-            panelPrincipal.Location = new Point(-9, 47);
+            panelPrincipal.Location = new Point(-10, 45);
             panelPrincipal.Margin = new Padding(3, 4, 3, 4);
             panelPrincipal.Name = "panelPrincipal";
-            panelPrincipal.Size = new Size(934, 439);
+            panelPrincipal.Size = new Size(1051, 417);
             panelPrincipal.TabIndex = 2;
             panelPrincipal.Paint += panelPrincipal_Paint;
             // 
@@ -139,7 +139,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Oxanium", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(277, 173);
+            label1.Location = new Point(312, 164);
             label1.Name = "label1";
             label1.Size = new Size(416, 37);
             label1.TabIndex = 0;
@@ -147,12 +147,13 @@
             // 
             // FormMenu
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 477);
+            ClientSize = new Size(1028, 453);
             ControlBox = false;
             Controls.Add(panelPrincipal);
             Controls.Add(menuStrip1);
+            Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;

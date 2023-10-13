@@ -53,13 +53,13 @@
             dgvRessources.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvRessources.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvRessources.ContextMenuStrip = contextMenuStrip1;
-            dgvRessources.Location = new Point(66, 55);
+            dgvRessources.Location = new Point(74, 52);
             dgvRessources.Margin = new Padding(3, 4, 3, 4);
             dgvRessources.Name = "dgvRessources";
             dgvRessources.ReadOnly = true;
             dgvRessources.RowHeadersWidth = 51;
             dgvRessources.RowTemplate.Height = 25;
-            dgvRessources.Size = new Size(766, 287);
+            dgvRessources.Size = new Size(862, 273);
             dgvRessources.TabIndex = 0;
             dgvRessources.CellContentClick += dgvRessources_CellContentClick;
             dgvRessources.CellMouseClick += dgvRessources_CellMouseClick;
@@ -82,10 +82,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(66, 17);
+            label1.Font = new Font("Oxanium", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(74, 16);
             label1.Name = "label1";
-            label1.Size = new Size(245, 32);
+            label1.Size = new Size(244, 29);
             label1.TabIndex = 1;
             label1.Text = "Liste des Ressources";
             // 
@@ -93,12 +93,12 @@
             // 
             btnFermer.BackColor = Color.Black;
             btnFermer.FlatStyle = FlatStyle.Popup;
-            btnFermer.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnFermer.Font = new Font("Oxanium", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnFermer.ForeColor = Color.White;
-            btnFermer.Location = new Point(712, 350);
+            btnFermer.Location = new Point(801, 332);
             btnFermer.Margin = new Padding(3, 4, 3, 4);
             btnFermer.Name = "btnFermer";
-            btnFermer.Size = new Size(120, 61);
+            btnFermer.Size = new Size(135, 58);
             btnFermer.TabIndex = 2;
             btnFermer.Text = "FERMER";
             btnFermer.UseVisualStyleBackColor = false;
@@ -111,10 +111,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(66, 360);
+            label2.Font = new Font("Oxanium", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(74, 342);
             label2.Name = "label2";
-            label2.Size = new Size(561, 25);
+            label2.Size = new Size(552, 23);
             label2.TabIndex = 4;
             label2.Text = "click droit sur la ressource sélectionnée pour voir ses exemplaires";
             label2.Click += label2_Click;
@@ -124,28 +124,29 @@
             dgvExemplaires.AllowUserToAddRows = false;
             dgvExemplaires.AllowUserToDeleteRows = false;
             dgvExemplaires.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvExemplaires.Location = new Point(599, 68);
+            dgvExemplaires.Location = new Point(674, 65);
             dgvExemplaires.Margin = new Padding(3, 4, 3, 4);
             dgvExemplaires.Name = "dgvExemplaires";
             dgvExemplaires.ReadOnly = true;
             dgvExemplaires.RowHeadersWidth = 51;
             dgvExemplaires.RowTemplate.Height = 25;
-            dgvExemplaires.Size = new Size(257, 141);
+            dgvExemplaires.Size = new Size(289, 134);
             dgvExemplaires.TabIndex = 5;
             dgvExemplaires.Visible = false;
             dgvExemplaires.CellContentClick += dgvExemplaires_CellContentClick;
             // 
             // FormRessources
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(154, 206, 234);
-            ClientSize = new Size(914, 451);
+            ClientSize = new Size(1028, 428);
             Controls.Add(dgvExemplaires);
             Controls.Add(label2);
             Controls.Add(btnFermer);
             Controls.Add(label1);
             Controls.Add(dgvRessources);
+            Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 4, 3, 4);
             Name = "FormRessources";
