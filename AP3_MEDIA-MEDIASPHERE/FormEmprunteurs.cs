@@ -45,5 +45,11 @@ namespace AP3_MEDIA
             dgvEmprunteurs.Columns["Idemprunteur"].Visible = false;
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormPopDGV formPopDGV = new FormPopDGV("Aucun Aide");
+            formPopDGV.Show();
+        }
     }
 }

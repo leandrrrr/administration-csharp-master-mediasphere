@@ -40,6 +40,7 @@
             qUITTERToolStripMenuItem = new ToolStripMenuItem();
             panelPrincipal = new Panel();
             label1 = new Label();
+            exemplairesToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             panelPrincipal.SuspendLayout();
             SuspendLayout();
@@ -49,7 +50,7 @@
             menuStrip1.BackColor = SystemColors.Window;
             menuStrip1.Font = new Font("Oxanium Medium", 9F, FontStyle.Regular, GraphicsUnit.Point);
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { rESSOURCESToolStripMenuItem, eMPRUNTEURToolStripMenuItem, cATEGORIESToolStripMenuItem, qUITTERToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { rESSOURCESToolStripMenuItem, eMPRUNTEURToolStripMenuItem, cATEGORIESToolStripMenuItem, qUITTERToolStripMenuItem, exemplairesToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(8, 10, 0, 10);
@@ -145,6 +146,14 @@
             label1.TabIndex = 0;
             label1.Text = "Bienvenue à la Médiathèque";
             // 
+            // exemplairesToolStripMenuItem
+            // 
+            exemplairesToolStripMenuItem.Margin = new Padding(20, 0, 0, 0);
+            exemplairesToolStripMenuItem.Name = "exemplairesToolStripMenuItem";
+            exemplairesToolStripMenuItem.Size = new Size(122, 32);
+            exemplairesToolStripMenuItem.Text = "EXEMPLAIRES";
+            exemplairesToolStripMenuItem.Click += exemplairesToolStripMenuItem_Click;
+            // 
             // FormMenu
             // 
             AutoScaleDimensions = new SizeF(9F, 19F);
@@ -154,7 +163,7 @@
             Controls.Add(panelPrincipal);
             Controls.Add(menuStrip1);
             Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             Margin = new Padding(3, 4, 3, 4);
@@ -184,5 +193,6 @@
         private Panel panelPrincipal;
         private Label label1;
         private ToolStripMenuItem supressionToolStripMenuItem;
+        private ToolStripMenuItem exemplairesToolStripMenuItem;
     }
 }

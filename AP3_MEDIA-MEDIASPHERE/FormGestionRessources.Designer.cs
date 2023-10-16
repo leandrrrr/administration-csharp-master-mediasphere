@@ -32,8 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGestionRessources));
             label1 = new Label();
             gbInfo = new GroupBox();
-            cbEtats = new ComboBox();
-            cbEtat = new Label();
             cbCategories = new ComboBox();
             label8 = new Label();
             tbLangue = new TextBox();
@@ -55,6 +53,7 @@
             bsRessources = new BindingSource(components);
             button1 = new Button();
             bsEtats = new BindingSource(components);
+            button2 = new Button();
             gbInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bsCategories).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsRessources).BeginInit();
@@ -75,8 +74,6 @@
             // 
             gbInfo.BackgroundImage = (Image)resources.GetObject("gbInfo.BackgroundImage");
             gbInfo.BackgroundImageLayout = ImageLayout.Stretch;
-            gbInfo.Controls.Add(cbEtats);
-            gbInfo.Controls.Add(cbEtat);
             gbInfo.Controls.Add(cbCategories);
             gbInfo.Controls.Add(label8);
             gbInfo.Controls.Add(tbLangue);
@@ -103,38 +100,16 @@
             gbInfo.Text = "Informations de la ressource";
             gbInfo.Enter += gbInfo_Enter;
             // 
-            // cbEtats
-            // 
-            cbEtats.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbEtats.FlatStyle = FlatStyle.Flat;
-            cbEtats.Font = new Font("Oxanium", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            cbEtats.FormattingEnabled = true;
-            cbEtats.Location = new Point(284, 234);
-            cbEtats.Margin = new Padding(3, 4, 3, 4);
-            cbEtats.Name = "cbEtats";
-            cbEtats.Size = new Size(238, 29);
-            cbEtats.TabIndex = 12;
-            // 
-            // cbEtat
-            // 
-            cbEtat.AutoSize = true;
-            cbEtat.Font = new Font("Oxanium", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            cbEtat.Location = new Point(282, 204);
-            cbEtat.Name = "cbEtat";
-            cbEtat.Size = new Size(43, 21);
-            cbEtat.TabIndex = 13;
-            cbEtat.Text = "Etat";
-            // 
             // cbCategories
             // 
             cbCategories.DropDownStyle = ComboBoxStyle.DropDownList;
             cbCategories.FlatStyle = FlatStyle.Flat;
             cbCategories.Font = new Font("Oxanium", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             cbCategories.FormattingEnabled = true;
-            cbCategories.Location = new Point(551, 234);
+            cbCategories.Location = new Point(282, 233);
             cbCategories.Margin = new Padding(3, 4, 3, 4);
             cbCategories.Name = "cbCategories";
-            cbCategories.Size = new Size(211, 29);
+            cbCategories.Size = new Size(240, 29);
             cbCategories.TabIndex = 6;
             cbCategories.SelectedIndexChanged += cbCategories_SelectedIndexChanged;
             // 
@@ -142,7 +117,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Oxanium", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(550, 204);
+            label8.Location = new Point(281, 203);
             label8.Name = "label8";
             label8.Size = new Size(98, 21);
             label8.TabIndex = 11;
@@ -343,18 +318,35 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
+            // button2
+            // 
+            button2.BackColor = Color.Black;
+            button2.FlatStyle = FlatStyle.Popup;
+            button2.Font = new Font("Oxanium ExtraBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(981, 13);
+            button2.Margin = new Padding(3, 4, 3, 4);
+            button2.Name = "button2";
+            button2.Size = new Size(35, 35);
+            button2.TabIndex = 15;
+            button2.Text = "?";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
             // FormGestionRessources
             // 
             AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(154, 206, 234);
             ClientSize = new Size(1028, 427);
+            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(cbRessources);
             Controls.Add(btnAjouter);
             Controls.Add(btnFermer);
             Controls.Add(gbInfo);
             Controls.Add(label1);
+            DoubleBuffered = true;
             Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 4, 3, 4);
@@ -396,9 +388,8 @@
         private ComboBox cbRessources;
         private BindingSource bsRessources;
         private Button button1;
-        private ComboBox cbEtats;
         private Label label9;
-        private Label cbEtat;
         private BindingSource bsEtats;
+        private Button button2;
     }
 }

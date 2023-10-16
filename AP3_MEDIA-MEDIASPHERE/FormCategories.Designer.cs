@@ -41,6 +41,7 @@
             btnModifier = new Button();
             btnValider = new Button();
             label4 = new Label();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)bsCategories).BeginInit();
             gbCategorie.SuspendLayout();
             SuspendLayout();
@@ -90,13 +91,14 @@
             // 
             // lbCategories
             // 
+            lbCategories.BorderStyle = BorderStyle.None;
             lbCategories.Font = new Font("Oxanium", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             lbCategories.FormattingEnabled = true;
             lbCategories.ItemHeight = 21;
             lbCategories.Location = new Point(514, 58);
             lbCategories.Margin = new Padding(3, 4, 3, 4);
             lbCategories.Name = "lbCategories";
-            lbCategories.Size = new Size(182, 277);
+            lbCategories.Size = new Size(343, 315);
             lbCategories.TabIndex = 8;
             lbCategories.SelectedIndexChanged += lbCategories_SelectedIndexChanged;
             // 
@@ -106,7 +108,7 @@
             btnFermer.FlatStyle = FlatStyle.Popup;
             btnFermer.Font = new Font("Oxanium", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnFermer.ForeColor = Color.White;
-            btnFermer.Location = new Point(758, 296);
+            btnFermer.Location = new Point(881, 301);
             btnFermer.Margin = new Padding(3, 4, 3, 4);
             btnFermer.Name = "btnFermer";
             btnFermer.Size = new Size(135, 72);
@@ -176,9 +178,23 @@
             label4.Font = new Font("Oxanium", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             label4.Location = new Point(117, 345);
             label4.Name = "label4";
-            label4.Size = new Size(501, 23);
+            label4.Size = new Size(0, 23);
             label4.TabIndex = 12;
-            label4.Text = "Sélectionner une catégorie pour la modifier ou la supprimer";
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.Black;
+            button1.FlatStyle = FlatStyle.Popup;
+            button1.Font = new Font("Oxanium ExtraBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(981, 13);
+            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new Size(35, 35);
+            button1.TabIndex = 13;
+            button1.Text = "?";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // FormCategories
             // 
@@ -186,6 +202,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(154, 206, 234);
             ClientSize = new Size(1028, 427);
+            Controls.Add(button1);
             Controls.Add(label4);
             Controls.Add(gbCategorie);
             Controls.Add(btnFermer);
@@ -219,5 +236,6 @@
         private Button btnValider;
         private Button btnSupprimer;
         private Button btnModifier;
+        private Button button1;
     }
 }

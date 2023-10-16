@@ -106,5 +106,11 @@ namespace AP3_MEDIA
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormPopDGV formPopDGV = new FormPopDGV("Aucun Aide");
+            formPopDGV.Show();
+        }
     }
 }

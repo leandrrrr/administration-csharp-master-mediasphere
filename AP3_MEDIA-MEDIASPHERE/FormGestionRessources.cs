@@ -55,10 +55,7 @@ namespace AP3_MEDIA
         private void remplirListeEtat()
         {
             // remplir la comboBox des etats
-            cbEtats.ValueMember = "idetat";    //permet de stocker l'identifiant
-            cbEtats.DisplayMember = "libelleetat";
-            bsEtats.DataSource = Modele.getListEtats();
-            cbEtats.DataSource = bsEtats;
+
         }
         public void remplirListeCategories()
         {
@@ -93,8 +90,7 @@ namespace AP3_MEDIA
                 btnAjouter.Visible = false;
                 gbInfo.Visible = false;
                 cbRessources.Visible = true;
-                cbEtat.Visible = false;
-                cbEtats.Visible = false;
+
                 remplirListeRessources();
             }
             else if (etat == EtatGestion.Delete) // cas etat update
@@ -111,8 +107,7 @@ namespace AP3_MEDIA
                 tbIsbn.ReadOnly = true;
                 tbDescription.ReadOnly = true;
                 tbTitre.ReadOnly = true;
-                cbEtat.Visible = false;
-                cbEtats.Visible = false;
+                cbCategories.Enabled = false;
 
 
                 remplirListeRessources();
@@ -311,6 +306,12 @@ namespace AP3_MEDIA
         private void cbCategories_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FormPopDGV formPopDGV = new FormPopDGV("Aucun Aide");
+            formPopDGV.Show();
         }
     }
 }

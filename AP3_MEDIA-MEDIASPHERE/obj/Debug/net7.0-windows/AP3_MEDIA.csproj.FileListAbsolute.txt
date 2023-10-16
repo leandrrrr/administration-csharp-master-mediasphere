@@ -82,3 +82,4 @@ C:\Users\leandRe\source\repos\leandrrrr\administration-csharp-master-mediasphere
 C:\Users\leandRe\source\repos\leandrrrr\administration-csharp-master-mediasphere\AP3_MEDIA-MEDIASPHERE\obj\Debug\net7.0-windows\AP3_MEDIA.pdb
 C:\Users\leandRe\source\repos\leandrrrr\administration-csharp-master-mediasphere\AP3_MEDIA-MEDIASPHERE\obj\Debug\net7.0-windows\AP3_MEDIA.genruntimeconfig.cache
 C:\Users\leandRe\source\repos\leandrrrr\administration-csharp-master-mediasphere\AP3_MEDIA-MEDIASPHERE\obj\Debug\net7.0-windows\ref\AP3_MEDIA.dll
+C:\Users\leandRe\source\repos\leandrrrr\administration-csharp-master-mediasphere\AP3_MEDIA-MEDIASPHERE\obj\Debug\net7.0-windows\AP3_MEDIA.FormGestionExemplaires.resources

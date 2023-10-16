@@ -32,6 +32,7 @@
             label1 = new Label();
             dgvEmprunteurs = new DataGridView();
             bsEmprunteurs = new BindingSource(components);
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvEmprunteurs).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsEmprunteurs).BeginInit();
             SuspendLayout();
@@ -67,12 +68,28 @@
             // 
             bsEmprunteurs.CurrentChanged += bsEmprunteurs_CurrentChanged;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.Black;
+            button1.FlatStyle = FlatStyle.Popup;
+            button1.Font = new Font("Oxanium ExtraBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(961, 13);
+            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new Size(35, 35);
+            button1.TabIndex = 14;
+            button1.Text = "?";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // FormEmprunteurs
             // 
             AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(154, 206, 234);
             ClientSize = new Size(1008, 377);
+            Controls.Add(button1);
             Controls.Add(dgvEmprunteurs);
             Controls.Add(label1);
             Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -92,5 +109,6 @@
         private Label label1;
         private DataGridView dgvEmprunteurs;
         private BindingSource bsEmprunteurs;
+        private Button button1;
     }
 }

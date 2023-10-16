@@ -111,5 +111,12 @@ namespace AP3_MEDIA
 
         }
 
+        private void exemplairesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+                openChildForm(new FormGestionExemplaires());
+
+            
+        }
     }
 }

@@ -127,5 +127,11 @@ namespace AP3_MEDIA
             btnModifier.Enabled = true;
             btnSupprimer.Enabled = true;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormPopDGV formPopDGV = new FormPopDGV("Sélectionner une catégorie pour la modifier ou la supprimer");
+            formPopDGV.Show();
+        }
     }
 }

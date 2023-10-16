@@ -38,6 +38,7 @@
             label2 = new Label();
             bsExemplaires = new BindingSource(components);
             dgvExemplaires = new DataGridView();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvRessources).BeginInit();
             contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bsRessources).BeginInit();
@@ -135,12 +136,28 @@
             dgvExemplaires.Visible = false;
             dgvExemplaires.CellContentClick += dgvExemplaires_CellContentClick;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.Black;
+            button1.FlatStyle = FlatStyle.Popup;
+            button1.Font = new Font("Oxanium ExtraBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(981, 13);
+            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new Size(35, 35);
+            button1.TabIndex = 14;
+            button1.Text = "?";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // FormRessources
             // 
             AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(154, 206, 234);
             ClientSize = new Size(1028, 428);
+            Controls.Add(button1);
             Controls.Add(dgvExemplaires);
             Controls.Add(label2);
             Controls.Add(btnFermer);
@@ -172,5 +189,6 @@
         private Label label2;
         private BindingSource bsExemplaires;
         private DataGridView dgvExemplaires;
+        private Button button1;
     }
 }
