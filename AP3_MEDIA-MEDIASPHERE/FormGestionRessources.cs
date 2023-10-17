@@ -1,4 +1,5 @@
 ﻿using AP3_MEDIA.Entities;
+using AP3_MEDIA.Libs;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,6 +23,7 @@ namespace AP3_MEDIA
     public partial class FormGestionRessources : Form
     {
         private EtatGestion etat;
+        private ToolsLeandre ToolsL = new ToolsLeandre();
         public FormGestionRessources(EtatGestion etat)
         {
             InitializeComponent();
@@ -273,20 +275,7 @@ namespace AP3_MEDIA
         {
 
         }
-        public async Task rgbb()
-        {
-            while (true)
-            {
-                await Task.Delay(20);
-                this.BackColor = Color.Blue;
-                await Task.Delay(20);
-                this.BackColor = Color.Red;
-                await Task.Delay(20);
-                this.BackColor = Color.LightGreen;
-                await Task.Delay(20);
-                this.BackColor = Color.Yellow;
-            }
-        }
+
 
         private void FormGestionRessources_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -300,7 +289,7 @@ namespace AP3_MEDIA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            rgbb();
+            ToolsL.rgbb(this);
         }
 
         private void cbCategories_SelectedIndexChanged(object sender, EventArgs e)

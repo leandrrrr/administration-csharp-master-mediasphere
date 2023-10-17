@@ -89,7 +89,7 @@
             gbInfo.Controls.Add(tbDescription);
             gbInfo.Controls.Add(tbTitre);
             gbInfo.FlatStyle = FlatStyle.Flat;
-            gbInfo.Font = new Font("Oxanium", 18.2F, FontStyle.Underline, GraphicsUnit.Point);
+            gbInfo.Font = new Font("Oxanium Medium", 18F, FontStyle.Bold, GraphicsUnit.Point);
             gbInfo.Location = new Point(66, 58);
             gbInfo.Margin = new Padding(3, 4, 3, 4);
             gbInfo.Name = "gbInfo";
@@ -116,10 +116,10 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Font = new Font("Oxanium", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            label8.Font = new Font("Oxanium Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             label8.Location = new Point(281, 203);
             label8.Name = "label8";
-            label8.Size = new Size(98, 21);
+            label8.Size = new Size(110, 21);
             label8.TabIndex = 11;
             label8.Text = "Catégorie *";
             // 
@@ -138,10 +138,10 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Oxanium", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.Font = new Font("Oxanium Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             label7.Location = new Point(550, 128);
             label7.Name = "label7";
-            label7.Size = new Size(68, 21);
+            label7.Size = new Size(74, 21);
             label7.TabIndex = 9;
             label7.Text = "Langue";
             // 
@@ -160,21 +160,21 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Oxanium", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Font = new Font("Oxanium Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             label6.Image = Properties.Resources.border_style___Copie;
             label6.Location = new Point(550, 52);
             label6.Name = "label6";
-            label6.Size = new Size(47, 21);
+            label6.Size = new Size(52, 21);
             label6.TabIndex = 8;
             label6.Text = "ISBN";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Oxanium", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Font = new Font("Oxanium Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             label5.Location = new Point(282, 124);
             label5.Name = "label5";
-            label5.Size = new Size(134, 21);
+            label5.Size = new Size(150, 21);
             label5.TabIndex = 7;
             label5.Text = "Année de sortie";
             label5.Click += label5_Click;
@@ -207,30 +207,30 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Oxanium", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Font = new Font("Oxanium Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             label4.Location = new Point(282, 52);
             label4.Name = "label4";
-            label4.Size = new Size(58, 21);
+            label4.Size = new Size(64, 21);
             label4.TabIndex = 4;
             label4.Text = "Image";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Oxanium", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Font = new Font("Oxanium Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             label3.Location = new Point(21, 113);
             label3.Name = "label3";
-            label3.Size = new Size(100, 21);
+            label3.Size = new Size(112, 21);
             label3.TabIndex = 3;
             label3.Text = "Description";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Oxanium", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Font = new Font("Oxanium Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             label2.Location = new Point(21, 52);
             label2.Name = "label2";
-            label2.Size = new Size(59, 21);
+            label2.Size = new Size(67, 21);
             label2.TabIndex = 2;
             label2.Text = "Titre *";
             // 
@@ -261,7 +261,7 @@
             // 
             btnAjouter.BackColor = Color.Black;
             btnAjouter.FlatStyle = FlatStyle.Popup;
-            btnAjouter.Font = new Font("Oxanium", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAjouter.Font = new Font("Oxanium Medium", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnAjouter.ForeColor = Color.White;
             btnAjouter.Location = new Point(654, 357);
             btnAjouter.Margin = new Padding(3, 4, 3, 4);
@@ -276,7 +276,7 @@
             // 
             btnFermer.BackColor = Color.Black;
             btnFermer.FlatStyle = FlatStyle.Popup;
-            btnFermer.Font = new Font("Oxanium", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnFermer.Font = new Font("Oxanium Medium", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnFermer.ForeColor = Color.White;
             btnFermer.Location = new Point(810, 357);
             btnFermer.Margin = new Padding(3, 4, 3, 4);

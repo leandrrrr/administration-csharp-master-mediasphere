@@ -9,9 +9,9 @@ namespace AP3_MEDIA.Libs
     public class ToolsLeandre
     {
 
-        public string dateFormatBDD(DateTimePicker pickerDate)
+        public string dateFormatBDD(DateTime pickerDate)
         {
-            DateTime myTime = pickerDate.Value;
+            DateTime myTime = pickerDate;
             string myDay = Convert.ToString(myTime.Day);
             string myMonth = Convert.ToString(myTime.Month);
             string myYear = Convert.ToString(myTime.Year);

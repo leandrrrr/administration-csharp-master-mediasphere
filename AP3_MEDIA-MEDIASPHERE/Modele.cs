@@ -108,6 +108,31 @@ namespace AP3_MEDIA
             return vretour;
         }
 
+        public static bool AjoutExemplaire(int idRessource,int idEtat,DateTime date)
+        {
+            Exemplaire uneExemplaire;
+            bool vretour = true;
+            try
+            {
+                // ajout dans la table Ressource
+
+                uneExemplaire = new Exemplaire();
+                uneExemplaire.Idressource = idRessource;
+                uneExemplaire.Idetat = idEtat;
+                uneExemplaire.Dateentree = DateOnly.FromDateTime(date);
+
+                monModele.Exemplaires.Add(uneExemplaire);
+                monModele.SaveChanges();
+
+            }
+            catch (Exception ex)
+            {
+                vretour = false;
+                MessageBox.Show(ex.Message.ToString());
+            }
+            return vretour;
+        }
+
         /// <summary>
         /// Fonction qui retourne l'identifiant de la dernière ressource
         /// </summary>

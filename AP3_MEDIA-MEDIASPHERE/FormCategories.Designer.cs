@@ -30,10 +30,8 @@
         {
             components = new System.ComponentModel.Container();
             label1 = new Label();
-            label3 = new Label();
             bsCategories = new BindingSource(components);
             tbLibelle = new TextBox();
-            label2 = new Label();
             lbCategories = new ListBox();
             btnFermer = new Button();
             gbCategorie = new GroupBox();
@@ -50,21 +48,11 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Oxanium", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(55, 26);
+            label1.Location = new Point(55, 19);
             label1.Name = "label1";
             label1.Size = new Size(264, 29);
             label1.TabIndex = 3;
             label1.Text = "Gestion des catégories";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Oxanium", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(514, 33);
-            label3.Name = "label3";
-            label3.Size = new Size(126, 21);
-            label3.TabIndex = 5;
-            label3.Text = "Liste existante";
             // 
             // bsCategories
             // 
@@ -72,22 +60,15 @@
             // 
             // tbLibelle
             // 
-            tbLibelle.Location = new Point(26, 62);
+            tbLibelle.Font = new Font("Oxanium", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
+            tbLibelle.ImeMode = ImeMode.NoControl;
+            tbLibelle.Location = new Point(6, 27);
             tbLibelle.Margin = new Padding(3, 4, 3, 4);
+            tbLibelle.Multiline = true;
             tbLibelle.Name = "tbLibelle";
-            tbLibelle.Size = new Size(302, 26);
+            tbLibelle.Size = new Size(402, 60);
             tbLibelle.TabIndex = 6;
             tbLibelle.TextChanged += tbLibelle_TextChanged;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Oxanium", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(26, 37);
-            label2.Name = "label2";
-            label2.Size = new Size(65, 21);
-            label2.TabIndex = 7;
-            label2.Text = "Libellé ";
             // 
             // lbCategories
             // 
@@ -104,10 +85,10 @@
             // 
             // btnFermer
             // 
-            btnFermer.BackColor = Color.Black;
-            btnFermer.FlatStyle = FlatStyle.Popup;
-            btnFermer.Font = new Font("Oxanium", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnFermer.ForeColor = Color.White;
+            btnFermer.BackColor = Color.FromArgb(254, 254, 254);
+            btnFermer.FlatStyle = FlatStyle.Flat;
+            btnFermer.Font = new Font("Oxanium Medium", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnFermer.ForeColor = Color.FromArgb(10, 10, 64);
             btnFermer.Location = new Point(881, 301);
             btnFermer.Margin = new Padding(3, 4, 3, 4);
             btnFermer.Name = "btnFermer";
@@ -122,54 +103,62 @@
             gbCategorie.Controls.Add(btnSupprimer);
             gbCategorie.Controls.Add(btnModifier);
             gbCategorie.Controls.Add(btnValider);
-            gbCategorie.Controls.Add(label2);
             gbCategorie.Controls.Add(tbLibelle);
             gbCategorie.Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            gbCategorie.Location = new Point(55, 126);
+            gbCategorie.Location = new Point(55, 58);
             gbCategorie.Margin = new Padding(3, 4, 3, 4);
             gbCategorie.Name = "gbCategorie";
             gbCategorie.Padding = new Padding(3, 4, 3, 4);
-            gbCategorie.Size = new Size(358, 163);
+            gbCategorie.Size = new Size(414, 315);
             gbCategorie.TabIndex = 11;
             gbCategorie.TabStop = false;
             gbCategorie.Text = "A ajouter";
             // 
             // btnSupprimer
             // 
+            btnSupprimer.BackColor = Color.FromArgb(254, 254, 254);
             btnSupprimer.Enabled = false;
-            btnSupprimer.Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btnSupprimer.Location = new Point(233, 114);
+            btnSupprimer.FlatStyle = FlatStyle.Flat;
+            btnSupprimer.Font = new Font("Oxanium Medium", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSupprimer.ForeColor = Color.FromArgb(10, 10, 64);
+            btnSupprimer.Location = new Point(6, 231);
             btnSupprimer.Margin = new Padding(3, 4, 3, 4);
             btnSupprimer.Name = "btnSupprimer";
-            btnSupprimer.Size = new Size(97, 29);
+            btnSupprimer.Size = new Size(402, 60);
             btnSupprimer.TabIndex = 10;
             btnSupprimer.Text = "Supprimer";
-            btnSupprimer.UseVisualStyleBackColor = true;
+            btnSupprimer.UseVisualStyleBackColor = false;
             btnSupprimer.Click += btnSupprimer_Click;
             // 
             // btnModifier
             // 
+            btnModifier.BackColor = Color.FromArgb(254, 254, 254);
             btnModifier.Enabled = false;
-            btnModifier.Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btnModifier.Location = new Point(129, 114);
+            btnModifier.FlatStyle = FlatStyle.Flat;
+            btnModifier.Font = new Font("Oxanium Medium", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnModifier.ForeColor = Color.FromArgb(10, 10, 64);
+            btnModifier.Location = new Point(6, 163);
             btnModifier.Margin = new Padding(3, 4, 3, 4);
             btnModifier.Name = "btnModifier";
-            btnModifier.Size = new Size(97, 29);
+            btnModifier.Size = new Size(402, 60);
             btnModifier.TabIndex = 9;
             btnModifier.Text = "Modifier";
-            btnModifier.UseVisualStyleBackColor = true;
+            btnModifier.UseVisualStyleBackColor = false;
             btnModifier.Click += btnModifier_Click;
             // 
             // btnValider
             // 
-            btnValider.Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btnValider.Location = new Point(26, 114);
+            btnValider.BackColor = Color.FromArgb(254, 254, 254);
+            btnValider.FlatStyle = FlatStyle.Flat;
+            btnValider.Font = new Font("Oxanium Medium", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnValider.ForeColor = Color.FromArgb(10, 10, 64);
+            btnValider.Location = new Point(6, 95);
             btnValider.Margin = new Padding(3, 4, 3, 4);
             btnValider.Name = "btnValider";
-            btnValider.Size = new Size(97, 29);
+            btnValider.Size = new Size(402, 60);
             btnValider.TabIndex = 8;
             btnValider.Text = "Ajouter";
-            btnValider.UseVisualStyleBackColor = true;
+            btnValider.UseVisualStyleBackColor = false;
             btnValider.Click += btnValider_Click;
             // 
             // label4
@@ -207,7 +196,6 @@
             Controls.Add(gbCategorie);
             Controls.Add(btnFermer);
             Controls.Add(lbCategories);
-            Controls.Add(label3);
             Controls.Add(label1);
             Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
@@ -225,10 +213,8 @@
         #endregion
 
         private Label label1;
-        private Label label3;
         private BindingSource bsCategories;
         private TextBox tbLibelle;
-        private Label label2;
         private ListBox lbCategories;
         private Button btnFermer;
         private GroupBox gbCategorie;
