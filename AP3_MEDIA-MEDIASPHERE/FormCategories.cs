@@ -32,6 +32,8 @@ namespace AP3_MEDIA
         private void FormCategories_Load(object sender, EventArgs e)
         {
             remplirListeCategories();
+            btnModifier.Enabled = false;
+            btnSupprimer.Enabled = false;
 
         }
 
@@ -119,19 +121,41 @@ namespace AP3_MEDIA
 
         private void lbCategories_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (lbCategories.SelectedIndex == -1)
+            {
+                btnModifier.Enabled = false;
+                btnSupprimer.Enabled = false;
+            }
+            btnValider.Enabled = false;
+            btnModifier.Enabled = true;
+            btnSupprimer.Enabled = true;
         }
 
         private void tbLibelle_TextChanged(object sender, EventArgs e)
         {
-            btnModifier.Enabled = true;
-            btnSupprimer.Enabled = true;
+            
+            if (tbLibelle.Text == "" || tbLibelle.Text == " ")
+            {
+                btnValider.Enabled = false;
+                btnModifier.Enabled = false;
+                btnSupprimer.Enabled = false;
+            }
+            else
+            {
+                
+                btnValider.Enabled = true;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             FormPopDGV formPopDGV = new FormPopDGV("Sélectionner une catégorie pour la modifier ou la supprimer");
             formPopDGV.Show();
+        }
+
+        private void gbCategorie_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

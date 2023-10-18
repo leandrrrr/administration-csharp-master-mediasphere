@@ -93,6 +93,16 @@ namespace AP3_MEDIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap border_style___Copie1 {
+            get {
+                object obj = ResourceManager.GetObject("border style - Copie1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap crosse {
             get {
                 object obj = ResourceManager.GetObject("crosse", resourceCulture);

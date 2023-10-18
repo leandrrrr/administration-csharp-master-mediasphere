@@ -73,7 +73,7 @@
             // lbCategories
             // 
             lbCategories.BorderStyle = BorderStyle.None;
-            lbCategories.Font = new Font("Oxanium", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            lbCategories.Font = new Font("Oxanium Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             lbCategories.FormattingEnabled = true;
             lbCategories.ItemHeight = 21;
             lbCategories.Location = new Point(514, 58);
@@ -100,11 +100,13 @@
             // 
             // gbCategorie
             // 
+            gbCategorie.BackgroundImage = Properties.Resources.border_style___Copie;
+            gbCategorie.BackgroundImageLayout = ImageLayout.Stretch;
             gbCategorie.Controls.Add(btnSupprimer);
             gbCategorie.Controls.Add(btnModifier);
             gbCategorie.Controls.Add(btnValider);
             gbCategorie.Controls.Add(tbLibelle);
-            gbCategorie.Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            gbCategorie.Font = new Font("Oxanium Medium", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             gbCategorie.Location = new Point(55, 58);
             gbCategorie.Margin = new Padding(3, 4, 3, 4);
             gbCategorie.Name = "gbCategorie";
@@ -113,6 +115,7 @@
             gbCategorie.TabIndex = 11;
             gbCategorie.TabStop = false;
             gbCategorie.Text = "A ajouter";
+            gbCategorie.Enter += gbCategorie_Enter;
             // 
             // btnSupprimer
             // 
