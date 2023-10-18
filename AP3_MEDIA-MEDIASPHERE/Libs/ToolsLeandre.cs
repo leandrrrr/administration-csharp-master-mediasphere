@@ -8,7 +8,7 @@ namespace AP3_MEDIA.Libs
 {
     public class ToolsLeandre
     {
-
+        //
         public string dateFormatBDD(DateTime pickerDate)
         {
             DateTime myTime = pickerDate;
@@ -33,6 +33,16 @@ namespace AP3_MEDIA.Libs
                 thisF.BackColor = Color.LightGreen;
                 await Task.Delay(20);
                 thisF.BackColor = Color.Yellow;
+            }
+        }
+
+        public async Task waitingForm(Form thisF, int timeToWait)
+        {
+            while (true)
+            {
+                await Task.Delay(timeToWait);
+                thisF.Show();
+                
             }
         }
     }
