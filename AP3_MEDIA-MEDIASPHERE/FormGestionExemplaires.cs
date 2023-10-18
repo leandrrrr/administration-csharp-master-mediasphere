@@ -101,11 +101,18 @@ namespace AP3_MEDIA
 
             if (cbEtat.SelectedIndex != -1 && lbRessources.SelectedIndex != -1 && dateTimePicker1.Value != null)
             {
-                if (Modele.AjoutExemplaire(idRessourceAdd, idEtatAdd, dateRessourceAdd))
+                try
                 {
-                    FormPopDGV formPopDGV = new FormPopDGV("AJOUT EFFECTUÉ !");
-                    formPopDGV.Show();
+                    if (Modele.AjoutExemplaire(idRessourceAdd, idEtatAdd, dateRessourceAdd))
+                    {
+                        FormPopDGV formPopDGV = new FormPopDGV("AJOUT EFFECTUÉ !");
+                        ToolsL.waitingForm(formPopDGV,1000);
 
+                    }
+                }
+                catch(Exception ex) {
+                    FormPopDGV formPopDGV = new FormPopDGV("sa a merdé : " + Convert.ToString(ex));
+                    formPopDGV.Show();
                 }
             }
             else

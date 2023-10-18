@@ -47,16 +47,19 @@ namespace AP3_MEDIA
             string libelle = tbLibelle.Text;
             if (libelle != "")
             {
-                if (Modele.AjoutCategorie(libelle))
-                {
-                    MessageBox.Show("Catégorie ajoutée ");
-                    tbLibelle.Clear();
-                    remplirListeCategories();
-                }
-                else
-                {
-                    MessageBox.Show("Ajout impossible", "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                
+                    if (Modele.AjoutCategorie(libelle))
+                    {
+                        MessageBox.Show("Catégorie ajoutée ");
+                        tbLibelle.Clear();
+                        remplirListeCategories();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ajout impossible", "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                
+                
             }
             else
             {
