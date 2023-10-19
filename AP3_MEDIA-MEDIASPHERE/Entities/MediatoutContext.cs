@@ -27,15 +27,17 @@ public partial class MediatoutContext : DbContext
 
     public virtual DbSet<Ressource> Ressources { get; set; }
 
+    public virtual DbSet<User> Users { get; set; }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseMySql("server=192.168.114.2;port=3306;user=APP;password=&VYP4dWHC8&4@v3b;database=mediatout", Microsoft.EntityFrameworkCore.ServerVersion.Parse("10.9.8-mariadb"));
+        => optionsBuilder.UseMySql("server=192.168.114.2;port=3306;user=APP;password=&VYP4dWHC8&4@v3b;database=mediatout", Microsoft.EntityFrameworkCore.ServerVersion.Parse("10.11.3-mariadb"));
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder
-            .UseCollation("latin1_swedish_ci")
-            .HasCharSet("latin1");
+            .UseCollation("utf8mb4_general_ci")
+            .HasCharSet("utf8mb4");
 
         modelBuilder.Entity<Categorie>(entity =>
         {
@@ -209,6 +211,30 @@ public partial class MediatoutContext : DbContext
                 .HasForeignKey(d => d.Idcategorie)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_ressource_categorie");
+        });
+
+        modelBuilder.Entity<User>(entity =>
+        {
+            entity.HasKey(e => e.IdUser).HasName("PRIMARY");
+
+            entity.ToTable("User");
+
+            entity.Property(e => e.IdUser)
+                .ValueGeneratedNever()
+                .HasColumnType("int(5)")
+                .HasColumnName("idUser");
+            entity.Property(e => e.MailUser)
+                .HasMaxLength(200)
+                .HasColumnName("mailUser");
+            entity.Property(e => e.MdpUser)
+                .HasMaxLength(200)
+                .HasColumnName("mdpUser");
+            entity.Property(e => e.NomUser)
+                .HasMaxLength(200)
+                .HasColumnName("nomUser");
+            entity.Property(e => e.PrenomUser)
+                .HasMaxLength(200)
+                .HasColumnName("prenomUser");
         });
 
         OnModelCreatingPartial(modelBuilder);

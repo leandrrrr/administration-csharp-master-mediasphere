@@ -84,3 +84,5 @@ C:\Users\leandRe\source\repos\leandrrrr\administration-csharp-master-mediasphere
 C:\Users\leandRe\source\repos\leandrrrr\administration-csharp-master-mediasphere\AP3_MEDIA-MEDIASPHERE\obj\Debug\net7.0-windows\ref\AP3_MEDIA.dll
 C:\Users\leandRe\source\repos\leandrrrr\administration-csharp-master-mediasphere\AP3_MEDIA-MEDIASPHERE\obj\Debug\net7.0-windows\AP3_MEDIA.FormGestionExemplaires.resources
 C:\Users\leandRe\source\repos\leandrrrr\administration-csharp-master-mediasphere\AP3_MEDIA-MEDIASPHERE\obj\Debug\net7.0-windows\AP3_MEDIA.FormConnexion.resources
+C:\Users\leandRe\source\repos\leandrrrr\administration-csharp-master-mediasphere\AP3_MEDIA-MEDIASPHERE\bin\Debug\net7.0-windows\DevOne.Security.Cryptography.BCrypt.dll
+C:\Users\leandRe\source\repos\leandrrrr\administration-csharp-master-mediasphere\AP3_MEDIA-MEDIASPHERE\bin\Debug\net7.0-windows\BCrypt.Net.dll

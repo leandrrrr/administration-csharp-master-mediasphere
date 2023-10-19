@@ -28,13 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             labelId = new Label();
             labelMdp = new Label();
             tbId = new TextBox();
             btnConnexion = new Button();
             pictureBox1 = new PictureBox();
             tbMdp = new TextBox();
+            bsUser = new BindingSource(components);
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bsUser).BeginInit();
             SuspendLayout();
             // 
             // labelId
@@ -85,6 +89,7 @@
             btnConnexion.TabIndex = 20;
             btnConnexion.Text = "CONNECTION";
             btnConnexion.UseVisualStyleBackColor = false;
+            btnConnexion.Click += btnConnexion_Click;
             // 
             // pictureBox1
             // 
@@ -109,12 +114,29 @@
             tbMdp.Size = new Size(559, 46);
             tbMdp.TabIndex = 26;
             // 
+            // button1
+            // 
+            button1.Anchor = AnchorStyles.Top;
+            button1.BackColor = Color.Black;
+            button1.FlatStyle = FlatStyle.Popup;
+            button1.Font = new Font("Oxanium ExtraBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(981, 12);
+            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new Size(35, 35);
+            button1.TabIndex = 27;
+            button1.Text = "X";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // FormConnexion
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(154, 206, 234);
             ClientSize = new Size(1028, 428);
+            Controls.Add(button1);
             Controls.Add(tbMdp);
             Controls.Add(labelId);
             Controls.Add(labelMdp);
@@ -125,6 +147,7 @@
             Name = "FormConnexion";
             Text = "FormConnexion";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bsUser).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -137,5 +160,7 @@
         private Button btnConnexion;
         private PictureBox pictureBox1;
         private TextBox tbMdp;
+        private BindingSource bsUser;
+        private Button button1;
     }
 }

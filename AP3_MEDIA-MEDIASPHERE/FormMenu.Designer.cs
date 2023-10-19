@@ -38,9 +38,10 @@
             eMPRUNTEURToolStripMenuItem = new ToolStripMenuItem();
             cATEGORIESToolStripMenuItem = new ToolStripMenuItem();
             qUITTERToolStripMenuItem = new ToolStripMenuItem();
+            exemplairesToolStripMenuItem = new ToolStripMenuItem();
             panelPrincipal = new Panel();
             label1 = new Label();
-            exemplairesToolStripMenuItem = new ToolStripMenuItem();
+            deconnexionToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             panelPrincipal.SuspendLayout();
             SuspendLayout();
@@ -50,7 +51,7 @@
             menuStrip1.BackColor = SystemColors.Window;
             menuStrip1.Font = new Font("Oxanium Medium", 9F, FontStyle.Regular, GraphicsUnit.Point);
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { rESSOURCESToolStripMenuItem, eMPRUNTEURToolStripMenuItem, cATEGORIESToolStripMenuItem, qUITTERToolStripMenuItem, exemplairesToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { qUITTERToolStripMenuItem, rESSOURCESToolStripMenuItem, eMPRUNTEURToolStripMenuItem, cATEGORIESToolStripMenuItem, exemplairesToolStripMenuItem, deconnexionToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(8, 10, 0, 10);
@@ -112,7 +113,6 @@
             // 
             // qUITTERToolStripMenuItem
             // 
-            qUITTERToolStripMenuItem.Alignment = ToolStripItemAlignment.Right;
             qUITTERToolStripMenuItem.BackColor = SystemColors.ButtonFace;
             qUITTERToolStripMenuItem.Font = new Font("Lucida Sans Unicode", 9F, FontStyle.Bold, GraphicsUnit.Point);
             qUITTERToolStripMenuItem.ForeColor = Color.Crimson;
@@ -122,6 +122,14 @@
             qUITTERToolStripMenuItem.Size = new Size(36, 32);
             qUITTERToolStripMenuItem.Text = "X";
             qUITTERToolStripMenuItem.Click += qUITTERToolStripMenuItem_Click;
+            // 
+            // exemplairesToolStripMenuItem
+            // 
+            exemplairesToolStripMenuItem.Margin = new Padding(20, 0, 0, 0);
+            exemplairesToolStripMenuItem.Name = "exemplairesToolStripMenuItem";
+            exemplairesToolStripMenuItem.Size = new Size(122, 32);
+            exemplairesToolStripMenuItem.Text = "EXEMPLAIRES";
+            exemplairesToolStripMenuItem.Click += exemplairesToolStripMenuItem_Click;
             // 
             // panelPrincipal
             // 
@@ -146,13 +154,13 @@
             label1.TabIndex = 0;
             label1.Text = "Bienvenue à la Médiathèque";
             // 
-            // exemplairesToolStripMenuItem
+            // deconnexionToolStripMenuItem
             // 
-            exemplairesToolStripMenuItem.Margin = new Padding(20, 0, 0, 0);
-            exemplairesToolStripMenuItem.Name = "exemplairesToolStripMenuItem";
-            exemplairesToolStripMenuItem.Size = new Size(122, 32);
-            exemplairesToolStripMenuItem.Text = "EXEMPLAIRES";
-            exemplairesToolStripMenuItem.Click += exemplairesToolStripMenuItem_Click;
+            deconnexionToolStripMenuItem.Alignment = ToolStripItemAlignment.Right;
+            deconnexionToolStripMenuItem.Name = "deconnexionToolStripMenuItem";
+            deconnexionToolStripMenuItem.Size = new Size(128, 32);
+            deconnexionToolStripMenuItem.Text = "DECONNEXION";
+            deconnexionToolStripMenuItem.Click += deconnexionToolStripMenuItem_Click;
             // 
             // FormMenu
             // 
@@ -181,8 +189,6 @@
         }
 
         #endregion
-
-        private MenuStrip menuStrip1;
         private ToolStripMenuItem rESSOURCESToolStripMenuItem;
         private ToolStripMenuItem listeToolStripMenuItem;
         private ToolStripMenuItem ajoutToolStripMenuItem;
@@ -194,5 +200,7 @@
         private Label label1;
         private ToolStripMenuItem supressionToolStripMenuItem;
         private ToolStripMenuItem exemplairesToolStripMenuItem;
+        public MenuStrip menuStrip1;
+        private ToolStripMenuItem deconnexionToolStripMenuItem;
     }
 }

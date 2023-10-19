@@ -57,6 +57,11 @@ namespace AP3_MEDIA
             return monModele.Etats.ToList();
         }
 
+        public static List<User> getListUsers()
+        {
+            return monModele.Users.ToList();
+        }
+
         /// <summary>
         /// Fonction qui retourne la liste des exemplaires d'une ressource dont l'identifiant est passé en paramètre
         /// </summary>

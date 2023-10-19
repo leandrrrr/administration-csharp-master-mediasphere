@@ -11,6 +11,8 @@ namespace AP3_MEDIA
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            menuStrip1.Visible = false;
+            openChildForm(new FormConnexion(this));
 
         }
 
@@ -113,10 +115,16 @@ namespace AP3_MEDIA
 
         private void exemplairesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
-                openChildForm(new FormGestionExemplaires());
 
-            
+            openChildForm(new FormGestionExemplaires());
+
+
+        }
+
+        private void deconnexionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            menuStrip1.Visible = false;
+            openChildForm(new FormConnexion(this));
         }
     }
 }
