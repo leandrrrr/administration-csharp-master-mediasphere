@@ -30,19 +30,7 @@ namespace AP3_MEDIA
 
         private void FormEmprunteurs_Load(object sender, EventArgs e)
         {
-            bsEmprunteurs.DataSource = Modele.getListEmprunteur().Select(x => new
-            {
-                x.Idemprunteur,
-                x.Nomemprunteur,
-                x.Prenomemprunteur,
-                x.Datenaissance,
-                x.Emailemprunteur,
-                x.Telportable
-            }).OrderBy(x => x.Idemprunteur).ToList();
-
-            dgvEmprunteurs.DataSource = bsEmprunteurs;
-
-            dgvEmprunteurs.Columns["Idemprunteur"].Visible = false;
+            
 
         }
 
@@ -50,6 +38,26 @@ namespace AP3_MEDIA
         {
             FormPopDGV formPopDGV = new FormPopDGV("Aucun Aide");
             formPopDGV.Show();
+        }
+
+        private void voirLesEmpruntsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bsExemplaires_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void contextMenuStrip1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvEmprunteurs_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            dgvEmprunts.Visible = true;
         }
     }
 }

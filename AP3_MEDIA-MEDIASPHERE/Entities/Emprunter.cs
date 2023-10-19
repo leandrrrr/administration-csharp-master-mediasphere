@@ -20,4 +20,7 @@ public partial class Emprunter
     public virtual Exemplaire Id { get; set; } = null!;
 
     public virtual Emprunteur IdemprunteurNavigation { get; set; } = null!;
+
+    public virtual Ressource IdRessourceNavigation { get; set; } = null!;
+
 }

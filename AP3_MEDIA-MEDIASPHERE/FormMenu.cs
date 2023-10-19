@@ -50,7 +50,7 @@ namespace AP3_MEDIA
         private async void listeToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            openChildForm(new FormRessources());
+            openChildForm(new FormRessources("ressources"));
 
         }
 
@@ -77,7 +77,7 @@ namespace AP3_MEDIA
 
         private void eMPRUNTEURToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            openChildForm(new FormEmprunteurs());
+            openChildForm(new FormRessources("emprunteurs"));
         }
 
         private void supressionToolStripMenuItem_Click(object sender, EventArgs e)
@@ -125,6 +125,16 @@ namespace AP3_MEDIA
         {
             menuStrip1.Visible = false;
             openChildForm(new FormConnexion(this));
+        }
+
+        private void eMPRUNTSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void eMPRUNTEURSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormEmprunteurs());
         }
     }
 }

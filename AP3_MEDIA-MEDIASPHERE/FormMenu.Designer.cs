@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             menuStrip1 = new MenuStrip();
+            qUITTERToolStripMenuItem = new ToolStripMenuItem();
             rESSOURCESToolStripMenuItem = new ToolStripMenuItem();
             listeToolStripMenuItem = new ToolStripMenuItem();
             ajoutToolStripMenuItem = new ToolStripMenuItem();
@@ -37,11 +38,10 @@
             supressionToolStripMenuItem = new ToolStripMenuItem();
             eMPRUNTEURToolStripMenuItem = new ToolStripMenuItem();
             cATEGORIESToolStripMenuItem = new ToolStripMenuItem();
-            qUITTERToolStripMenuItem = new ToolStripMenuItem();
             exemplairesToolStripMenuItem = new ToolStripMenuItem();
+            deconnexionToolStripMenuItem = new ToolStripMenuItem();
             panelPrincipal = new Panel();
             label1 = new Label();
-            deconnexionToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             panelPrincipal.SuspendLayout();
             SuspendLayout();
@@ -59,6 +59,18 @@
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
             // 
+            // qUITTERToolStripMenuItem
+            // 
+            qUITTERToolStripMenuItem.BackColor = SystemColors.ButtonFace;
+            qUITTERToolStripMenuItem.Font = new Font("Lucida Sans Unicode", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            qUITTERToolStripMenuItem.ForeColor = Color.Crimson;
+            qUITTERToolStripMenuItem.Margin = new Padding(0, 0, 20, 0);
+            qUITTERToolStripMenuItem.Name = "qUITTERToolStripMenuItem";
+            qUITTERToolStripMenuItem.Padding = new Padding(7, 5, 7, 5);
+            qUITTERToolStripMenuItem.Size = new Size(36, 32);
+            qUITTERToolStripMenuItem.Text = "X";
+            qUITTERToolStripMenuItem.Click += qUITTERToolStripMenuItem_Click;
+            // 
             // rESSOURCESToolStripMenuItem
             // 
             rESSOURCESToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { listeToolStripMenuItem, ajoutToolStripMenuItem, modificationToolStripMenuItem, supressionToolStripMenuItem });
@@ -70,28 +82,28 @@
             // listeToolStripMenuItem
             // 
             listeToolStripMenuItem.Name = "listeToolStripMenuItem";
-            listeToolStripMenuItem.Size = new Size(181, 26);
+            listeToolStripMenuItem.Size = new Size(224, 26);
             listeToolStripMenuItem.Text = "Liste";
             listeToolStripMenuItem.Click += listeToolStripMenuItem_Click;
             // 
             // ajoutToolStripMenuItem
             // 
             ajoutToolStripMenuItem.Name = "ajoutToolStripMenuItem";
-            ajoutToolStripMenuItem.Size = new Size(181, 26);
+            ajoutToolStripMenuItem.Size = new Size(224, 26);
             ajoutToolStripMenuItem.Text = "Ajout";
             ajoutToolStripMenuItem.Click += ajoutToolStripMenuItem_Click;
             // 
             // modificationToolStripMenuItem
             // 
             modificationToolStripMenuItem.Name = "modificationToolStripMenuItem";
-            modificationToolStripMenuItem.Size = new Size(181, 26);
+            modificationToolStripMenuItem.Size = new Size(224, 26);
             modificationToolStripMenuItem.Text = "Modification";
             modificationToolStripMenuItem.Click += modificationToolStripMenuItem_Click;
             // 
             // supressionToolStripMenuItem
             // 
             supressionToolStripMenuItem.Name = "supressionToolStripMenuItem";
-            supressionToolStripMenuItem.Size = new Size(181, 26);
+            supressionToolStripMenuItem.Size = new Size(224, 26);
             supressionToolStripMenuItem.Text = "Supression";
             supressionToolStripMenuItem.Click += supressionToolStripMenuItem_Click;
             // 
@@ -111,18 +123,6 @@
             cATEGORIESToolStripMenuItem.Text = "CATEGORIES";
             cATEGORIESToolStripMenuItem.Click += cATEGORIESToolStripMenuItem_Click;
             // 
-            // qUITTERToolStripMenuItem
-            // 
-            qUITTERToolStripMenuItem.BackColor = SystemColors.ButtonFace;
-            qUITTERToolStripMenuItem.Font = new Font("Lucida Sans Unicode", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            qUITTERToolStripMenuItem.ForeColor = Color.Crimson;
-            qUITTERToolStripMenuItem.Margin = new Padding(0, 0, 20, 0);
-            qUITTERToolStripMenuItem.Name = "qUITTERToolStripMenuItem";
-            qUITTERToolStripMenuItem.Padding = new Padding(7, 5, 7, 5);
-            qUITTERToolStripMenuItem.Size = new Size(36, 32);
-            qUITTERToolStripMenuItem.Text = "X";
-            qUITTERToolStripMenuItem.Click += qUITTERToolStripMenuItem_Click;
-            // 
             // exemplairesToolStripMenuItem
             // 
             exemplairesToolStripMenuItem.Margin = new Padding(20, 0, 0, 0);
@@ -130,6 +130,14 @@
             exemplairesToolStripMenuItem.Size = new Size(122, 32);
             exemplairesToolStripMenuItem.Text = "EXEMPLAIRES";
             exemplairesToolStripMenuItem.Click += exemplairesToolStripMenuItem_Click;
+            // 
+            // deconnexionToolStripMenuItem
+            // 
+            deconnexionToolStripMenuItem.Alignment = ToolStripItemAlignment.Right;
+            deconnexionToolStripMenuItem.Name = "deconnexionToolStripMenuItem";
+            deconnexionToolStripMenuItem.Size = new Size(128, 32);
+            deconnexionToolStripMenuItem.Text = "DECONNEXION";
+            deconnexionToolStripMenuItem.Click += deconnexionToolStripMenuItem_Click;
             // 
             // panelPrincipal
             // 
@@ -153,14 +161,6 @@
             label1.Size = new Size(416, 37);
             label1.TabIndex = 0;
             label1.Text = "Bienvenue à la Médiathèque";
-            // 
-            // deconnexionToolStripMenuItem
-            // 
-            deconnexionToolStripMenuItem.Alignment = ToolStripItemAlignment.Right;
-            deconnexionToolStripMenuItem.Name = "deconnexionToolStripMenuItem";
-            deconnexionToolStripMenuItem.Size = new Size(128, 32);
-            deconnexionToolStripMenuItem.Text = "DECONNEXION";
-            deconnexionToolStripMenuItem.Click += deconnexionToolStripMenuItem_Click;
             // 
             // FormMenu
             // 

@@ -72,6 +72,13 @@ namespace AP3_MEDIA
             List<Exemplaire> lesEx = monModele.Exemplaires.Where(p => p.Idressource == idR).Include(p=> p.IdetatNavigation).ToList();
             return lesEx;
         }
+        public static List<Emprunter> listeEmpruntsParEmpruteurs(int idR)
+        {
+            List<Emprunter> lesEx = monModele.Emprunters.Where(p => p.Idemprunteur == idR).Include(p => p.IdRessourceNavigation).ToList();
+            return lesEx;
+        }
+        
+
 
         /// <summary>
         /// Fonction qui retourne vrai si l'ajout d'une ressource peut s'effectuer

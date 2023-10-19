@@ -35,7 +35,6 @@
             label1 = new Label();
             btnFermer = new Button();
             bsRessources = new BindingSource(components);
-            label2 = new Label();
             bsExemplaires = new BindingSource(components);
             dgvExemplaires = new DataGridView();
             button1 = new Button();
@@ -109,29 +108,18 @@
             // 
             bsRessources.CurrentChanged += bsRessources_CurrentChanged;
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Oxanium", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(74, 342);
-            label2.Name = "label2";
-            label2.Size = new Size(552, 23);
-            label2.TabIndex = 4;
-            label2.Text = "click droit sur la ressource sélectionnée pour voir ses exemplaires";
-            label2.Click += label2_Click;
-            // 
             // dgvExemplaires
             // 
             dgvExemplaires.AllowUserToAddRows = false;
             dgvExemplaires.AllowUserToDeleteRows = false;
             dgvExemplaires.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvExemplaires.Location = new Point(674, 65);
+            dgvExemplaires.Location = new Point(418, 52);
             dgvExemplaires.Margin = new Padding(3, 4, 3, 4);
             dgvExemplaires.Name = "dgvExemplaires";
             dgvExemplaires.ReadOnly = true;
             dgvExemplaires.RowHeadersWidth = 51;
             dgvExemplaires.RowTemplate.Height = 25;
-            dgvExemplaires.Size = new Size(289, 134);
+            dgvExemplaires.Size = new Size(518, 273);
             dgvExemplaires.TabIndex = 5;
             dgvExemplaires.Visible = false;
             dgvExemplaires.CellContentClick += dgvExemplaires_CellContentClick;
@@ -159,7 +147,6 @@
             ClientSize = new Size(1028, 428);
             Controls.Add(button1);
             Controls.Add(dgvExemplaires);
-            Controls.Add(label2);
             Controls.Add(btnFermer);
             Controls.Add(label1);
             Controls.Add(dgvRessources);
@@ -186,7 +173,6 @@
         private BindingSource bsRessources;
         private ContextMenuStrip contextMenuStrip1;
         private ToolStripMenuItem voirLesExemplaireToolStripMenuItem;
-        private Label label2;
         private BindingSource bsExemplaires;
         private DataGridView dgvExemplaires;
         private Button button1;
