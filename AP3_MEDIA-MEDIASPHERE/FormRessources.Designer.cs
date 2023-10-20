@@ -51,6 +51,8 @@
             dgvRessources.AllowUserToDeleteRows = false;
             dgvRessources.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dgvRessources.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvRessources.BackgroundColor = Color.FromArgb(154, 206, 234);
+            dgvRessources.BorderStyle = BorderStyle.None;
             dgvRessources.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvRessources.ContextMenuStrip = contextMenuStrip1;
             dgvRessources.Location = new Point(74, 52);
@@ -95,7 +97,7 @@
             btnFermer.FlatStyle = FlatStyle.Popup;
             btnFermer.Font = new Font("Oxanium", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnFermer.ForeColor = Color.White;
-            btnFermer.Location = new Point(801, 332);
+            btnFermer.Location = new Point(881, 357);
             btnFermer.Margin = new Padding(3, 4, 3, 4);
             btnFermer.Name = "btnFermer";
             btnFermer.Size = new Size(135, 58);
@@ -112,6 +114,8 @@
             // 
             dgvExemplaires.AllowUserToAddRows = false;
             dgvExemplaires.AllowUserToDeleteRows = false;
+            dgvExemplaires.BackgroundColor = Color.FromArgb(154, 206, 234);
+            dgvExemplaires.BorderStyle = BorderStyle.None;
             dgvExemplaires.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvExemplaires.Location = new Point(418, 52);
             dgvExemplaires.Margin = new Padding(3, 4, 3, 4);
