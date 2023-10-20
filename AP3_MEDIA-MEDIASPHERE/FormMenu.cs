@@ -4,6 +4,8 @@ namespace AP3_MEDIA
 {
     public partial class FormMenu : Form
     {
+
+        bool DevMode = true;
         public FormMenu()
         {
             InitializeComponent();
@@ -11,8 +13,11 @@ namespace AP3_MEDIA
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            menuStrip1.Visible = false;
-            openChildForm(new FormConnexion(this));
+            if (!DevMode)
+            {
+                menuStrip1.Visible = false;
+                openChildForm(new FormConnexion(this));
+            }
 
         }
 

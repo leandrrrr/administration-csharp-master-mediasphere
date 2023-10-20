@@ -94,7 +94,7 @@ namespace AP3_MEDIA
 
         private void btnFermer_Click(object sender, EventArgs e)
         {
-            int idEtatAdd = cbEtat.SelectedIndex;
+            int idEtatAdd = Convert.ToInt32( cbEtat.SelectedValue) ;
             int idRessourceAdd = lbRessources.SelectedIndex;
             DateTime dateRessourceAdd = dateTimePicker1.Value;
 

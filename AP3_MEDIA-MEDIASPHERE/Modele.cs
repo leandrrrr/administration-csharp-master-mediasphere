@@ -127,11 +127,12 @@ namespace AP3_MEDIA
             try
             {
                 // ajout dans la table Ressource
-
+                int timeStamp = (int)((DateTimeOffset)DateTime.UtcNow).ToUnixTimeSeconds();
                 uneExemplaire = new Exemplaire();
                 uneExemplaire.Idressource = idRessource;
                 uneExemplaire.Idetat = idEtat;
                 uneExemplaire.Dateentree = DateOnly.FromDateTime(date);
+                uneExemplaire.Idexemplaire = timeStamp;
 
                 monModele.Exemplaires.Add(uneExemplaire);
                 monModele.SaveChanges();
