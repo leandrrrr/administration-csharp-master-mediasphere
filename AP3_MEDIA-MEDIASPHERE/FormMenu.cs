@@ -141,5 +141,11 @@ namespace AP3_MEDIA
         {
             openChildForm(new FormEmprunteurs());
         }
+
+        private void lISTEToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormRessources("auteurs"));
+
+        }
     }
 }

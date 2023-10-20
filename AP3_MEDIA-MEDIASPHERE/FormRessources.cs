@@ -66,6 +66,26 @@ namespace AP3_MEDIA
                 dgvRessources.Columns["Idemprunteur"].Visible = false;
             }
 
+            else if (etatForm == "auteurs")
+            {
+
+                voirLesExemplaireToolStripMenuItem.Text = "il fait beau aujourd'hui";
+                bsRessources.DataSource = Modele.getListAuteurs().Select(x => new
+                {
+                    x.IdAuteur,
+                    x.PrenomAuteur
+                    ,
+                    x.NomAuteur
+                }).OrderBy(x => x.IdAuteur).ToList();
+
+                dgvRessources.DataSource = bsRessources;
+
+                dgvRessources.Columns["IdAuteur"].Visible = false;
+                dgvRessources.Columns["PrenomAuteur"].HeaderText = "Prenom";
+                dgvRessources.Columns["NomAuteur"].HeaderText = "Nom";
+
+            }
+
 
 
         }

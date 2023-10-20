@@ -40,6 +40,9 @@
             cATEGORIESToolStripMenuItem = new ToolStripMenuItem();
             exemplairesToolStripMenuItem = new ToolStripMenuItem();
             deconnexionToolStripMenuItem = new ToolStripMenuItem();
+            aUTEURToolStripMenuItem = new ToolStripMenuItem();
+            aJOUTToolStripMenuItem1 = new ToolStripMenuItem();
+            lISTEToolStripMenuItem1 = new ToolStripMenuItem();
             panelPrincipal = new Panel();
             label1 = new Label();
             menuStrip1.SuspendLayout();
@@ -51,7 +54,7 @@
             menuStrip1.BackColor = SystemColors.Window;
             menuStrip1.Font = new Font("Oxanium Medium", 9F, FontStyle.Regular, GraphicsUnit.Point);
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { qUITTERToolStripMenuItem, rESSOURCESToolStripMenuItem, eMPRUNTEURToolStripMenuItem, cATEGORIESToolStripMenuItem, exemplairesToolStripMenuItem, deconnexionToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { qUITTERToolStripMenuItem, rESSOURCESToolStripMenuItem, eMPRUNTEURToolStripMenuItem, cATEGORIESToolStripMenuItem, exemplairesToolStripMenuItem, deconnexionToolStripMenuItem, aUTEURToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(8, 10, 0, 10);
@@ -139,6 +142,27 @@
             deconnexionToolStripMenuItem.Text = "DECONNEXION";
             deconnexionToolStripMenuItem.Click += deconnexionToolStripMenuItem_Click;
             // 
+            // aUTEURToolStripMenuItem
+            // 
+            aUTEURToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aJOUTToolStripMenuItem1, lISTEToolStripMenuItem1 });
+            aUTEURToolStripMenuItem.Margin = new Padding(20, 0, 0, 0);
+            aUTEURToolStripMenuItem.Name = "aUTEURToolStripMenuItem";
+            aUTEURToolStripMenuItem.Size = new Size(81, 32);
+            aUTEURToolStripMenuItem.Text = "AUTEUR";
+            // 
+            // aJOUTToolStripMenuItem1
+            // 
+            aJOUTToolStripMenuItem1.Name = "aJOUTToolStripMenuItem1";
+            aJOUTToolStripMenuItem1.Size = new Size(224, 26);
+            aJOUTToolStripMenuItem1.Text = "AJOUT";
+            // 
+            // lISTEToolStripMenuItem1
+            // 
+            lISTEToolStripMenuItem1.Name = "lISTEToolStripMenuItem1";
+            lISTEToolStripMenuItem1.Size = new Size(224, 26);
+            lISTEToolStripMenuItem1.Text = "LISTE";
+            lISTEToolStripMenuItem1.Click += lISTEToolStripMenuItem1_Click;
+            // 
             // panelPrincipal
             // 
             panelPrincipal.BackColor = Color.FromArgb(154, 206, 234);
@@ -166,6 +190,7 @@
             // 
             AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(154, 206, 234);
             ClientSize = new Size(1028, 453);
             ControlBox = false;
             Controls.Add(panelPrincipal);
@@ -202,5 +227,8 @@
         private ToolStripMenuItem exemplairesToolStripMenuItem;
         public MenuStrip menuStrip1;
         private ToolStripMenuItem deconnexionToolStripMenuItem;
+        private ToolStripMenuItem aUTEURToolStripMenuItem;
+        private ToolStripMenuItem aJOUTToolStripMenuItem1;
+        private ToolStripMenuItem lISTEToolStripMenuItem1;
     }
 }

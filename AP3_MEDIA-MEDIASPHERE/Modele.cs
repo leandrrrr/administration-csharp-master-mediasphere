@@ -28,6 +28,10 @@ namespace AP3_MEDIA
         {
             return monModele.Categories.ToList();
         }
+        public static List<Auteur> getListAuteurs()
+        {
+            return monModele.Auteurs.ToList();
+        }
 
         public static List<Emprunteur> getListEmprunteur()
         {

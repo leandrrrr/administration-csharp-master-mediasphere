@@ -15,6 +15,10 @@ public partial class MediatoutContext : DbContext
     {
     }
 
+    public virtual DbSet<Auteur> Auteurs { get; set; }
+
+    public virtual DbSet<AuteurRessource> AuteurRessources { get; set; }
+
     public virtual DbSet<Categorie> Categories { get; set; }
 
     public virtual DbSet<Emprunter> Emprunters { get; set; }
@@ -38,6 +42,38 @@ public partial class MediatoutContext : DbContext
         modelBuilder
             .UseCollation("utf8mb4_general_ci")
             .HasCharSet("utf8mb4");
+
+        modelBuilder.Entity<Auteur>(entity =>
+        {
+            entity.HasKey(e => e.IdAuteur).HasName("PRIMARY");
+
+            entity.ToTable("auteur");
+
+            entity.Property(e => e.IdAuteur)
+                .HasColumnType("int(11)")
+                .HasColumnName("idAuteur");
+            entity.Property(e => e.NomAuteur)
+                .HasMaxLength(255)
+                .HasColumnName("nomAuteur");
+            entity.Property(e => e.PrenomAuteur)
+                .HasMaxLength(244)
+                .HasColumnName("prenomAuteur");
+        });
+
+        modelBuilder.Entity<AuteurRessource>(entity =>
+        {
+            entity.HasKey(e => e.IdAuteur).HasName("PRIMARY");
+
+            entity.ToTable("auteur_ressource");
+
+            entity.Property(e => e.IdAuteur)
+                .ValueGeneratedNever()
+                .HasColumnType("int(11)")
+                .HasColumnName("idAuteur");
+            entity.Property(e => e.IdRessource)
+                .HasColumnType("int(11)")
+                .HasColumnName("idRessource");
+        });
 
         modelBuilder.Entity<Categorie>(entity =>
         {
@@ -181,6 +217,8 @@ public partial class MediatoutContext : DbContext
 
             entity.HasIndex(e => e.Idcategorie, "i_fk_ressource_categorie1");
 
+            entity.HasIndex(e => e.IdAuteur, "idAuteur");
+
             entity.Property(e => e.Idressource)
                 .HasColumnType("int(11)")
                 .HasColumnName("idressource");
@@ -190,6 +228,9 @@ public partial class MediatoutContext : DbContext
             entity.Property(e => e.Description)
                 .HasMaxLength(255)
                 .HasColumnName("description");
+            entity.Property(e => e.IdAuteur)
+                .HasColumnType("int(11)")
+                .HasColumnName("idAuteur");
             entity.Property(e => e.Idcategorie)
                 .HasColumnType("int(11)")
                 .HasColumnName("idcategorie");
@@ -218,6 +259,8 @@ public partial class MediatoutContext : DbContext
             entity.HasKey(e => e.IdUser).HasName("PRIMARY");
 
             entity.ToTable("User");
+
+            entity.HasIndex(e => e.MailUser, "mailUser").IsUnique();
 
             entity.Property(e => e.IdUser)
                 .ValueGeneratedNever()

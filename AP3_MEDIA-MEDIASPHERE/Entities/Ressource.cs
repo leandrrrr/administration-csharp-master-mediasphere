@@ -9,6 +9,8 @@ public partial class Ressource
 
     public int Idcategorie { get; set; }
 
+    public int? IdAuteur { get; set; }
+
     public string Titre { get; set; } = null!;
 
     public string? Description { get; set; }
@@ -24,6 +26,4 @@ public partial class Ressource
     public virtual ICollection<Exemplaire> Exemplaires { get; set; } = new List<Exemplaire>();
 
     public virtual Categorie IdcategorieNavigation { get; set; } = null!;
-
-
 }
