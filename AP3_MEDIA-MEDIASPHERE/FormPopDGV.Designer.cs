@@ -29,9 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPopDGV));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             pictureBox1 = new PictureBox();
+            gbtExemplaires = new Guna.UI2.WinForms.Guna2Button();
             richTextBox1 = new RichTextBox();
-            btnAjouter = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -47,33 +49,38 @@
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
+            // gbtExemplaires
+            // 
+            gbtExemplaires.BackColor = Color.White;
+            gbtExemplaires.BorderRadius = 6;
+            gbtExemplaires.CustomizableEdges = customizableEdges1;
+            gbtExemplaires.DisabledState.BorderColor = Color.DarkGray;
+            gbtExemplaires.DisabledState.CustomBorderColor = Color.DarkGray;
+            gbtExemplaires.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gbtExemplaires.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gbtExemplaires.Font = new Font("Oxanium Medium", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            gbtExemplaires.ForeColor = Color.White;
+            gbtExemplaires.Location = new Point(49, 345);
+            gbtExemplaires.Name = "gbtExemplaires";
+            gbtExemplaires.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            gbtExemplaires.Size = new Size(426, 52);
+            gbtExemplaires.TabIndex = 14;
+            gbtExemplaires.Text = "OK";
+            // 
             // richTextBox1
             // 
+            richTextBox1.BackColor = Color.White;
+            richTextBox1.BorderStyle = BorderStyle.None;
             richTextBox1.Font = new Font("Oxanium", 12F, FontStyle.Regular, GraphicsUnit.Point);
             richTextBox1.ForeColor = Color.MidnightBlue;
-            richTextBox1.Location = new Point(49, 41);
+            richTextBox1.Location = new Point(49, 40);
             richTextBox1.Name = "richTextBox1";
             richTextBox1.ReadOnly = true;
             richTextBox1.ScrollBars = RichTextBoxScrollBars.Vertical;
-            richTextBox1.Size = new Size(426, 356);
+            richTextBox1.Size = new Size(426, 357);
             richTextBox1.TabIndex = 2;
             richTextBox1.Text = "";
             richTextBox1.TextChanged += richTextBox1_TextChanged;
-            // 
-            // btnAjouter
-            // 
-            btnAjouter.BackColor = Color.FromArgb(24, 24, 20);
-            btnAjouter.FlatStyle = FlatStyle.Popup;
-            btnAjouter.Font = new Font("Oxanium Medium", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAjouter.ForeColor = Color.White;
-            btnAjouter.Location = new Point(227, 361);
-            btnAjouter.Margin = new Padding(3, 4, 3, 4);
-            btnAjouter.Name = "btnAjouter";
-            btnAjouter.Size = new Size(79, 49);
-            btnAjouter.TabIndex = 13;
-            btnAjouter.Text = "OK";
-            btnAjouter.UseVisualStyleBackColor = false;
-            btnAjouter.Click += btnAjouter_Click;
             // 
             // FormPopDGV
             // 
@@ -83,7 +90,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(525, 435);
-            Controls.Add(btnAjouter);
+            Controls.Add(gbtExemplaires);
             Controls.Add(richTextBox1);
             Controls.Add(pictureBox1);
             DoubleBuffered = true;
@@ -99,7 +106,7 @@
         #endregion
 
         private PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2Button gbtExemplaires;
         private RichTextBox richTextBox1;
-        private Button btnAjouter;
     }
 }
