@@ -29,15 +29,18 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             dgvRessources = new DataGridView();
             contextMenuStrip1 = new ContextMenuStrip(components);
             voirLesExemplaireToolStripMenuItem = new ToolStripMenuItem();
             label1 = new Label();
-            btnFermer = new Button();
             bsRessources = new BindingSource(components);
             bsExemplaires = new BindingSource(components);
             dgvExemplaires = new DataGridView();
-            button1 = new Button();
+            gbtHelp = new Guna.UI2.WinForms.Guna2CircleButton();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)dgvRessources).BeginInit();
             contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bsRessources).BeginInit();
@@ -91,21 +94,6 @@
             label1.TabIndex = 1;
             label1.Text = "Liste des Ressources";
             // 
-            // btnFermer
-            // 
-            btnFermer.BackColor = Color.Black;
-            btnFermer.FlatStyle = FlatStyle.Popup;
-            btnFermer.Font = new Font("Oxanium", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnFermer.ForeColor = Color.White;
-            btnFermer.Location = new Point(881, 357);
-            btnFermer.Margin = new Padding(3, 4, 3, 4);
-            btnFermer.Name = "btnFermer";
-            btnFermer.Size = new Size(135, 58);
-            btnFermer.TabIndex = 2;
-            btnFermer.Text = "FERMER";
-            btnFermer.UseVisualStyleBackColor = false;
-            btnFermer.Click += btnFermer_Click;
-            // 
             // bsRessources
             // 
             bsRessources.CurrentChanged += bsRessources_CurrentChanged;
@@ -128,20 +116,42 @@
             dgvExemplaires.Visible = false;
             dgvExemplaires.CellContentClick += dgvExemplaires_CellContentClick;
             // 
-            // button1
+            // gbtHelp
             // 
-            button1.BackColor = Color.Black;
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Font = new Font("Oxanium ExtraBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(981, 13);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(35, 35);
-            button1.TabIndex = 14;
-            button1.Text = "?";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            gbtHelp.DisabledState.BorderColor = Color.DarkGray;
+            gbtHelp.DisabledState.CustomBorderColor = Color.DarkGray;
+            gbtHelp.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gbtHelp.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gbtHelp.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            gbtHelp.ForeColor = Color.White;
+            gbtHelp.Image = Properties.Resources.icons8_about_50;
+            gbtHelp.ImageSize = new Size(27, 27);
+            gbtHelp.Location = new Point(976, 12);
+            gbtHelp.Name = "gbtHelp";
+            gbtHelp.ShadowDecoration.CustomizableEdges = customizableEdges1;
+            gbtHelp.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            gbtHelp.Size = new Size(40, 40);
+            gbtHelp.TabIndex = 35;
+            gbtHelp.Click += gbtHelp_Click;
+            // 
+            // guna2Button1
+            // 
+            guna2Button1.BackColor = Color.FromArgb(154, 206, 234);
+            guna2Button1.BorderRadius = 6;
+            guna2Button1.CustomizableEdges = customizableEdges2;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.Font = new Font("Oxanium Medium", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            guna2Button1.ForeColor = Color.White;
+            guna2Button1.Location = new Point(881, 358);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges3;
+            guna2Button1.Size = new Size(135, 58);
+            guna2Button1.TabIndex = 34;
+            guna2Button1.Text = "Fermer";
+            guna2Button1.Click += guna2Button1_Click;
             // 
             // FormRessources
             // 
@@ -149,9 +159,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(154, 206, 234);
             ClientSize = new Size(1028, 428);
-            Controls.Add(button1);
+            Controls.Add(gbtHelp);
+            Controls.Add(guna2Button1);
             Controls.Add(dgvExemplaires);
-            Controls.Add(btnFermer);
             Controls.Add(label1);
             Controls.Add(dgvRessources);
             Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -173,12 +183,12 @@
 
         private DataGridView dgvRessources;
         private Label label1;
-        private Button btnFermer;
         private BindingSource bsRessources;
         private ContextMenuStrip contextMenuStrip1;
         private ToolStripMenuItem voirLesExemplaireToolStripMenuItem;
         private BindingSource bsExemplaires;
         private DataGridView dgvExemplaires;
-        private Button button1;
+        private Guna.UI2.WinForms.Guna2CircleButton gbtHelp;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

@@ -47,12 +47,12 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Oxanium", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(55, 33);
+            label1.Font = new Font("Oxanium", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(404, 40);
             label1.Name = "label1";
-            label1.Size = new Size(261, 29);
+            label1.Size = new Size(268, 37);
             label1.TabIndex = 4;
-            label1.Text = "Liste des emprunteurs";
+            label1.Text = "FORM INUTILISER";
             // 
             // dgvEmprunteurs
             // 
@@ -61,7 +61,7 @@
             dgvEmprunteurs.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dgvEmprunteurs.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvEmprunteurs.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvEmprunteurs.Location = new Point(55, 67);
+            dgvEmprunteurs.Location = new Point(-57, 111);
             dgvEmprunteurs.Margin = new Padding(3, 4, 3, 4);
             dgvEmprunteurs.Name = "dgvEmprunteurs";
             dgvEmprunteurs.ReadOnly = true;
@@ -96,7 +96,7 @@
             dgvEmprunts.AllowUserToAddRows = false;
             dgvEmprunts.AllowUserToDeleteRows = false;
             dgvEmprunts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvEmprunts.Location = new Point(455, 67);
+            dgvEmprunts.Location = new Point(586, 122);
             dgvEmprunts.Margin = new Padding(3, 4, 3, 4);
             dgvEmprunts.Name = "dgvEmprunts";
             dgvEmprunts.ReadOnly = true;
@@ -117,7 +117,7 @@
             // voirLesEmpruntsToolStripMenuItem
             // 
             voirLesEmpruntsToolStripMenuItem.Name = "voirLesEmpruntsToolStripMenuItem";
-            voirLesEmpruntsToolStripMenuItem.Size = new Size(210, 24);
+            voirLesEmpruntsToolStripMenuItem.Size = new Size(191, 24);
             voirLesEmpruntsToolStripMenuItem.Text = "voir les emprunts";
             voirLesEmpruntsToolStripMenuItem.Click += voirLesEmpruntsToolStripMenuItem_Click;
             // 
