@@ -29,35 +29,46 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGestionRessources));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label1 = new Label();
-            gbInfo = new GroupBox();
-            cbCategories = new ComboBox();
-            label8 = new Label();
-            tbLangue = new TextBox();
-            label7 = new Label();
-            tbIsbn = new TextBox();
-            label6 = new Label();
-            label5 = new Label();
-            tbAnnee = new TextBox();
-            tbImage = new TextBox();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            tbDescription = new TextBox();
-            tbTitre = new TextBox();
-            btnAjouter = new Button();
-            btnFermer = new Button();
             bsCategories = new BindingSource(components);
             cbRessources = new ComboBox();
             bsRessources = new BindingSource(components);
             button1 = new Button();
             bsEtats = new BindingSource(components);
-            button2 = new Button();
-            gbInfo.SuspendLayout();
+            gbtHelp = new Guna.UI2.WinForms.Guna2CircleButton();
+            tbDescription = new TextBox();
+            label3 = new Label();
+            label8 = new Label();
+            cbCategories = new ComboBox();
+            gtbIsbn = new Guna.UI2.WinForms.Guna2TextBox();
+            ggbInfo = new Guna.UI2.WinForms.Guna2GroupBox();
+            gtbTitre = new Guna.UI2.WinForms.Guna2TextBox();
+            gtbImage = new Guna.UI2.WinForms.Guna2TextBox();
+            gtbAnnee = new Guna.UI2.WinForms.Guna2TextBox();
+            gtbLangue = new Guna.UI2.WinForms.Guna2TextBox();
+            gbtnAjouter = new Guna.UI2.WinForms.Guna2Button();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)bsCategories).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsRessources).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsEtats).BeginInit();
+            ggbInfo.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -69,223 +80,6 @@
             label1.Size = new Size(253, 29);
             label1.TabIndex = 2;
             label1.Text = "Ajout d'une ressource";
-            // 
-            // gbInfo
-            // 
-            gbInfo.BackgroundImage = (Image)resources.GetObject("gbInfo.BackgroundImage");
-            gbInfo.BackgroundImageLayout = ImageLayout.Stretch;
-            gbInfo.Controls.Add(cbCategories);
-            gbInfo.Controls.Add(label8);
-            gbInfo.Controls.Add(tbLangue);
-            gbInfo.Controls.Add(label7);
-            gbInfo.Controls.Add(tbIsbn);
-            gbInfo.Controls.Add(label6);
-            gbInfo.Controls.Add(label5);
-            gbInfo.Controls.Add(tbAnnee);
-            gbInfo.Controls.Add(tbImage);
-            gbInfo.Controls.Add(label4);
-            gbInfo.Controls.Add(label3);
-            gbInfo.Controls.Add(label2);
-            gbInfo.Controls.Add(tbDescription);
-            gbInfo.Controls.Add(tbTitre);
-            gbInfo.FlatStyle = FlatStyle.Flat;
-            gbInfo.Font = new Font("Oxanium Medium", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            gbInfo.Location = new Point(66, 58);
-            gbInfo.Margin = new Padding(3, 4, 3, 4);
-            gbInfo.Name = "gbInfo";
-            gbInfo.Padding = new Padding(2, 4, 3, 4);
-            gbInfo.Size = new Size(879, 292);
-            gbInfo.TabIndex = 3;
-            gbInfo.TabStop = false;
-            gbInfo.Text = "Informations de la ressource";
-            gbInfo.Enter += gbInfo_Enter;
-            // 
-            // cbCategories
-            // 
-            cbCategories.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbCategories.FlatStyle = FlatStyle.Flat;
-            cbCategories.Font = new Font("Oxanium", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            cbCategories.FormattingEnabled = true;
-            cbCategories.Location = new Point(282, 233);
-            cbCategories.Margin = new Padding(3, 4, 3, 4);
-            cbCategories.Name = "cbCategories";
-            cbCategories.Size = new Size(240, 29);
-            cbCategories.TabIndex = 6;
-            cbCategories.SelectedIndexChanged += cbCategories_SelectedIndexChanged;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Oxanium Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(281, 203);
-            label8.Name = "label8";
-            label8.Size = new Size(110, 21);
-            label8.TabIndex = 11;
-            label8.Text = "Catégorie *";
-            // 
-            // tbLangue
-            // 
-            tbLangue.BorderStyle = BorderStyle.None;
-            tbLangue.Font = new Font("Oxanium", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            tbLangue.Location = new Point(551, 154);
-            tbLangue.Margin = new Padding(3, 4, 3, 4);
-            tbLangue.MaxLength = 2;
-            tbLangue.Name = "tbLangue";
-            tbLangue.Size = new Size(83, 22);
-            tbLangue.TabIndex = 5;
-            tbLangue.KeyPress += tbLangue_KeyPress;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Oxanium Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(550, 128);
-            label7.Name = "label7";
-            label7.Size = new Size(74, 21);
-            label7.TabIndex = 9;
-            label7.Text = "Langue";
-            // 
-            // tbIsbn
-            // 
-            tbIsbn.BorderStyle = BorderStyle.None;
-            tbIsbn.Font = new Font("Oxanium", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            tbIsbn.Location = new Point(551, 78);
-            tbIsbn.Margin = new Padding(3, 4, 3, 4);
-            tbIsbn.MaxLength = 13;
-            tbIsbn.Name = "tbIsbn";
-            tbIsbn.Size = new Size(212, 22);
-            tbIsbn.TabIndex = 4;
-            tbIsbn.KeyPress += tbIsbn_KeyPress;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Oxanium Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Image = Properties.Resources.border_style___Copie;
-            label6.Location = new Point(550, 52);
-            label6.Name = "label6";
-            label6.Size = new Size(52, 21);
-            label6.TabIndex = 8;
-            label6.Text = "ISBN";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Oxanium Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(282, 124);
-            label5.Name = "label5";
-            label5.Size = new Size(150, 21);
-            label5.TabIndex = 7;
-            label5.Text = "Année de sortie";
-            label5.Click += label5_Click;
-            // 
-            // tbAnnee
-            // 
-            tbAnnee.BorderStyle = BorderStyle.None;
-            tbAnnee.Font = new Font("Oxanium", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            tbAnnee.Location = new Point(284, 154);
-            tbAnnee.Margin = new Padding(3, 4, 3, 4);
-            tbAnnee.MaxLength = 4;
-            tbAnnee.Name = "tbAnnee";
-            tbAnnee.Size = new Size(238, 22);
-            tbAnnee.TabIndex = 3;
-            tbAnnee.TextChanged += tbAnnee_TextChanged;
-            tbAnnee.KeyPress += tbAnnee_KeyPress;
-            // 
-            // tbImage
-            // 
-            tbImage.BorderStyle = BorderStyle.None;
-            tbImage.Font = new Font("Oxanium", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            tbImage.ForeColor = SystemColors.WindowText;
-            tbImage.Location = new Point(284, 78);
-            tbImage.Margin = new Padding(3, 4, 3, 4);
-            tbImage.Multiline = true;
-            tbImage.Name = "tbImage";
-            tbImage.Size = new Size(238, 21);
-            tbImage.TabIndex = 2;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Oxanium Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(282, 52);
-            label4.Name = "label4";
-            label4.Size = new Size(64, 21);
-            label4.TabIndex = 4;
-            label4.Text = "Image";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Oxanium Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(21, 113);
-            label3.Name = "label3";
-            label3.Size = new Size(112, 21);
-            label3.TabIndex = 3;
-            label3.Text = "Description";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Oxanium Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(21, 52);
-            label2.Name = "label2";
-            label2.Size = new Size(67, 21);
-            label2.TabIndex = 2;
-            label2.Text = "Titre *";
-            // 
-            // tbDescription
-            // 
-            tbDescription.BorderStyle = BorderStyle.None;
-            tbDescription.Font = new Font("Oxanium", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            tbDescription.ForeColor = SystemColors.WindowText;
-            tbDescription.Location = new Point(22, 139);
-            tbDescription.Margin = new Padding(3, 4, 3, 4);
-            tbDescription.Multiline = true;
-            tbDescription.Name = "tbDescription";
-            tbDescription.Size = new Size(238, 123);
-            tbDescription.TabIndex = 1;
-            // 
-            // tbTitre
-            // 
-            tbTitre.BorderStyle = BorderStyle.None;
-            tbTitre.Font = new Font("Oxanium", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            tbTitre.ForeColor = SystemColors.WindowText;
-            tbTitre.Location = new Point(22, 78);
-            tbTitre.Margin = new Padding(3, 4, 3, 4);
-            tbTitre.Name = "tbTitre";
-            tbTitre.Size = new Size(238, 22);
-            tbTitre.TabIndex = 0;
-            // 
-            // btnAjouter
-            // 
-            btnAjouter.BackColor = Color.Black;
-            btnAjouter.FlatStyle = FlatStyle.Popup;
-            btnAjouter.Font = new Font("Oxanium Medium", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAjouter.ForeColor = Color.White;
-            btnAjouter.Location = new Point(654, 357);
-            btnAjouter.Margin = new Padding(3, 4, 3, 4);
-            btnAjouter.Name = "btnAjouter";
-            btnAjouter.Size = new Size(128, 44);
-            btnAjouter.TabIndex = 12;
-            btnAjouter.Text = "AJOUTER";
-            btnAjouter.UseVisualStyleBackColor = false;
-            btnAjouter.Click += btnAjouter_Click;
-            // 
-            // btnFermer
-            // 
-            btnFermer.BackColor = Color.Black;
-            btnFermer.FlatStyle = FlatStyle.Popup;
-            btnFermer.Font = new Font("Oxanium Medium", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnFermer.ForeColor = Color.White;
-            btnFermer.Location = new Point(810, 357);
-            btnFermer.Margin = new Padding(3, 4, 3, 4);
-            btnFermer.Name = "btnFermer";
-            btnFermer.Size = new Size(135, 44);
-            btnFermer.TabIndex = 4;
-            btnFermer.Text = "FERMER";
-            btnFermer.UseVisualStyleBackColor = false;
-            btnFermer.Click += btnFermer_Click;
             // 
             // cbRessources
             // 
@@ -310,7 +104,7 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Oxanium", 12F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(0, 397);
+            button1.Location = new Point(3, 486);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
             button1.Size = new Size(40, 28);
@@ -318,34 +112,268 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // button2
+            // gbtHelp
             // 
-            button2.BackColor = Color.Black;
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.Font = new Font("Oxanium ExtraBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(981, 13);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(35, 35);
-            button2.TabIndex = 15;
-            button2.Text = "?";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            gbtHelp.DisabledState.BorderColor = Color.DarkGray;
+            gbtHelp.DisabledState.CustomBorderColor = Color.DarkGray;
+            gbtHelp.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gbtHelp.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gbtHelp.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            gbtHelp.ForeColor = Color.White;
+            gbtHelp.Image = Properties.Resources.icons8_about_50;
+            gbtHelp.ImageSize = new Size(27, 27);
+            gbtHelp.Location = new Point(976, 12);
+            gbtHelp.Name = "gbtHelp";
+            gbtHelp.ShadowDecoration.CustomizableEdges = customizableEdges1;
+            gbtHelp.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            gbtHelp.Size = new Size(40, 40);
+            gbtHelp.TabIndex = 34;
+            // 
+            // tbDescription
+            // 
+            tbDescription.BorderStyle = BorderStyle.FixedSingle;
+            tbDescription.Font = new Font("Oxanium", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            tbDescription.ForeColor = SystemColors.WindowText;
+            tbDescription.Location = new Point(120, 255);
+            tbDescription.Margin = new Padding(3, 4, 3, 4);
+            tbDescription.Multiline = true;
+            tbDescription.Name = "tbDescription";
+            tbDescription.Size = new Size(238, 123);
+            tbDescription.TabIndex = 1;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.FromArgb(94, 148, 255);
+            label3.Font = new Font("Oxanium Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(119, 229);
+            label3.Name = "label3";
+            label3.Size = new Size(112, 21);
+            label3.TabIndex = 3;
+            label3.Text = "Description";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.BackColor = Color.FromArgb(94, 148, 255);
+            label8.Font = new Font("Oxanium Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.ForeColor = Color.White;
+            label8.Location = new Point(379, 319);
+            label8.Name = "label8";
+            label8.Size = new Size(110, 21);
+            label8.TabIndex = 11;
+            label8.Text = "Catégorie *";
+            // 
+            // cbCategories
+            // 
+            cbCategories.BackColor = Color.FromArgb(94, 148, 255);
+            cbCategories.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbCategories.FlatStyle = FlatStyle.Popup;
+            cbCategories.Font = new Font("Oxanium", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            cbCategories.ForeColor = Color.White;
+            cbCategories.FormattingEnabled = true;
+            cbCategories.Location = new Point(380, 349);
+            cbCategories.Margin = new Padding(3, 4, 3, 4);
+            cbCategories.Name = "cbCategories";
+            cbCategories.Size = new Size(240, 29);
+            cbCategories.TabIndex = 6;
+            cbCategories.SelectedIndexChanged += cbCategories_SelectedIndexChanged;
+            // 
+            // gtbIsbn
+            // 
+            gtbIsbn.BackColor = Color.White;
+            gtbIsbn.BorderRadius = 6;
+            gtbIsbn.CustomizableEdges = customizableEdges2;
+            gtbIsbn.DefaultText = "";
+            gtbIsbn.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            gtbIsbn.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            gtbIsbn.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            gtbIsbn.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            gtbIsbn.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gtbIsbn.Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            gtbIsbn.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            gtbIsbn.Location = new Point(582, 85);
+            gtbIsbn.Margin = new Padding(3, 4, 3, 4);
+            gtbIsbn.Name = "gtbIsbn";
+            gtbIsbn.PasswordChar = '\0';
+            gtbIsbn.PlaceholderText = "Isbn";
+            gtbIsbn.SelectedText = "";
+            gtbIsbn.ShadowDecoration.CustomizableEdges = customizableEdges3;
+            gtbIsbn.Size = new Size(240, 54);
+            gtbIsbn.TabIndex = 12;
+            gtbIsbn.KeyPress += gtbIsbn_KeyPress;
+            // 
+            // ggbInfo
+            // 
+            ggbInfo.Anchor = AnchorStyles.Top;
+            ggbInfo.BorderColor = Color.White;
+            ggbInfo.BorderRadius = 6;
+            ggbInfo.Controls.Add(gtbTitre);
+            ggbInfo.Controls.Add(gtbImage);
+            ggbInfo.Controls.Add(gtbAnnee);
+            ggbInfo.Controls.Add(gtbLangue);
+            ggbInfo.Controls.Add(gtbIsbn);
+            ggbInfo.CustomBorderColor = Color.FromArgb(94, 148, 255);
+            ggbInfo.CustomizableEdges = customizableEdges12;
+            ggbInfo.Font = new Font("Oxanium Medium", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            ggbInfo.ForeColor = Color.White;
+            ggbInfo.Location = new Point(66, 63);
+            ggbInfo.Name = "ggbInfo";
+            ggbInfo.ShadowDecoration.CustomizableEdges = customizableEdges13;
+            ggbInfo.Size = new Size(878, 362);
+            ggbInfo.TabIndex = 35;
+            ggbInfo.Text = "Gestion Ressources";
+            // 
+            // gtbTitre
+            // 
+            gtbTitre.BackColor = Color.White;
+            gtbTitre.BorderRadius = 6;
+            gtbTitre.CustomizableEdges = customizableEdges4;
+            gtbTitre.DefaultText = "";
+            gtbTitre.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            gtbTitre.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            gtbTitre.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            gtbTitre.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            gtbTitre.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gtbTitre.Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            gtbTitre.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            gtbTitre.Location = new Point(54, 85);
+            gtbTitre.Margin = new Padding(3, 4, 3, 4);
+            gtbTitre.Name = "gtbTitre";
+            gtbTitre.PasswordChar = '\0';
+            gtbTitre.PlaceholderText = "Titre";
+            gtbTitre.SelectedText = "";
+            gtbTitre.ShadowDecoration.CustomizableEdges = customizableEdges5;
+            gtbTitre.Size = new Size(240, 54);
+            gtbTitre.TabIndex = 36;
+            // 
+            // gtbImage
+            // 
+            gtbImage.BackColor = Color.White;
+            gtbImage.BorderRadius = 6;
+            gtbImage.CustomizableEdges = customizableEdges6;
+            gtbImage.DefaultText = "";
+            gtbImage.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            gtbImage.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            gtbImage.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            gtbImage.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            gtbImage.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gtbImage.Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            gtbImage.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            gtbImage.Location = new Point(314, 85);
+            gtbImage.Margin = new Padding(3, 4, 3, 4);
+            gtbImage.Name = "gtbImage";
+            gtbImage.PasswordChar = '\0';
+            gtbImage.PlaceholderText = "Image";
+            gtbImage.SelectedText = "";
+            gtbImage.ShadowDecoration.CustomizableEdges = customizableEdges7;
+            gtbImage.Size = new Size(240, 54);
+            gtbImage.TabIndex = 36;
+            // 
+            // gtbAnnee
+            // 
+            gtbAnnee.BackColor = Color.White;
+            gtbAnnee.BorderRadius = 6;
+            gtbAnnee.CustomizableEdges = customizableEdges8;
+            gtbAnnee.DefaultText = "";
+            gtbAnnee.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            gtbAnnee.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            gtbAnnee.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            gtbAnnee.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            gtbAnnee.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gtbAnnee.Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            gtbAnnee.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            gtbAnnee.Location = new Point(313, 177);
+            gtbAnnee.Margin = new Padding(3, 4, 3, 4);
+            gtbAnnee.Name = "gtbAnnee";
+            gtbAnnee.PasswordChar = '\0';
+            gtbAnnee.PlaceholderText = "Date";
+            gtbAnnee.SelectedText = "";
+            gtbAnnee.ShadowDecoration.CustomizableEdges = customizableEdges9;
+            gtbAnnee.Size = new Size(241, 54);
+            gtbAnnee.TabIndex = 14;
+            gtbAnnee.TextChanged += guna2TextBox1_TextChanged;
+            gtbAnnee.KeyPress += gtbAnnee_KeyPress;
+            // 
+            // gtbLangue
+            // 
+            gtbLangue.BackColor = Color.White;
+            gtbLangue.BorderRadius = 6;
+            gtbLangue.CustomizableEdges = customizableEdges10;
+            gtbLangue.DefaultText = "";
+            gtbLangue.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            gtbLangue.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            gtbLangue.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            gtbLangue.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            gtbLangue.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gtbLangue.Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            gtbLangue.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            gtbLangue.Location = new Point(582, 177);
+            gtbLangue.Margin = new Padding(3, 4, 3, 4);
+            gtbLangue.Name = "gtbLangue";
+            gtbLangue.PasswordChar = '\0';
+            gtbLangue.PlaceholderText = "Langue";
+            gtbLangue.SelectedText = "";
+            gtbLangue.ShadowDecoration.CustomizableEdges = customizableEdges11;
+            gtbLangue.Size = new Size(126, 54);
+            gtbLangue.TabIndex = 13;
+            gtbLangue.KeyPress += gtbLangue_KeyPress;
+            // 
+            // gbtnAjouter
+            // 
+            gbtnAjouter.BackColor = Color.FromArgb(154, 206, 234);
+            gbtnAjouter.BorderRadius = 6;
+            gbtnAjouter.CustomizableEdges = customizableEdges14;
+            gbtnAjouter.DisabledState.BorderColor = Color.DarkGray;
+            gbtnAjouter.DisabledState.CustomBorderColor = Color.DarkGray;
+            gbtnAjouter.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gbtnAjouter.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gbtnAjouter.Font = new Font("Oxanium Medium", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            gbtnAjouter.ForeColor = Color.White;
+            gbtnAjouter.Location = new Point(740, 431);
+            gbtnAjouter.Name = "gbtnAjouter";
+            gbtnAjouter.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            gbtnAjouter.Size = new Size(135, 58);
+            gbtnAjouter.TabIndex = 4;
+            gbtnAjouter.Text = "Ajouter";
+            gbtnAjouter.Click += gbtnAjouter_Click;
+            // 
+            // guna2Button1
+            // 
+            guna2Button1.BackColor = Color.FromArgb(154, 206, 234);
+            guna2Button1.BorderRadius = 6;
+            guna2Button1.CustomizableEdges = customizableEdges16;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.Font = new Font("Oxanium Medium", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            guna2Button1.ForeColor = Color.White;
+            guna2Button1.Location = new Point(881, 431);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges17;
+            guna2Button1.Size = new Size(135, 58);
+            guna2Button1.TabIndex = 36;
+            guna2Button1.Text = "Fermer";
             // 
             // FormGestionRessources
             // 
             AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(154, 206, 234);
-            ClientSize = new Size(1028, 427);
-            Controls.Add(button2);
+            ClientSize = new Size(1028, 517);
+            Controls.Add(guna2Button1);
+            Controls.Add(gbtnAjouter);
+            Controls.Add(gbtHelp);
+            Controls.Add(cbCategories);
             Controls.Add(button1);
+            Controls.Add(label8);
             Controls.Add(cbRessources);
-            Controls.Add(btnAjouter);
-            Controls.Add(btnFermer);
-            Controls.Add(gbInfo);
             Controls.Add(label1);
+            Controls.Add(tbDescription);
+            Controls.Add(label3);
+            Controls.Add(ggbInfo);
             DoubleBuffered = true;
             Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
@@ -355,11 +383,10 @@
             Load += FormGestionRessources_Load;
             KeyDown += FormGestionRessources_KeyDown;
             KeyPress += FormGestionRessources_KeyPress;
-            gbInfo.ResumeLayout(false);
-            gbInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)bsCategories).EndInit();
             ((System.ComponentModel.ISupportInitialize)bsRessources).EndInit();
             ((System.ComponentModel.ISupportInitialize)bsEtats).EndInit();
+            ggbInfo.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -367,29 +394,28 @@
         #endregion
 
         private Label label1;
-        private GroupBox gbInfo;
-        private Button btnFermer;
-        private TextBox tbAnnee;
-        private TextBox tbImage;
-        private Label label4;
-        private Label label3;
-        private Label label2;
-        private TextBox tbDescription;
-        private TextBox tbTitre;
-        private Label label5;
-        private Label label6;
-        private ComboBox cbCategories;
-        private Label label8;
-        private TextBox tbLangue;
-        private Label label7;
-        private TextBox tbIsbn;
         private BindingSource bsCategories;
-        private Button btnAjouter;
         private ComboBox cbRessources;
         private BindingSource bsRessources;
         private Button button1;
         private Label label9;
         private BindingSource bsEtats;
-        private Button button2;
+        private Guna.UI2.WinForms.Guna2CircleButton gbtHelp;
+        private TextBox tbTitre;
+        private TextBox tbDescription;
+        private Label label2;
+        private Label label3;
+        private Label label4;
+        private TextBox tbImage;
+        private Label label8;
+        private ComboBox cbCategories;
+        private Guna.UI2.WinForms.Guna2TextBox gtbIsbn;
+        private Guna.UI2.WinForms.Guna2GroupBox ggbInfo;
+        private Guna.UI2.WinForms.Guna2TextBox gtbLangue;
+        private Guna.UI2.WinForms.Guna2Button gbtnAjouter;
+        private Guna.UI2.WinForms.Guna2TextBox gtbAnnee;
+        private Guna.UI2.WinForms.Guna2TextBox gtbTitre;
+        private Guna.UI2.WinForms.Guna2TextBox gtbImage;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

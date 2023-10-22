@@ -79,18 +79,18 @@ namespace AP3_MEDIA
             if (etat == EtatGestion.Create) // cas etat create
             {
                 label1.Text = "Ajout d'une ressource";
-                btnAjouter.Text = "AJOUTER";
-                gbInfo.Visible = true;
+                gbtnAjouter.Text = "AJOUTER";
+                ggbInfo.Visible = true;
                 cbRessources.Visible = false;
-                tbAnnee.Text = Convert.ToString(System.DateTime.Now.Year);
+                gtbAnnee.Text = Convert.ToString(System.DateTime.Now.Year);
 
             }
             else if (etat == EtatGestion.Update) // cas etat update
             {
                 label1.Text = "Modification d'une ressource";
-                btnAjouter.Text = "MODIFIER";
-                btnAjouter.Visible = false;
-                gbInfo.Visible = false;
+                gbtnAjouter.Text = "MODIFIER";
+                gbtnAjouter.Visible = false;
+                ggbInfo.Visible = false;
                 cbRessources.Visible = true;
 
                 remplirListeRessources();
@@ -98,17 +98,17 @@ namespace AP3_MEDIA
             else if (etat == EtatGestion.Delete) // cas etat update
             {
                 label1.Text = "Supression d'une ressource";
-                btnAjouter.Text = "Supprimer";
-                btnAjouter.Visible = false;
-                gbInfo.Visible = false;
+                gbtnAjouter.Text = "Supprimer";
+                gbtnAjouter.Visible = false;
+                ggbInfo.Visible = false;
                 cbRessources.Visible = true;
 
-                tbAnnee.ReadOnly = true;
-                tbLangue.ReadOnly = true;
-                tbImage.ReadOnly = true;
-                tbIsbn.ReadOnly = true;
+                gtbAnnee.ReadOnly = true;
+                gtbLangue.ReadOnly = true;
+                gtbImage.ReadOnly = true;
+                gtbIsbn.ReadOnly = true;
                 tbDescription.ReadOnly = true;
-                tbTitre.ReadOnly = true;
+                gtbTitre.ReadOnly = true;
                 cbCategories.Enabled = false;
 
 
@@ -117,129 +117,38 @@ namespace AP3_MEDIA
             }
         }
 
+
+        #region useless
         private void tbAnnee_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != Convert.ToChar(Keys.Back))
-            {
-                string errorText = "Erreur dans le format de saisie de l'année (que des chiffres)" + "Erreur" + MessageBoxButtons.OK +
-                         MessageBoxIcon.Error;
-                FormPopDGV formPopDGV = new FormPopDGV(errorText);
-                formPopDGV.Show();
-                e.Handled = true; // efface le dernier caractère saisi
-            }
+
         }
 
         private void tbIsbn_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != Convert.ToChar(Keys.Back))
-            {
 
-                string errorText = "Erreur dans le format de saisie de l'ISBN (que des chiffres)" + "Erreur" + MessageBoxButtons.OK +
-                        MessageBoxIcon.Error;
-                FormPopDGV formPopDGV = new FormPopDGV(errorText);
-                formPopDGV.Show();
-                e.Handled = true; // efface le dernier caractère saisi
-            }
         }
 
         private void tbLangue_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar < 'a' || e.KeyChar > 'z') && (e.KeyChar < 'A' || e.KeyChar > 'Z') && e.KeyChar != Convert.ToChar(Keys.Back))
-            {
-                string errorText = "Erreur dans le format de saisie de la langue (2 caractères)" + "Erreur" + MessageBoxButtons.OK +
-                        MessageBoxIcon.Error;
-                FormPopDGV formPopDGV = new FormPopDGV(errorText);
-                formPopDGV.Show();
-                e.Handled = true; // efface le dernier caractère saisi
-            }
+
         }
+        #endregion
 
         private void Annuler()
         {
-            tbTitre.Clear();
+            gtbTitre.Clear();
             tbDescription.Clear();
-            tbLangue.Clear();
-            tbImage.Clear();
-            tbAnnee.Clear();
-            tbIsbn.Clear();
+            gtbLangue.Clear();
+            gtbImage.Clear();
+            gtbAnnee.Clear();
+            gtbIsbn.Clear();
             cbCategories.SelectedIndex = -1;
-            tbTitre.Focus();
+            gtbTitre.Focus();
         }
         private void btnAjouter_Click(object sender, EventArgs e)
         {
-            int idCat = -1, annee;
-            string titre, description, image, langue, isbn;
 
-            if (tbTitre.Text != "" && cbCategories.SelectedIndex != -1 && tbAnnee.Text != "")
-            {
-                // ajout possible si les champs titre et catégorie sont remplis au moins
-                if (Convert.ToInt32(tbAnnee.Text) >= 1000 && Convert.ToInt32(tbAnnee.Text) <= 2100)
-                {
-                    // ajout possible si l'année est correcte
-                    titre = tbTitre.Text;
-                    description = tbDescription.Text;
-                    image = tbImage.Text;
-                    langue = tbLangue.Text;
-                    isbn = tbIsbn.Text;
-                    annee = Convert.ToInt32(tbAnnee.Text);
-                    idCat = Convert.ToInt32(cbCategories.SelectedValue.ToString());
-
-
-                    if (etat == EtatGestion.Create) // cas de l'ajout
-                    {
-                        //verification de la completion de tout les champs
-                        if (tbAnnee.Text != "" && tbImage.Text != "" && tbIsbn.Text != "" && tbLangue.Text != "" && cbCategories.SelectedIndex != -1 && tbDescription.Text != "" && tbTitre.Text != "" && tbAnnee.Text != " " && tbImage.Text != " " && tbIsbn.Text != " " && tbLangue.Text != " " && tbDescription.Text != " " && tbTitre.Text != " ")
-                        {
-                            if (Modele.AjoutRessource(titre, description, image, annee, langue, isbn, idCat))
-                            {
-                                FormPopDGV formPopDGV = new FormPopDGV("AJOUT EFFECTUÉ !");
-                                formPopDGV.Show();
-                                Annuler();
-                            }
-                        }
-                        else
-                        {
-                            FormPopDGV formPopDGV = new FormPopDGV("VEUILLEZ REMPLIR TOUT LES CHAMP !");
-                            formPopDGV.Show();
-                        }
-                    }
-                    if (etat == EtatGestion.Update) // cas de la mise à jour
-                    {
-                        Ressource R = (Ressource)bsRessources.Current;
-                        if (Modele.ModificationRessource(R.Idressource, titre, description, image, annee, langue, isbn, idCat))
-                        {
-                            MessageBox.Show("Ressource modifiée");
-                            gbInfo.Visible = false;
-                            btnAjouter.Visible = false;
-                            cbRessources.SelectedIndex = -1;
-                            // Annuler();
-                        }
-                    }
-                    if (etat == EtatGestion.Delete) // cas de la mise à jour
-                    {
-                        Ressource R = (Ressource)bsRessources.Current;
-                        if (Modele.SupprimerRessource(R.Idressource))
-                        {
-                            MessageBox.Show("Ressource DELETE !");
-                            gbInfo.Visible = false;
-                            btnAjouter.Visible = false;
-                            cbRessources.SelectedIndex = -1;
-                            // Annuler();
-                        }
-                    }
-                }
-                else
-                {
-                    FormPopDGV formPopDGV = new FormPopDGV("ERREUR AVEC L'ANNÉE !");
-                    formPopDGV.Show();
-                }
-
-            }
-            else
-            {
-                FormPopDGV formPopDGV = new FormPopDGV("VEUILLEZ REMPLIR TOUS LES CHAMPS !");
-                formPopDGV.Show();
-            }
         }
 
         private void bsRessources_CurrentChanged(object sender, EventArgs e)
@@ -251,19 +160,19 @@ namespace AP3_MEDIA
                 Ressource R = (Ressource)bsRessources.Current;
 
                 // mise à jour des champs de la ressource sélectionnée
-                tbTitre.Text = R.Titre;
+                gtbTitre.Text = R.Titre;
                 tbDescription.Text = R.Description;
-                tbAnnee.Text = R.Anneesortie.ToString();
-                tbIsbn.Text = R.Isbn;
-                tbLangue.Text = R.Langue;
-                tbImage.Text = R.Image;
+                gtbAnnee.Text = R.Anneesortie.ToString();
+                gtbIsbn.Text = R.Isbn;
+                gtbLangue.Text = R.Langue;
+                gtbImage.Text = R.Image;
                 cbCategories.Text = R.IdcategorieNavigation.Libellecategorie;
 
-                gbInfo.Visible = true;
-                btnAjouter.Visible = true;
+                ggbInfo.Visible = true;
+                gbtnAjouter.Visible = true;
             }
             else
-                gbInfo.Visible = false;
+                ggbInfo.Visible = false;
         }
 
         private void cbRessources_SelectedIndexChanged(object sender, EventArgs e)
@@ -301,6 +210,125 @@ namespace AP3_MEDIA
         {
             FormPopDGV formPopDGV = new FormPopDGV("Aucun Aide");
             formPopDGV.Show();
+        }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gbtnAjouter_Click(object sender, EventArgs e)
+        {
+            int idCat = -1, annee;
+            string titre, description, image, langue, isbn;
+
+            if (gtbTitre.Text != "" && cbCategories.SelectedIndex != -1 && gtbAnnee.Text != "")
+            {
+                // ajout possible si les champs titre et catégorie sont remplis au moins
+                if (Convert.ToInt32(gtbAnnee.Text) >= 1000 && Convert.ToInt32(gtbAnnee.Text) <= 2100)
+                {
+                    // ajout possible si l'année est correcte
+                    titre = gtbTitre.Text;
+                    description = tbDescription.Text;
+                    image = gtbImage.Text;
+                    langue = gtbLangue.Text;
+                    isbn = gtbIsbn.Text;
+                    annee = Convert.ToInt32(gtbAnnee.Text);
+                    idCat = Convert.ToInt32(cbCategories.SelectedValue.ToString());
+
+
+                    if (etat == EtatGestion.Create) // cas de l'ajout
+                    {
+                        //verification de la completion de tout les champs
+                        if (gtbAnnee.Text != "" && gtbImage.Text != "" && gtbIsbn.Text != "" && gtbLangue.Text != "" && cbCategories.SelectedIndex != -1 && tbDescription.Text != "" && gtbTitre.Text != "" && gtbAnnee.Text != " " && gtbImage.Text != " " && gtbIsbn.Text != " " && gtbLangue.Text != " " && tbDescription.Text != " " && gtbTitre.Text != " ")
+                        {
+                            if (Modele.AjoutRessource(titre, description, image, annee, langue, isbn, idCat))
+                            {
+                                FormPopDGV formPopDGV = new FormPopDGV("AJOUT EFFECTUÉ !");
+                                formPopDGV.Show();
+                                Annuler();
+                            }
+                        }
+                        else
+                        {
+                            FormPopDGV formPopDGV = new FormPopDGV("VEUILLEZ REMPLIR TOUT LES CHAMP !");
+                            formPopDGV.Show();
+                        }
+                    }
+                    if (etat == EtatGestion.Update) // cas de la mise à jour
+                    {
+                        Ressource R = (Ressource)bsRessources.Current;
+                        if (Modele.ModificationRessource(R.Idressource, titre, description, image, annee, langue, isbn, idCat))
+                        {
+                            MessageBox.Show("Ressource modifiée");
+                            ggbInfo.Visible = false;
+                            gbtnAjouter.Visible = false;
+                            cbRessources.SelectedIndex = -1;
+                            // Annuler();
+                        }
+                    }
+                    if (etat == EtatGestion.Delete) // cas de la mise à jour
+                    {
+                        Ressource R = (Ressource)bsRessources.Current;
+                        if (Modele.SupprimerRessource(R.Idressource))
+                        {
+                            MessageBox.Show("Ressource DELETE !");
+                            ggbInfo.Visible = false;
+                            gbtnAjouter.Visible = false;
+                            cbRessources.SelectedIndex = -1;
+                            // Annuler();
+                        }
+                    }
+                }
+                else
+                {
+                    FormPopDGV formPopDGV = new FormPopDGV("ERREUR AVEC L'ANNÉE !");
+                    formPopDGV.Show();
+                }
+
+            }
+            else
+            {
+                FormPopDGV formPopDGV = new FormPopDGV("VEUILLEZ REMPLIR TOUS LES CHAMPS !");
+                formPopDGV.Show();
+            }
+        }
+
+        private void gtbAnnee_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != Convert.ToChar(Keys.Back))
+            {
+                string errorText = "Erreur dans le format de saisie de l'année (que des chiffres)" + "Erreur" + MessageBoxButtons.OK +
+                         MessageBoxIcon.Error;
+                FormPopDGV formPopDGV = new FormPopDGV(errorText);
+                formPopDGV.Show();
+                e.Handled = true; // efface le dernier caractère saisi
+            }
+        }
+
+        private void gtbIsbn_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != Convert.ToChar(Keys.Back))
+            {
+
+                string errorText = "Erreur dans le format de saisie de l'ISBN (que des chiffres)" + "Erreur" + MessageBoxButtons.OK +
+                        MessageBoxIcon.Error;
+                FormPopDGV formPopDGV = new FormPopDGV(errorText);
+                formPopDGV.Show();
+                e.Handled = true; // efface le dernier caractère saisi
+            }
+        }
+
+        private void gtbLangue_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < 'a' || e.KeyChar > 'z') && (e.KeyChar < 'A' || e.KeyChar > 'Z') && e.KeyChar != Convert.ToChar(Keys.Back))
+            {
+                string errorText = "Erreur dans le format de saisie de la langue (2 caractères)" + "Erreur" + MessageBoxButtons.OK +
+                        MessageBoxIcon.Error;
+                FormPopDGV formPopDGV = new FormPopDGV(errorText);
+                formPopDGV.Show();
+                e.Handled = true; // efface le dernier caractère saisi
+            }
         }
     }
 }
