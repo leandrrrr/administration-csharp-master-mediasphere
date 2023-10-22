@@ -33,7 +33,7 @@ namespace AP3_MEDIA
                 bool motDePasseCorrect = BCrypt.Net.BCrypt.Verify(tbMdp.Text, mdpBcrypt);
                 if (motDePasseCorrect)
                 {
-                    parentForm.menuStrip1.Visible = true;
+                    parentForm.ggbMenuStrip.Visible = true;
 
                     this.Close();
                 }

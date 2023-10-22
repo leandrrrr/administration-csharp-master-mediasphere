@@ -29,127 +29,138 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            labelId = new Label();
-            labelMdp = new Label();
-            tbId = new TextBox();
-            btnConnexion = new Button();
-            pictureBox1 = new PictureBox();
-            tbMdp = new TextBox();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             bsUser = new BindingSource(components);
-            button1 = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ggbMenuStrip = new Guna.UI2.WinForms.Guna2GroupBox();
+            gtbMdp = new Guna.UI2.WinForms.Guna2TextBox();
+            gbtId = new Guna.UI2.WinForms.Guna2TextBox();
+            gbtExemplaires = new Guna.UI2.WinForms.Guna2Button();
+            gbtClose = new Guna.UI2.WinForms.Guna2CircleButton();
             ((System.ComponentModel.ISupportInitialize)bsUser).BeginInit();
+            ggbMenuStrip.SuspendLayout();
             SuspendLayout();
             // 
-            // labelId
+            // ggbMenuStrip
             // 
-            labelId.Anchor = AnchorStyles.Top;
-            labelId.AutoSize = true;
-            labelId.Font = new Font("Oxanium Medium", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            labelId.Location = new Point(439, 41);
-            labelId.Name = "labelId";
-            labelId.Size = new Size(160, 35);
-            labelId.TabIndex = 25;
-            labelId.Text = "Identifiant";
+            ggbMenuStrip.BorderColor = Color.White;
+            ggbMenuStrip.BorderRadius = 4;
+            ggbMenuStrip.Controls.Add(gbtExemplaires);
+            ggbMenuStrip.Controls.Add(gbtId);
+            ggbMenuStrip.Controls.Add(gtbMdp);
+            ggbMenuStrip.CustomBorderColor = Color.White;
+            ggbMenuStrip.CustomizableEdges = customizableEdges16;
+            ggbMenuStrip.Font = new Font("Oxanium Medium", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            ggbMenuStrip.ForeColor = Color.FromArgb(125, 137, 149);
+            ggbMenuStrip.Location = new Point(195, 30);
+            ggbMenuStrip.Name = "ggbMenuStrip";
+            ggbMenuStrip.ShadowDecoration.CustomizableEdges = customizableEdges17;
+            ggbMenuStrip.Size = new Size(672, 379);
+            ggbMenuStrip.TabIndex = 28;
+            ggbMenuStrip.TextAlign = HorizontalAlignment.Center;
             // 
-            // labelMdp
+            // gtbMdp
             // 
-            labelMdp.Anchor = AnchorStyles.Top;
-            labelMdp.AutoSize = true;
-            labelMdp.Font = new Font("Oxanium Medium", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            labelMdp.Location = new Point(424, 138);
-            labelMdp.Name = "labelMdp";
-            labelMdp.Size = new Size(200, 35);
-            labelMdp.TabIndex = 24;
-            labelMdp.Text = "Mot de Passe";
+            gtbMdp.BackColor = Color.White;
+            gtbMdp.BorderRadius = 6;
+            gtbMdp.CustomizableEdges = customizableEdges14;
+            gtbMdp.DefaultText = "";
+            gtbMdp.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            gtbMdp.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            gtbMdp.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            gtbMdp.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            gtbMdp.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gtbMdp.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            gtbMdp.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            gtbMdp.Location = new Point(57, 154);
+            gtbMdp.Margin = new Padding(3, 4, 3, 4);
+            gtbMdp.Name = "gtbMdp";
+            gtbMdp.PasswordChar = '\0';
+            gtbMdp.PlaceholderText = "Mot de passe";
+            gtbMdp.SelectedText = "";
+            gtbMdp.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            gtbMdp.Size = new Size(559, 46);
+            gtbMdp.TabIndex = 0;
             // 
-            // tbId
+            // gbtId
             // 
-            tbId.Anchor = AnchorStyles.Top;
-            tbId.BackColor = SystemColors.ButtonHighlight;
-            tbId.Font = new Font("Oxanium Medium", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
-            tbId.Location = new Point(233, 80);
-            tbId.Margin = new Padding(3, 4, 3, 4);
-            tbId.Multiline = true;
-            tbId.Name = "tbId";
-            tbId.Size = new Size(559, 46);
-            tbId.TabIndex = 21;
+            gbtId.BackColor = Color.White;
+            gbtId.BorderRadius = 6;
+            gbtId.CustomizableEdges = customizableEdges12;
+            gbtId.DefaultText = "";
+            gbtId.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            gbtId.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            gbtId.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            gbtId.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            gbtId.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gbtId.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            gbtId.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            gbtId.Location = new Point(57, 53);
+            gbtId.Margin = new Padding(3, 4, 3, 4);
+            gbtId.Name = "gbtId";
+            gbtId.PasswordChar = '\0';
+            gbtId.PlaceholderText = "Email";
+            gbtId.SelectedText = "";
+            gbtId.ShadowDecoration.CustomizableEdges = customizableEdges13;
+            gbtId.Size = new Size(559, 46);
+            gbtId.TabIndex = 1;
             // 
-            // btnConnexion
+            // gbtExemplaires
             // 
-            btnConnexion.Anchor = AnchorStyles.Top;
-            btnConnexion.BackColor = Color.Black;
-            btnConnexion.FlatStyle = FlatStyle.Popup;
-            btnConnexion.Font = new Font("Oxanium Medium", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            btnConnexion.ForeColor = Color.White;
-            btnConnexion.Location = new Point(233, 278);
-            btnConnexion.Margin = new Padding(3, 4, 3, 4);
-            btnConnexion.Name = "btnConnexion";
-            btnConnexion.Size = new Size(559, 59);
-            btnConnexion.TabIndex = 20;
-            btnConnexion.Text = "CONNECTION";
-            btnConnexion.UseVisualStyleBackColor = false;
-            btnConnexion.Click += btnConnexion_Click;
+            gbtExemplaires.BackColor = Color.White;
+            gbtExemplaires.BorderRadius = 6;
+            gbtExemplaires.CustomizableEdges = customizableEdges10;
+            gbtExemplaires.DisabledState.BorderColor = Color.DarkGray;
+            gbtExemplaires.DisabledState.CustomBorderColor = Color.DarkGray;
+            gbtExemplaires.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gbtExemplaires.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gbtExemplaires.Font = new Font("Oxanium Medium", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            gbtExemplaires.ForeColor = Color.White;
+            gbtExemplaires.Location = new Point(57, 256);
+            gbtExemplaires.Name = "gbtExemplaires";
+            gbtExemplaires.ShadowDecoration.CustomizableEdges = customizableEdges11;
+            gbtExemplaires.Size = new Size(559, 59);
+            gbtExemplaires.TabIndex = 4;
+            gbtExemplaires.Text = "Connexion";
             // 
-            // pictureBox1
+            // gbtClose
             // 
-            pictureBox1.Anchor = AnchorStyles.Top;
-            pictureBox1.Image = Properties.Resources.border_style___Copie;
-            pictureBox1.Location = new Point(222, 12);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(584, 378);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 19;
-            pictureBox1.TabStop = false;
-            // 
-            // tbMdp
-            // 
-            tbMdp.Anchor = AnchorStyles.Top;
-            tbMdp.BackColor = SystemColors.ButtonHighlight;
-            tbMdp.Font = new Font("Oxanium Medium", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
-            tbMdp.Location = new Point(233, 177);
-            tbMdp.Margin = new Padding(3, 4, 3, 4);
-            tbMdp.Multiline = true;
-            tbMdp.Name = "tbMdp";
-            tbMdp.Size = new Size(559, 46);
-            tbMdp.TabIndex = 26;
-            // 
-            // button1
-            // 
-            button1.Anchor = AnchorStyles.Top;
-            button1.BackColor = Color.Black;
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Font = new Font("Oxanium ExtraBold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(981, 12);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(35, 35);
-            button1.TabIndex = 27;
-            button1.Text = "X";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            gbtClose.DisabledState.BorderColor = Color.DarkGray;
+            gbtClose.DisabledState.CustomBorderColor = Color.DarkGray;
+            gbtClose.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gbtClose.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gbtClose.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            gbtClose.ForeColor = Color.White;
+            gbtClose.Image = Properties.Resources.icons8_close_50;
+            gbtClose.ImageSize = new Size(35, 35);
+            gbtClose.Location = new Point(512, 430);
+            gbtClose.Name = "gbtClose";
+            gbtClose.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            gbtClose.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            gbtClose.Size = new Size(51, 49);
+            gbtClose.TabIndex = 29;
             // 
             // FormConnexion
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(154, 206, 234);
-            ClientSize = new Size(1028, 428);
-            Controls.Add(button1);
-            Controls.Add(tbMdp);
-            Controls.Add(labelId);
-            Controls.Add(labelMdp);
-            Controls.Add(tbId);
-            Controls.Add(btnConnexion);
-            Controls.Add(pictureBox1);
+            ClientSize = new Size(1028, 491);
+            Controls.Add(gbtClose);
+            Controls.Add(ggbMenuStrip);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormConnexion";
             Text = "FormConnexion";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)bsUser).EndInit();
+            ggbMenuStrip.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -158,9 +169,13 @@
         private Label labelMdp;
         private TextBox tbId;
         private Button btnConnexion;
-        private PictureBox pictureBox1;
         private TextBox tbMdp;
         private BindingSource bsUser;
         private Button button1;
+        private Guna.UI2.WinForms.Guna2GroupBox ggbMenuStrip;
+        private Guna.UI2.WinForms.Guna2TextBox gtbMdp;
+        private Guna.UI2.WinForms.Guna2TextBox gbtId;
+        private Guna.UI2.WinForms.Guna2Button gbtExemplaires;
+        private Guna.UI2.WinForms.Guna2CircleButton gbtClose;
     }
 }
