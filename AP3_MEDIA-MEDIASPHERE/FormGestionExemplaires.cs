@@ -29,10 +29,10 @@ namespace AP3_MEDIA
         public void remplirListeExemples()
         {
             // remplir la comboBox des catégories
-            cbEtat.ValueMember = "idetat";    //permet de stocker l'identifiant
-            cbEtat.DisplayMember = "libelleetat";
+            gcbEtat.ValueMember = "idetat";    //permet de stocker l'identifiant
+            gcbEtat.DisplayMember = "libelleetat";
             bsEtat.DataSource = Modele.getListEtats();
-            cbEtat.DataSource = bsEtat;
+            gcbEtat.DataSource = bsEtat;
         }
 
         private void bsCategories_CurrentChanged(object sender, EventArgs e)
@@ -43,7 +43,7 @@ namespace AP3_MEDIA
                 R = (Ressource)bsRessources.Current;
 
                 // mise à jour du libellé pour modifier ou supprimer
-                tbLibelle.Text = R.Titre;
+                gtbLibelle.Text = R.Titre;
             }
         }
 
@@ -58,8 +58,7 @@ namespace AP3_MEDIA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormPopDGV formPopDGV = new FormPopDGV("Aucun Aide");
-            formPopDGV.Show();
+
         }
 
         private void lbRessources_SelectedIndexChanged(object sender, EventArgs e)
@@ -72,9 +71,11 @@ namespace AP3_MEDIA
             remplirListeCategories();
             remplirListeExemples();
 
-            dateTimePicker1.Value = DateTime.Now;
-            textBox1.Text = ToolsL.dateFormatBDD(System.DateTime.Now);
+            gdtpDate.Value = DateTime.Now;
+            gtbDate.Text = ToolsL.dateFormatBDD(System.DateTime.Now);
         }
+
+        #region useless
 
         private void cbCategories_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -89,28 +90,46 @@ namespace AP3_MEDIA
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
-            textBox1.Text = ToolsL.dateFormatBDD(dateTimePicker1.Value);
         }
 
         private void btnFermer_Click(object sender, EventArgs e)
         {
-            int idEtatAdd = Convert.ToInt32( cbEtat.SelectedValue) ;
+
+        }
+        #endregion
+
+        private void gbtHelp_Click(object sender, EventArgs e)
+        {
+            FormPopDGV formPopDGV = new FormPopDGV("Aucun Aide");
+            formPopDGV.Show();
+        }
+
+        private void gdtpDate_ValueChanged(object sender, EventArgs e)
+        {
+            gtbDate.Text = ToolsL.dateFormatBDD(gdtpDate.Value);
+
+        }
+
+        private void gbtAjouter_Click(object sender, EventArgs e)
+        {
+            int idEtatAdd = Convert.ToInt32(gcbEtat.SelectedValue);
             int idRessourceAdd = lbRessources.SelectedIndex;
-            DateTime dateRessourceAdd = dateTimePicker1.Value;
+            DateTime dateRessourceAdd = gdtpDate.Value;
 
 
-            if (cbEtat.SelectedIndex != -1 && lbRessources.SelectedIndex != -1 && dateTimePicker1.Value != null)
+            if (gcbEtat.SelectedIndex != -1 && lbRessources.SelectedIndex != -1 && gdtpDate.Value != null)
             {
                 try
                 {
                     if (Modele.AjoutExemplaire(idRessourceAdd, idEtatAdd, dateRessourceAdd))
                     {
                         FormPopDGV formPopDGV = new FormPopDGV("AJOUT EFFECTUÉ !");
-                        ToolsL.waitingForm(formPopDGV,1000);
+                        ToolsL.waitingForm(formPopDGV, 1000);
 
                     }
                 }
-                catch(Exception ex) {
+                catch (Exception ex)
+                {
                     FormPopDGV formPopDGV = new FormPopDGV("sa a merdé : " + Convert.ToString(ex));
                     formPopDGV.Show();
                 }
