@@ -32,8 +32,8 @@ namespace AP3_MEDIA
         private void FormCategories_Load(object sender, EventArgs e)
         {
             remplirListeCategories();
-            btnModifier.Enabled = false;
-            btnSupprimer.Enabled = false;
+            gbtModifier.Enabled = false;
+            gbtSupprimer.Enabled = false;
 
         }
 
@@ -44,27 +44,7 @@ namespace AP3_MEDIA
 
         private void btnValider_Click(object sender, EventArgs e)
         {
-            string libelle = tbLibelle.Text;
-            if (libelle != "")
-            {
-                
-                    if (Modele.AjoutCategorie(libelle))
-                    {
-                        MessageBox.Show("Catégorie ajoutée ");
-                        tbLibelle.Clear();
-                        remplirListeCategories();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Ajout impossible", "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                
-                
-            }
-            else
-            {
-                MessageBox.Show("ERREUR : Libellé ne doit pas être vide", "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+
 
         }
 
@@ -76,13 +56,90 @@ namespace AP3_MEDIA
                 C = (Categorie)bsCategories.Current;
 
                 // mise à jour du libellé pour modifier ou supprimer
-                tbLibelle.Text = C.Libellecategorie;
+                gtbLibelle.Text = C.Libellecategorie;
+            }
+        }
+        #region useless
+        private void btnModifier_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSupprimer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        private void tbLibelle_TextChanged(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        private void gbCategorie_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbCategories_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lbCategories.SelectedIndex == -1)
+            {
+                gbtModifier.Enabled = false;
+                gbtSupprimer.Enabled = false;
+            }
+            gbtAjouter.Enabled = false;
+            gbtModifier.Enabled = true;
+            gbtSupprimer.Enabled = true;
+        }
+
+        private void gbtHelp_Click(object sender, EventArgs e)
+        {
+            FormPopDGV formPopDGV = new FormPopDGV("Sélectionner une catégorie pour la modifier ou la supprimer");
+            formPopDGV.Show();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void gbtAjouter_Click(object sender, EventArgs e)
+        {
+            string libelle = gtbLibelle.Text;
+            if (libelle != "")
+            {
+
+                if (Modele.AjoutCategorie(libelle))
+                {
+                    MessageBox.Show("Catégorie ajoutée ");
+                    gtbLibelle.Clear();
+                    remplirListeCategories();
+                }
+                else
+                {
+                    MessageBox.Show("Ajout impossible", "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+
+            }
+            else
+            {
+                MessageBox.Show("ERREUR : Libellé ne doit pas être vide", "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void btnModifier_Click(object sender, EventArgs e)
+        private void gbtModifier_Click(object sender, EventArgs e)
         {
-            string libelle = tbLibelle.Text;
+            string libelle = gtbLibelle.Text;
             if (libelle != "")
             {
                 if (Modele.ModifierCategorie(C.Idcategorie, libelle))
@@ -90,7 +147,7 @@ namespace AP3_MEDIA
                     MessageBox.Show("Catégorie modifiée ");
                     remplirListeCategories();
                     lbCategories.SelectedIndex = -1;
-                    tbLibelle.Clear();
+                    gtbLibelle.Clear();
                 }
                 else
                 {
@@ -103,9 +160,24 @@ namespace AP3_MEDIA
             }
         }
 
-        private void btnSupprimer_Click(object sender, EventArgs e)
+        private void gtbLibelle_TextChanged(object sender, EventArgs e)
         {
-            string libelle = tbLibelle.Text;
+            if (gtbLibelle.Text == "" || gtbLibelle.Text == " ")
+            {
+                gbtAjouter.Enabled = false;
+                gbtModifier.Enabled = false;
+                gbtSupprimer.Enabled = false;
+            }
+            else
+            {
+
+                gbtAjouter.Enabled = true;
+            }
+        }
+
+        private void gbtSupprimer_Click(object sender, EventArgs e)
+        {
+            string libelle = gtbLibelle.Text;
             if (libelle != "")
             {
                 if (Modele.SupprimerCategorie(C.Idcategorie))
@@ -113,52 +185,13 @@ namespace AP3_MEDIA
                     MessageBox.Show("Catégorie supprimée ");
                     remplirListeCategories();
                     lbCategories.SelectedIndex = -1;
-                    tbLibelle.Clear();
+                    gtbLibelle.Clear();
                 }
             }
             else
             {
                 MessageBox.Show("ERREUR : Sélectionner la catégorie à supprimer", "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void lbCategories_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (lbCategories.SelectedIndex == -1)
-            {
-                btnModifier.Enabled = false;
-                btnSupprimer.Enabled = false;
-            }
-            btnValider.Enabled = false;
-            btnModifier.Enabled = true;
-            btnSupprimer.Enabled = true;
-        }
-
-        private void tbLibelle_TextChanged(object sender, EventArgs e)
-        {
-            
-            if (tbLibelle.Text == "" || tbLibelle.Text == " ")
-            {
-                btnValider.Enabled = false;
-                btnModifier.Enabled = false;
-                btnSupprimer.Enabled = false;
-            }
-            else
-            {
-                
-                btnValider.Enabled = true;
-            }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            FormPopDGV formPopDGV = new FormPopDGV("Sélectionner une catégorie pour la modifier ou la supprimer");
-            formPopDGV.Show();
-        }
-
-        private void gbCategorie_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }
