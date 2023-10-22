@@ -23,8 +23,28 @@ namespace AP3_MEDIA
             InitializeComponent();
             this.parentForm = parentForm;
         }
-
+        #region useless
         private void btnConnexion_Click(object sender, EventArgs e)
+        {
+            //old
+
+
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //old
+        }
+        #endregion
+
+        private void FormConnexion_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gbtExemplaires_Click(object sender, EventArgs e)
         {
             var connexionAvecID1 = Modele.getListUsers().Where(x => x.MailUser == tbId.Text);
             try
@@ -48,13 +68,9 @@ namespace AP3_MEDIA
                 FormPopDGV formPopDGV = new FormPopDGV("Mot de Passe ou Email faux");
                 ToolsL.waitingForm(formPopDGV, 1000);
             }
-
-
-
-
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void gbtClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
