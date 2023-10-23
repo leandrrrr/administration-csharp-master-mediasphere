@@ -114,6 +114,8 @@ namespace AP3_MEDIA
 
                     dgvExemplaires.DataSource = bsExemplaires;
                     dgvExemplaires.Visible = true;
+                    ggbExemplaires.Visible = true;
+
                     dgvExemplaires.Columns["Idexemplaire"].Visible = false;
                     dgvExemplaires.Columns["Dateentree"].Width = 95;
                     dgvExemplaires.Columns["Libelleetat"].Width = 105;
@@ -143,6 +145,7 @@ namespace AP3_MEDIA
 
                     dgvExemplaires.DataSource = bsExemplaires;
                     dgvExemplaires.Visible = true;
+                    ggbExemplaires.Visible = true;
 
 
 
@@ -152,8 +155,21 @@ namespace AP3_MEDIA
                 else
                 {
                     dgvExemplaires.Visible = false;
+                    ggbExemplaires.Visible = false;
+
                     FormPopDGV formPopDGV = new FormPopDGV("Pas d'Emprunts pour cette Emprunteur");
                     formPopDGV.Show();
+
+
+
+
+
+
+
+
+
+
+
 
                 }
             }
@@ -162,17 +178,17 @@ namespace AP3_MEDIA
 
         private void dgvRessources_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            dgvExemplaires.Visible = false;
+            //gdgvExemplaires.Visible = false;
         }
 
         private void dgvRessources_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            dgvExemplaires.Visible = false;
+            //gdgvExemplaires.Visible = false;
         }
 
         private void dgvRessources_Click(object sender, EventArgs e)
         {
-            dgvExemplaires.Visible = false;
+            //gdgvExemplaires.Visible = false;
         }
 
         private void dgvExemplaires_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -199,6 +215,57 @@ namespace AP3_MEDIA
         {
             FormPopDGV formPopDGV = new FormPopDGV("Aucun Aide");
             formPopDGV.Show();
+        }
+
+        private void gdgvExemplaires_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void gdgvRessources_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dgvExemplaires.Visible = false;
+
+        }
+
+        private void gdgvRessources_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            dgvExemplaires.Visible = false;
+
+        }
+
+        private void gdgvRessources_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void gdgvRessources_Click(object sender, EventArgs e)
+        {
+            ggbExemplaires.Visible = false;
+
+        }
+
+        private void guna2GroupBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvRessources_Click_1(object sender, EventArgs e)
+        {
+            ggbExemplaires.Visible = false;
+
+        }
+
+        private void dgvRessources_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            ggbExemplaires.Visible = false;
+
+        }
+
+        private void dgvRessources_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ggbExemplaires.Visible = false;
+
         }
     }
 }

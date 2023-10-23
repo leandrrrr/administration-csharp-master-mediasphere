@@ -42,6 +42,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             bsCategories = new BindingSource(components);
             lbCategories = new ListBox();
             ggbMenuStrip = new Guna.UI2.WinForms.Guna2GroupBox();
@@ -51,6 +53,7 @@
             gtbLibelle = new Guna.UI2.WinForms.Guna2TextBox();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             gbtHelp = new Guna.UI2.WinForms.Guna2CircleButton();
+            guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             ((System.ComponentModel.ISupportInitialize)bsCategories).BeginInit();
             ggbMenuStrip.SuspendLayout();
             SuspendLayout();
@@ -65,10 +68,10 @@
             lbCategories.Font = new Font("Oxanium Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             lbCategories.FormattingEnabled = true;
             lbCategories.ItemHeight = 21;
-            lbCategories.Location = new Point(570, 32);
+            lbCategories.Location = new Point(573, 32);
             lbCategories.Margin = new Padding(3, 4, 3, 4);
             lbCategories.Name = "lbCategories";
-            lbCategories.Size = new Size(343, 399);
+            lbCategories.Size = new Size(337, 399);
             lbCategories.TabIndex = 8;
             lbCategories.SelectedIndexChanged += lbCategories_SelectedIndexChanged;
             // 
@@ -210,6 +213,22 @@
             gbtHelp.TabIndex = 33;
             gbtHelp.Click += gbtHelp_Click;
             // 
+            // guna2GroupBox1
+            // 
+            guna2GroupBox1.Anchor = AnchorStyles.Top;
+            guna2GroupBox1.BorderColor = Color.White;
+            guna2GroupBox1.BorderRadius = 4;
+            guna2GroupBox1.CustomBorderColor = Color.White;
+            guna2GroupBox1.CustomizableEdges = customizableEdges14;
+            guna2GroupBox1.Font = new Font("Oxanium Medium", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            guna2GroupBox1.ForeColor = Color.FromArgb(125, 137, 149);
+            guna2GroupBox1.Location = new Point(570, 32);
+            guna2GroupBox1.Name = "guna2GroupBox1";
+            guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            guna2GroupBox1.Size = new Size(343, 399);
+            guna2GroupBox1.TabIndex = 34;
+            guna2GroupBox1.TextAlign = HorizontalAlignment.Center;
+            // 
             // FormCategories
             // 
             AutoScaleDimensions = new SizeF(9F, 19F);
@@ -220,6 +239,7 @@
             Controls.Add(guna2Button1);
             Controls.Add(ggbMenuStrip);
             Controls.Add(lbCategories);
+            Controls.Add(guna2GroupBox1);
             Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 4, 3, 4);
@@ -241,5 +261,6 @@
         private Guna.UI2.WinForms.Guna2Button gbtSupprimer;
         private Guna.UI2.WinForms.Guna2Button gbtModifier;
         private Guna.UI2.WinForms.Guna2CircleButton gbtHelp;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
     }
 }

@@ -66,6 +66,7 @@
             gbtExemplaires.Size = new Size(426, 52);
             gbtExemplaires.TabIndex = 14;
             gbtExemplaires.Text = "OK";
+            gbtExemplaires.Click += gbtExemplaires_Click;
             // 
             // richTextBox1
             // 

@@ -50,6 +50,7 @@
             // 
             // ggbMenuStrip
             // 
+            ggbMenuStrip.Anchor = AnchorStyles.Top;
             ggbMenuStrip.BorderColor = Color.White;
             ggbMenuStrip.BorderRadius = 4;
             ggbMenuStrip.Controls.Add(gbtExemplaires);
@@ -68,6 +69,7 @@
             // 
             // gbtExemplaires
             // 
+            gbtExemplaires.Anchor = AnchorStyles.Top;
             gbtExemplaires.BackColor = Color.White;
             gbtExemplaires.BorderRadius = 6;
             gbtExemplaires.CustomizableEdges = customizableEdges1;
@@ -87,6 +89,7 @@
             // 
             // gbtId
             // 
+            gbtId.Anchor = AnchorStyles.Top;
             gbtId.BackColor = Color.White;
             gbtId.BorderRadius = 6;
             gbtId.CustomizableEdges = customizableEdges3;
@@ -110,6 +113,7 @@
             // 
             // gtbMdp
             // 
+            gtbMdp.Anchor = AnchorStyles.Top;
             gtbMdp.BackColor = Color.White;
             gtbMdp.BorderRadius = 6;
             gtbMdp.CustomizableEdges = customizableEdges5;
@@ -133,6 +137,7 @@
             // 
             // gbtClose
             // 
+            gbtClose.Anchor = AnchorStyles.Top;
             gbtClose.DisabledState.BorderColor = Color.DarkGray;
             gbtClose.DisabledState.CustomBorderColor = Color.DarkGray;
             gbtClose.DisabledState.FillColor = Color.FromArgb(169, 169, 169);

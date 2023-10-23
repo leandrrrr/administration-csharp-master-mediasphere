@@ -49,10 +49,10 @@ namespace AP3_MEDIA
         private void remplirListeRessources()
         {
             // remplir la comboBox des ressources (si modification)
-            cbRessources.ValueMember = "idressource";    //permet de stocker l'identifiant
-            cbRessources.DisplayMember = "titre";
+            gcbRessources.ValueMember = "idressource";    //permet de stocker l'identifiant
+            gcbRessources.DisplayMember = "titre";
             bsRessources.DataSource = Modele.getListRessources();
-            cbRessources.DataSource = bsRessources;
+            gcbRessources.DataSource = bsRessources;
         }
         private void remplirListeEtat()
         {
@@ -62,10 +62,10 @@ namespace AP3_MEDIA
         public void remplirListeCategories()
         {
             // remplir la comboBox des catégories
-            cbCategories.ValueMember = "idcategorie";    //permet de stocker l'identifiant
-            cbCategories.DisplayMember = "libellecategorie";
+            gcbCategories.ValueMember = "idcategorie";    //permet de stocker l'identifiant
+            gcbCategories.DisplayMember = "libellecategorie";
             bsCategories.DataSource = Modele.getListCategories();
-            cbCategories.DataSource = bsCategories;
+            gcbCategories.DataSource = bsCategories;
         }
         private void FormGestionRessources_Load(object sender, EventArgs e)
         {
@@ -78,30 +78,27 @@ namespace AP3_MEDIA
 
             if (etat == EtatGestion.Create) // cas etat create
             {
-                label1.Text = "Ajout d'une ressource";
                 gbtnAjouter.Text = "AJOUTER";
                 ggbInfo.Visible = true;
-                cbRessources.Visible = false;
+                gcbRessources.Visible = false;
                 gtbAnnee.Text = Convert.ToString(System.DateTime.Now.Year);
 
             }
             else if (etat == EtatGestion.Update) // cas etat update
             {
-                label1.Text = "Modification d'une ressource";
                 gbtnAjouter.Text = "MODIFIER";
                 gbtnAjouter.Visible = false;
                 ggbInfo.Visible = false;
-                cbRessources.Visible = true;
+                gcbRessources.Visible = true;
 
                 remplirListeRessources();
             }
             else if (etat == EtatGestion.Delete) // cas etat update
             {
-                label1.Text = "Supression d'une ressource";
                 gbtnAjouter.Text = "Supprimer";
                 gbtnAjouter.Visible = false;
                 ggbInfo.Visible = false;
-                cbRessources.Visible = true;
+                gcbRessources.Visible = true;
 
                 gtbAnnee.ReadOnly = true;
                 gtbLangue.ReadOnly = true;
@@ -109,7 +106,7 @@ namespace AP3_MEDIA
                 gtbIsbn.ReadOnly = true;
                 tbDescription.ReadOnly = true;
                 gtbTitre.ReadOnly = true;
-                cbCategories.Enabled = false;
+                gcbCategories.Enabled = false;
 
 
                 remplirListeRessources();
@@ -143,7 +140,7 @@ namespace AP3_MEDIA
             gtbImage.Clear();
             gtbAnnee.Clear();
             gtbIsbn.Clear();
-            cbCategories.SelectedIndex = -1;
+            gcbCategories.SelectedIndex = -1;
             gtbTitre.Focus();
         }
         private void btnAjouter_Click(object sender, EventArgs e)
@@ -154,7 +151,7 @@ namespace AP3_MEDIA
         private void bsRessources_CurrentChanged(object sender, EventArgs e)
         {
             // si une ressource est sélectionnée dans la liste
-            if (cbRessources.SelectedIndex != -1)
+            if (gcbRessources.SelectedIndex != -1)
             {
                 // récupération de la ressource sélectionnée
                 Ressource R = (Ressource)bsRessources.Current;
@@ -166,7 +163,7 @@ namespace AP3_MEDIA
                 gtbIsbn.Text = R.Isbn;
                 gtbLangue.Text = R.Langue;
                 gtbImage.Text = R.Image;
-                cbCategories.Text = R.IdcategorieNavigation.Libellecategorie;
+                gcbCategories.Text = R.IdcategorieNavigation.Libellecategorie;
 
                 ggbInfo.Visible = true;
                 gbtnAjouter.Visible = true;
@@ -208,8 +205,7 @@ namespace AP3_MEDIA
 
         private void button2_Click(object sender, EventArgs e)
         {
-            FormPopDGV formPopDGV = new FormPopDGV("Aucun Aide");
-            formPopDGV.Show();
+            
         }
 
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
@@ -222,7 +218,7 @@ namespace AP3_MEDIA
             int idCat = -1, annee;
             string titre, description, image, langue, isbn;
 
-            if (gtbTitre.Text != "" && cbCategories.SelectedIndex != -1 && gtbAnnee.Text != "")
+            if (gtbTitre.Text != "" && gcbCategories.SelectedIndex != -1 && gtbAnnee.Text != "")
             {
                 // ajout possible si les champs titre et catégorie sont remplis au moins
                 if (Convert.ToInt32(gtbAnnee.Text) >= 1000 && Convert.ToInt32(gtbAnnee.Text) <= 2100)
@@ -234,13 +230,13 @@ namespace AP3_MEDIA
                     langue = gtbLangue.Text;
                     isbn = gtbIsbn.Text;
                     annee = Convert.ToInt32(gtbAnnee.Text);
-                    idCat = Convert.ToInt32(cbCategories.SelectedValue.ToString());
+                    idCat = Convert.ToInt32(gcbCategories.SelectedValue.ToString());
 
 
                     if (etat == EtatGestion.Create) // cas de l'ajout
                     {
                         //verification de la completion de tout les champs
-                        if (gtbAnnee.Text != "" && gtbImage.Text != "" && gtbIsbn.Text != "" && gtbLangue.Text != "" && cbCategories.SelectedIndex != -1 && tbDescription.Text != "" && gtbTitre.Text != "" && gtbAnnee.Text != " " && gtbImage.Text != " " && gtbIsbn.Text != " " && gtbLangue.Text != " " && tbDescription.Text != " " && gtbTitre.Text != " ")
+                        if (gtbAnnee.Text != "" && gtbImage.Text != "" && gtbIsbn.Text != "" && gtbLangue.Text != "" && gcbCategories.SelectedIndex != -1 && tbDescription.Text != "" && gtbTitre.Text != "" && gtbAnnee.Text != " " && gtbImage.Text != " " && gtbIsbn.Text != " " && gtbLangue.Text != " " && tbDescription.Text != " " && gtbTitre.Text != " ")
                         {
                             if (Modele.AjoutRessource(titre, description, image, annee, langue, isbn, idCat))
                             {
@@ -263,7 +259,7 @@ namespace AP3_MEDIA
                             MessageBox.Show("Ressource modifiée");
                             ggbInfo.Visible = false;
                             gbtnAjouter.Visible = false;
-                            cbRessources.SelectedIndex = -1;
+                            gcbRessources.SelectedIndex = -1;
                             // Annuler();
                         }
                     }
@@ -275,7 +271,7 @@ namespace AP3_MEDIA
                             MessageBox.Show("Ressource DELETE !");
                             ggbInfo.Visible = false;
                             gbtnAjouter.Visible = false;
-                            cbRessources.SelectedIndex = -1;
+                            gcbRessources.SelectedIndex = -1;
                             // Annuler();
                         }
                     }
@@ -328,6 +324,40 @@ namespace AP3_MEDIA
                 FormPopDGV formPopDGV = new FormPopDGV(errorText);
                 formPopDGV.Show();
                 e.Handled = true; // efface le dernier caractère saisi
+            }
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gcbRessources_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            bsRessources_CurrentChanged(sender, e);
+        }
+
+        private void gbtHelp_Click(object sender, EventArgs e)
+        {
+            if(etat == EtatGestion.Create)
+            {
+                FormPopDGV formPopDGV = new FormPopDGV("Vous pouvez cree une nouvelle ressource pour la bibliotheque, n'oublier pas de remplir tout les champ : isbn,titre,description ect...");
+                formPopDGV.Show();
+            }
+            else if (etat == EtatGestion.Update)
+            {
+                FormPopDGV formPopDGV = new FormPopDGV("Vous pouvez modifier une ressource pour la bibliotheque, n'oublier pas de remplir tout les champ : isbn,titre,description ect...");
+                formPopDGV.Show();
+            }
+            else if (etat == EtatGestion.Delete)
+            {
+                FormPopDGV formPopDGV = new FormPopDGV("Vous pouvez supprimer une ressource pour la bibliotheque, n'oublier pas de remplir tout les champ : isbn,titre,description ect...");
+                formPopDGV.Show();
             }
         }
     }

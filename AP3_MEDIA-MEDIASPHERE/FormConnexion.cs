@@ -46,14 +46,20 @@ namespace AP3_MEDIA
 
         private void gbtExemplaires_Click(object sender, EventArgs e)
         {
-            var connexionAvecID1 = Modele.getListUsers().Where(x => x.MailUser == tbId.Text);
+            var connexionAvecID1 = Modele.getListUsers().Where(x => x.MailUser == gbtId.Text);
             try
             {
                 string mdpBcrypt = connexionAvecID1.Select(x => x.MdpUser).FirstOrDefault();
-                bool motDePasseCorrect = BCrypt.Net.BCrypt.Verify(tbMdp.Text, mdpBcrypt);
+                bool motDePasseCorrect = BCrypt.Net.BCrypt.Verify(gtbMdp.Text, mdpBcrypt);
                 if (motDePasseCorrect)
                 {
                     parentForm.ggbMenuStrip.Visible = true;
+                    parentForm.ggbMenuPlus.Visible = true;
+                    parentForm.gbtClose.Visible = true;
+                    parentForm.gcbHome.Visible = true;
+
+
+
 
                     this.Close();
                 }

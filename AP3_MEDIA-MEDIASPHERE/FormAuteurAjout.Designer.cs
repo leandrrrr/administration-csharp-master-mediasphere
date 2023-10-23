@@ -28,18 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lbRessources = new ListBox();
             gdgvAuteurs = new Guna.UI2.WinForms.Guna2DataGridView();
             ggbMenuStrip = new Guna.UI2.WinForms.Guna2GroupBox();
@@ -47,6 +51,8 @@
             gtbLibelle = new Guna.UI2.WinForms.Guna2TextBox();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             gbtHelp = new Guna.UI2.WinForms.Guna2CircleButton();
+            guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             ((System.ComponentModel.ISupportInitialize)gdgvAuteurs).BeginInit();
             ggbMenuStrip.SuspendLayout();
             SuspendLayout();
@@ -58,41 +64,41 @@
             lbRessources.Font = new Font("Oxanium Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             lbRessources.FormattingEnabled = true;
             lbRessources.ItemHeight = 21;
-            lbRessources.Location = new Point(44, 69);
+            lbRessources.Location = new Point(47, 69);
             lbRessources.Margin = new Padding(3, 4, 3, 4);
             lbRessources.Name = "lbRessources";
-            lbRessources.Size = new Size(280, 336);
+            lbRessources.Size = new Size(274, 336);
             lbRessources.TabIndex = 17;
             // 
             // gdgvAuteurs
             // 
-            dataGridViewCellStyle4.BackColor = Color.White;
-            gdgvAuteurs.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle5.Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            gdgvAuteurs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            gdgvAuteurs.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle2.Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            gdgvAuteurs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             gdgvAuteurs.ColumnHeadersHeight = 4;
             gdgvAuteurs.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = Color.White;
-            dataGridViewCellStyle6.Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            gdgvAuteurs.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            gdgvAuteurs.DefaultCellStyle = dataGridViewCellStyle3;
             gdgvAuteurs.GridColor = Color.FromArgb(231, 229, 255);
-            gdgvAuteurs.Location = new Point(684, 69);
+            gdgvAuteurs.Location = new Point(687, 69);
             gdgvAuteurs.Name = "gdgvAuteurs";
             gdgvAuteurs.RowHeadersVisible = false;
             gdgvAuteurs.RowHeadersWidth = 51;
             gdgvAuteurs.RowTemplate.Height = 29;
-            gdgvAuteurs.Size = new Size(332, 338);
+            gdgvAuteurs.Size = new Size(326, 338);
             gdgvAuteurs.TabIndex = 20;
             gdgvAuteurs.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             gdgvAuteurs.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -124,12 +130,12 @@
             ggbMenuStrip.Controls.Add(gbtAjouter);
             ggbMenuStrip.Controls.Add(gtbLibelle);
             ggbMenuStrip.CustomBorderColor = Color.FromArgb(94, 148, 255);
-            ggbMenuStrip.CustomizableEdges = customizableEdges14;
+            ggbMenuStrip.CustomizableEdges = customizableEdges5;
             ggbMenuStrip.Font = new Font("Oxanium Medium", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             ggbMenuStrip.ForeColor = Color.White;
             ggbMenuStrip.Location = new Point(330, 45);
             ggbMenuStrip.Name = "ggbMenuStrip";
-            ggbMenuStrip.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            ggbMenuStrip.ShadowDecoration.CustomizableEdges = customizableEdges6;
             ggbMenuStrip.Size = new Size(348, 370);
             ggbMenuStrip.TabIndex = 30;
             ggbMenuStrip.Text = "Ajout de un ou plusieurs utilisateurs";
@@ -138,7 +144,7 @@
             // 
             gbtAjouter.BackColor = Color.White;
             gbtAjouter.BorderRadius = 6;
-            gbtAjouter.CustomizableEdges = customizableEdges10;
+            gbtAjouter.CustomizableEdges = customizableEdges1;
             gbtAjouter.DisabledState.BorderColor = Color.DarkGray;
             gbtAjouter.DisabledState.CustomBorderColor = Color.DarkGray;
             gbtAjouter.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -147,7 +153,7 @@
             gbtAjouter.ForeColor = Color.White;
             gbtAjouter.Location = new Point(20, 216);
             gbtAjouter.Name = "gbtAjouter";
-            gbtAjouter.ShadowDecoration.CustomizableEdges = customizableEdges11;
+            gbtAjouter.ShadowDecoration.CustomizableEdges = customizableEdges2;
             gbtAjouter.Size = new Size(310, 59);
             gbtAjouter.TabIndex = 4;
             gbtAjouter.Text = "Ajouter";
@@ -156,7 +162,7 @@
             // 
             gtbLibelle.BackColor = Color.White;
             gtbLibelle.BorderRadius = 6;
-            gtbLibelle.CustomizableEdges = customizableEdges12;
+            gtbLibelle.CustomizableEdges = customizableEdges3;
             gtbLibelle.DefaultText = "";
             gtbLibelle.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             gtbLibelle.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -172,7 +178,7 @@
             gtbLibelle.PasswordChar = '\0';
             gtbLibelle.PlaceholderText = "";
             gtbLibelle.SelectedText = "";
-            gtbLibelle.ShadowDecoration.CustomizableEdges = customizableEdges13;
+            gtbLibelle.ShadowDecoration.CustomizableEdges = customizableEdges4;
             gtbLibelle.Size = new Size(310, 46);
             gtbLibelle.TabIndex = 1;
             gtbLibelle.TextAlign = HorizontalAlignment.Center;
@@ -181,7 +187,7 @@
             // 
             guna2Button1.BackColor = Color.FromArgb(154, 206, 234);
             guna2Button1.BorderRadius = 6;
-            guna2Button1.CustomizableEdges = customizableEdges16;
+            guna2Button1.CustomizableEdges = customizableEdges7;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
             guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -190,7 +196,7 @@
             guna2Button1.ForeColor = Color.White;
             guna2Button1.Location = new Point(881, 447);
             guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges17;
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2Button1.Size = new Size(135, 58);
             guna2Button1.TabIndex = 5;
             guna2Button1.Text = "Fermer";
@@ -208,11 +214,43 @@
             gbtHelp.ImageSize = new Size(27, 27);
             gbtHelp.Location = new Point(976, 12);
             gbtHelp.Name = "gbtHelp";
-            gbtHelp.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            gbtHelp.ShadowDecoration.CustomizableEdges = customizableEdges9;
             gbtHelp.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             gbtHelp.Size = new Size(40, 40);
             gbtHelp.TabIndex = 31;
             gbtHelp.Click += gbtHelp_Click;
+            // 
+            // guna2GroupBox1
+            // 
+            guna2GroupBox1.Anchor = AnchorStyles.Top;
+            guna2GroupBox1.BorderColor = Color.White;
+            guna2GroupBox1.BorderRadius = 4;
+            guna2GroupBox1.CustomBorderColor = Color.White;
+            guna2GroupBox1.CustomizableEdges = customizableEdges10;
+            guna2GroupBox1.Font = new Font("Oxanium Medium", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            guna2GroupBox1.ForeColor = Color.FromArgb(125, 137, 149);
+            guna2GroupBox1.Location = new Point(684, 69);
+            guna2GroupBox1.Name = "guna2GroupBox1";
+            guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges11;
+            guna2GroupBox1.Size = new Size(332, 338);
+            guna2GroupBox1.TabIndex = 32;
+            guna2GroupBox1.TextAlign = HorizontalAlignment.Center;
+            // 
+            // guna2GroupBox2
+            // 
+            guna2GroupBox2.Anchor = AnchorStyles.Top;
+            guna2GroupBox2.BorderColor = Color.White;
+            guna2GroupBox2.BorderRadius = 4;
+            guna2GroupBox2.CustomBorderColor = Color.White;
+            guna2GroupBox2.CustomizableEdges = customizableEdges12;
+            guna2GroupBox2.Font = new Font("Oxanium Medium", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            guna2GroupBox2.ForeColor = Color.FromArgb(125, 137, 149);
+            guna2GroupBox2.Location = new Point(44, 69);
+            guna2GroupBox2.Name = "guna2GroupBox2";
+            guna2GroupBox2.ShadowDecoration.CustomizableEdges = customizableEdges13;
+            guna2GroupBox2.Size = new Size(280, 336);
+            guna2GroupBox2.TabIndex = 33;
+            guna2GroupBox2.TextAlign = HorizontalAlignment.Center;
             // 
             // FormAuteurAjout
             // 
@@ -225,6 +263,8 @@
             Controls.Add(ggbMenuStrip);
             Controls.Add(gdgvAuteurs);
             Controls.Add(lbRessources);
+            Controls.Add(guna2GroupBox1);
+            Controls.Add(guna2GroupBox2);
             Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormAuteurAjout";
@@ -243,5 +283,7 @@
         private Guna.UI2.WinForms.Guna2TextBox gtbLibelle;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2CircleButton gbtHelp;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
     }
 }

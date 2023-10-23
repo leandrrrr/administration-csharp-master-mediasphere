@@ -8,13 +8,16 @@ namespace AP3_MEDIA
 
         bool DevMode = true;
         string menuOption = "";
+        bool homeButtonActive = true;
         public FormMenu()
         {
             InitializeComponent();
         }
 
+
         private void Form1_Load(object sender, EventArgs e)
         {
+            ggbHomeOption.Visible = false;
             ggbMenuOption.Visible = false;
             if (!DevMode)
             {
@@ -22,6 +25,30 @@ namespace AP3_MEDIA
                 openChildForm(new FormConnexion(this));
             }
 
+        }
+
+        public void resetMenuColor()
+        {
+            int colorHold1 = 94;
+            int colorHold2 = 148;
+            int colorHold3 = 255;
+            guna2Button1.FillColor = Color.FromArgb(colorHold1, colorHold2, colorHold3);
+            gbtCategories.FillColor = Color.FromArgb(colorHold1, colorHold2, colorHold3);
+            gbtEmprunteurs.FillColor = Color.FromArgb(colorHold1, colorHold2, colorHold3);
+            gbtRess.FillColor = Color.FromArgb(colorHold1, colorHold2, colorHold3);
+            gbtExemplaires.FillColor = Color.FromArgb(colorHold1, colorHold2, colorHold3);
+
+        }
+
+        public void resetMenuOptionColor()
+        {
+            int colorHold1 = 94;
+            int colorHold2 = 148;
+            int colorHold3 = 255;
+            guna2Button2.FillColor = Color.FromArgb(colorHold1, colorHold2, colorHold3);
+            guna2Button3.FillColor = Color.FromArgb(colorHold1, colorHold2, colorHold3);
+            guna2Button4.FillColor = Color.FromArgb(colorHold1, colorHold2, colorHold3);
+            guna2Button5.FillColor = Color.FromArgb(colorHold1, colorHold2, colorHold3);
         }
 
         private void qUITTERToolStripMenuItem_Click(object sender, EventArgs e)
@@ -164,6 +191,10 @@ namespace AP3_MEDIA
 
         private void gbtRess_Click(object sender, EventArgs e)
         {
+            resetMenuColor();
+            resetMenuOptionColor();
+            gbtRess.FillColor = Color.FromArgb(64, 108, 235);
+
             ggbMenuOption.Visible = true;
             menuOption = "ressource";
 
@@ -179,6 +210,9 @@ namespace AP3_MEDIA
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+            resetMenuColor();
+            resetMenuOptionColor();
+            guna2Button1.FillColor = Color.FromArgb(64, 108, 235);
 
             ggbMenuOption.Visible = true;
             menuOption = "auteur";
@@ -190,6 +224,9 @@ namespace AP3_MEDIA
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
+            resetMenuOptionColor();
+            guna2Button2.FillColor = Color.FromArgb(64, 108, 235);
+
             //liste
             switch (menuOption)
             {
@@ -207,6 +244,10 @@ namespace AP3_MEDIA
 
         private void gbtCategories_Click(object sender, EventArgs e)
         {
+            resetMenuColor();
+            resetMenuOptionColor();
+            gbtCategories.FillColor = Color.FromArgb(64, 108, 235);
+
             ggbMenuOption.Visible = false;
 
             openChildForm(new FormCategories());
@@ -214,6 +255,8 @@ namespace AP3_MEDIA
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
+            resetMenuOptionColor();
+            guna2Button3.FillColor = Color.FromArgb(64, 108, 235);
             //ajout
             switch (menuOption)
             {
@@ -231,6 +274,8 @@ namespace AP3_MEDIA
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
+            resetMenuOptionColor();
+            guna2Button4.FillColor = Color.FromArgb(64, 108, 235);
             //edit
             switch (menuOption)
             {
@@ -247,6 +292,8 @@ namespace AP3_MEDIA
 
         private void guna2Button5_Click(object sender, EventArgs e)
         {
+            resetMenuOptionColor();
+            guna2Button5.FillColor = Color.FromArgb(64, 108, 235);
             //delete
             switch (menuOption)
             {
@@ -264,6 +311,10 @@ namespace AP3_MEDIA
 
         private void gbtEmprunteurs_Click(object sender, EventArgs e)
         {
+            resetMenuColor();
+            resetMenuOptionColor();
+            gbtEmprunteurs.FillColor = Color.FromArgb(64, 108, 235);
+
             ggbMenuOption.Visible = false;
             openChildForm(new FormRessources("emprunteurs"));
 
@@ -271,8 +322,12 @@ namespace AP3_MEDIA
 
         private void gbtExemplaires_Click(object sender, EventArgs e)
         {
+            resetMenuColor();
+            resetMenuOptionColor();
+            gbtExemplaires.FillColor = Color.FromArgb(64, 108, 235);
+
             ggbMenuOption.Visible = false;
-            //openChildForm(new FormGestionExemplaires());
+            openChildForm(new FormGestionExemplaires());
         }
 
         private void guna2CircleButton1_Click(object sender, EventArgs e)
@@ -282,11 +337,39 @@ namespace AP3_MEDIA
 
         private void gcbHome_Click(object sender, EventArgs e)
         {
+
+
+            if (homeButtonActive)
+            {
+                ggbHomeOption.Visible = true;
+                homeButtonActive = false;
+                gcbHome.FillColor = Color.FromArgb(64, 108, 235);
+                //gcbHome.BackColor = Color.White;
+            }
+            else
+            {
+                ggbHomeOption.Visible = false;
+                homeButtonActive = true;
+                gcbHome.FillColor = Color.FromArgb(94, 148, 255);
+                //gcbHome.BackColor = Color.FromArgb(154, 206, 234);
+
+            }
+        }
+
+        private void guna2CircleButton3_Click(object sender, EventArgs e)
+        {
+            ggbMenuPlus.Visible = false;
             ggbMenuStrip.Visible = false;
+            ggbHomeOption.Visible = false;
             ggbMenuOption.Visible = false;
             gbtClose.Visible = false;
             gcbHome.Visible = false;
             openChildForm(new FormConnexion(this));
+        }
+
+        private void ggbMenuOption_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

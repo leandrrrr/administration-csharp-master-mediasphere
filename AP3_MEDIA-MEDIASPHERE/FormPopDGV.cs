@@ -42,5 +42,10 @@ namespace AP3_MEDIA
         {
             this.Close();
         }
+
+        private void gbtExemplaires_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

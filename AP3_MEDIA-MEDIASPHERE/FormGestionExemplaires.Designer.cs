@@ -42,6 +42,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lbRessources = new ListBox();
             bsRessources = new BindingSource(components);
             bsEtat = new BindingSource(components);
@@ -52,6 +54,7 @@
             gcbEtat = new Guna.UI2.WinForms.Guna2ComboBox();
             gdtpDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             ggbMenuStrip = new Guna.UI2.WinForms.Guna2GroupBox();
+            guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             ((System.ComponentModel.ISupportInitialize)bsRessources).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsEtat).BeginInit();
             ggbMenuStrip.SuspendLayout();
@@ -67,7 +70,7 @@
             lbRessources.Location = new Point(49, 56);
             lbRessources.Margin = new Padding(3, 4, 3, 4);
             lbRessources.Name = "lbRessources";
-            lbRessources.Size = new Size(280, 336);
+            lbRessources.Size = new Size(267, 336);
             lbRessources.TabIndex = 9;
             lbRessources.SelectedIndexChanged += lbRessources_SelectedIndexChanged;
             // 
@@ -229,6 +232,22 @@
             ggbMenuStrip.TabIndex = 29;
             ggbMenuStrip.TextAlign = HorizontalAlignment.Center;
             // 
+            // guna2GroupBox1
+            // 
+            guna2GroupBox1.Anchor = AnchorStyles.Top;
+            guna2GroupBox1.BorderColor = Color.White;
+            guna2GroupBox1.BorderRadius = 4;
+            guna2GroupBox1.CustomBorderColor = Color.White;
+            guna2GroupBox1.CustomizableEdges = customizableEdges14;
+            guna2GroupBox1.Font = new Font("Oxanium Medium", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            guna2GroupBox1.ForeColor = Color.FromArgb(125, 137, 149);
+            guna2GroupBox1.Location = new Point(39, 56);
+            guna2GroupBox1.Name = "guna2GroupBox1";
+            guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            guna2GroupBox1.Size = new Size(290, 336);
+            guna2GroupBox1.TabIndex = 30;
+            guna2GroupBox1.TextAlign = HorizontalAlignment.Center;
+            // 
             // FormGestionExemplaires
             // 
             AutoScaleDimensions = new SizeF(9F, 19F);
@@ -238,6 +257,7 @@
             Controls.Add(gbtHelp);
             Controls.Add(ggbMenuStrip);
             Controls.Add(lbRessources);
+            Controls.Add(guna2GroupBox1);
             Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormGestionExemplaires";
@@ -261,5 +281,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox gcbEtat;
         private Guna.UI2.WinForms.Guna2DateTimePicker gdtpDate;
         private Guna.UI2.WinForms.Guna2GroupBox ggbMenuStrip;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
     }
 }
