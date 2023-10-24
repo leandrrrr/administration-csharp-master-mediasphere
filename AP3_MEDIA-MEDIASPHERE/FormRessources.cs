@@ -29,9 +29,12 @@ namespace AP3_MEDIA
 
         private void FormRessources_Load(object sender, EventArgs e)
         {
+            voirLesAuteursToolStripMenuItem.Visible = true;
+            voirLesExemplaireToolStripMenuItem.Visible = true;
 
             if (etatForm == "ressources")
             {
+
 
                 bsRessources.DataSource = Modele.getListRessources().Select(x => new
                 {
@@ -50,6 +53,8 @@ namespace AP3_MEDIA
             }
             else if (etatForm == "emprunteurs")
             {
+                voirLesAuteursToolStripMenuItem.Visible = false;
+
                 voirLesExemplaireToolStripMenuItem.Text = "voir les emprunts";
                 bsRessources.DataSource = Modele.getListEmprunteur().Select(x => new
                 {
@@ -68,7 +73,8 @@ namespace AP3_MEDIA
 
             else if (etatForm == "auteurs")
             {
-
+                voirLesAuteursToolStripMenuItem.Visible = false;
+                voirLesExemplaireToolStripMenuItem.Visible = false;
                 voirLesExemplaireToolStripMenuItem.Text = "il fait beau aujourd'hui";
                 bsRessources.DataSource = Modele.getListAuteurs().Select(x => new
                 {
@@ -266,6 +272,43 @@ namespace AP3_MEDIA
         {
             ggbExemplaires.Visible = false;
 
+        }
+
+        private void dgvExemplaires_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void voirLesAuteursToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (etatForm == "ressources")
+            {
+                System.Type type = bsRessources.Current.GetType();
+                int idR = (int)type.GetProperty("Idressource").GetValue(bsRessources.Current, null);
+                List<AuteurRessource> lesExemplaires = Modele.listeAuteursParRessource(idR);
+                if (lesExemplaires.Count != 0)
+                {
+                    bsExemplaires.DataSource = (lesExemplaires).Select(x => new
+                    {
+                        x.IdAuteurNavigation.PrenomAuteur,
+                        x.IdAuteurNavigation.NomAuteur
+                    });
+
+                    dgvExemplaires.DataSource = bsExemplaires;
+                    dgvExemplaires.Visible = true;
+                    ggbExemplaires.Visible = true;
+
+
+
+
+
+                }
+                else
+                {
+                    dgvExemplaires.Visible = false;
+                    MessageBox.Show("Pas d'exemplaire pour cette ressource");
+                }
+            }
         }
     }
 }

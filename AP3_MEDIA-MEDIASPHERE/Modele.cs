@@ -56,6 +56,10 @@ namespace AP3_MEDIA
             return monModele.Exemplaires.ToList();
         }
 
+        public static List<Emprunter> getListEmprunt()
+        {
+            return monModele.Emprunters.ToList();
+        }
         public static List<Etat> getListEtats()
         {
             return monModele.Etats.ToList();
@@ -74,6 +78,11 @@ namespace AP3_MEDIA
         public static List<Exemplaire> listeExemplairesParRessource(int idR)
         {
             List<Exemplaire> lesEx = monModele.Exemplaires.Where(p => p.Idressource == idR).Include(p=> p.IdetatNavigation).ToList();
+            return lesEx;
+        }
+        public static List<AuteurRessource> listeAuteursParRessource(int idR)
+        {
+            List<AuteurRessource> lesEx = monModele.AuteurRessources.Where(p => p.IdRessource == idR).Include(p => p.IdAuteurNavigation).ToList();
             return lesEx;
         }
         public static List<Emprunter> listeEmpruntsParEmpruteurs(int idR)

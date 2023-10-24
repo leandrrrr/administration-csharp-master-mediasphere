@@ -38,7 +38,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             contextMenuStrip1 = new ContextMenuStrip(components);
             voirLesExemplaireToolStripMenuItem = new ToolStripMenuItem();
-            label1 = new Label();
+            voirLesAuteursToolStripMenuItem = new ToolStripMenuItem();
             bsRessources = new BindingSource(components);
             bsExemplaires = new BindingSource(components);
             gbtHelp = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -58,9 +58,9 @@
             // contextMenuStrip1
             // 
             contextMenuStrip1.ImageScalingSize = new Size(20, 20);
-            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { voirLesExemplaireToolStripMenuItem });
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { voirLesExemplaireToolStripMenuItem, voirLesAuteursToolStripMenuItem });
             contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(210, 28);
+            contextMenuStrip1.Size = new Size(210, 52);
             // 
             // voirLesExemplaireToolStripMenuItem
             // 
@@ -69,15 +69,12 @@
             voirLesExemplaireToolStripMenuItem.Text = "voir les exemplaires";
             voirLesExemplaireToolStripMenuItem.Click += voirLesExemplaireToolStripMenuItem_Click;
             // 
-            // label1
+            // voirLesAuteursToolStripMenuItem
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Oxanium", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(74, 16);
-            label1.Name = "label1";
-            label1.Size = new Size(244, 29);
-            label1.TabIndex = 1;
-            label1.Text = "Liste des Ressources";
+            voirLesAuteursToolStripMenuItem.Name = "voirLesAuteursToolStripMenuItem";
+            voirLesAuteursToolStripMenuItem.Size = new Size(209, 24);
+            voirLesAuteursToolStripMenuItem.Text = "Voir les Auteurs";
+            voirLesAuteursToolStripMenuItem.Click += voirLesAuteursToolStripMenuItem_Click;
             // 
             // bsRessources
             // 
@@ -131,7 +128,7 @@
             dgvRessources.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvRessources.ContextMenuStrip = contextMenuStrip1;
             dgvRessources.GridColor = Color.White;
-            dgvRessources.Location = new Point(74, 89);
+            dgvRessources.Location = new Point(74, 75);
             dgvRessources.Margin = new Padding(3, 4, 3, 4);
             dgvRessources.Name = "dgvRessources";
             dgvRessources.ReadOnly = true;
@@ -151,7 +148,7 @@
             ggbMenuStrip.CustomizableEdges = customizableEdges4;
             ggbMenuStrip.Font = new Font("Oxanium Medium", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             ggbMenuStrip.ForeColor = Color.FromArgb(125, 137, 149);
-            ggbMenuStrip.Location = new Point(65, 77);
+            ggbMenuStrip.Location = new Point(65, 63);
             ggbMenuStrip.Name = "ggbMenuStrip";
             ggbMenuStrip.ShadowDecoration.CustomizableEdges = customizableEdges5;
             ggbMenuStrip.Size = new Size(903, 350);
@@ -168,7 +165,7 @@
             ggbExemplaires.CustomizableEdges = customizableEdges6;
             ggbExemplaires.Font = new Font("Oxanium Medium", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             ggbExemplaires.ForeColor = Color.Black;
-            ggbExemplaires.Location = new Point(496, 60);
+            ggbExemplaires.Location = new Point(496, 46);
             ggbExemplaires.Name = "ggbExemplaires";
             ggbExemplaires.ShadowDecoration.CustomizableEdges = customizableEdges7;
             ggbExemplaires.Size = new Size(462, 381);
@@ -193,6 +190,7 @@
             dgvExemplaires.Size = new Size(455, 346);
             dgvExemplaires.TabIndex = 42;
             dgvExemplaires.Visible = false;
+            dgvExemplaires.CellContentClick += dgvExemplaires_CellContentClick_1;
             // 
             // FormRessources
             // 
@@ -203,7 +201,6 @@
             Controls.Add(ggbExemplaires);
             Controls.Add(gbtHelp);
             Controls.Add(guna2Button1);
-            Controls.Add(label1);
             Controls.Add(dgvRessources);
             Controls.Add(ggbMenuStrip);
             Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -219,11 +216,9 @@
             ggbExemplaires.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvExemplaires).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-        private Label label1;
         private BindingSource bsRessources;
         private ContextMenuStrip contextMenuStrip1;
         private ToolStripMenuItem voirLesExemplaireToolStripMenuItem;
@@ -234,5 +229,6 @@
         private Guna.UI2.WinForms.Guna2GroupBox ggbMenuStrip;
         private Guna.UI2.WinForms.Guna2GroupBox ggbExemplaires;
         private DataGridView dgvExemplaires;
+        private ToolStripMenuItem voirLesAuteursToolStripMenuItem;
     }
 }

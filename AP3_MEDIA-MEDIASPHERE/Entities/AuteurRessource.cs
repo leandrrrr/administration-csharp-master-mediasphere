@@ -8,4 +8,7 @@ public partial class AuteurRessource
     public int IdRessource { get; set; }
 
     public int IdAuteur { get; set; }
+
+    public virtual Auteur IdAuteurNavigation { get; set; } = null!;
+
 }

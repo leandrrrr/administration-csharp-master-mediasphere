@@ -205,7 +205,7 @@ namespace AP3_MEDIA
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
@@ -344,7 +344,7 @@ namespace AP3_MEDIA
 
         private void gbtHelp_Click(object sender, EventArgs e)
         {
-            if(etat == EtatGestion.Create)
+            if (etat == EtatGestion.Create)
             {
                 FormPopDGV formPopDGV = new FormPopDGV("Vous pouvez cree une nouvelle ressource pour la bibliotheque, n'oublier pas de remplir tout les champ : isbn,titre,description ect...");
                 formPopDGV.Show();
@@ -358,6 +358,21 @@ namespace AP3_MEDIA
             {
                 FormPopDGV formPopDGV = new FormPopDGV("Vous pouvez supprimer une ressource pour la bibliotheque, n'oublier pas de remplir tout les champ : isbn,titre,description ect...");
                 formPopDGV.Show();
+            }
+        }
+
+        private void gtbImage_TextChanged(object sender, EventArgs e)
+        {
+            string imageUrl = "http://mediatout.florianjaunet.fr/public/assets/"+gtbImage.Text;
+
+            try
+            {
+                Image image = Image.FromStream(new System.Net.WebClient().OpenRead(imageUrl));
+                pictureBox1.Image = image;
+            }
+            catch (Exception ex)
+            {
+                
             }
         }
     }

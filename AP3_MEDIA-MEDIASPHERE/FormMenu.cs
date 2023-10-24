@@ -37,6 +37,7 @@ namespace AP3_MEDIA
             gbtEmprunteurs.FillColor = Color.FromArgb(colorHold1, colorHold2, colorHold3);
             gbtRess.FillColor = Color.FromArgb(colorHold1, colorHold2, colorHold3);
             gbtExemplaires.FillColor = Color.FromArgb(colorHold1, colorHold2, colorHold3);
+            gbtExtension.FillColor = Color.FromArgb(colorHold1, colorHold2, colorHold3);
 
         }
 
@@ -370,6 +371,16 @@ namespace AP3_MEDIA
         private void ggbMenuOption_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void gbtExtension_Click(object sender, EventArgs e)
+        {
+            resetMenuColor();
+            resetMenuOptionColor();
+            gbtExtension.FillColor = Color.FromArgb(64, 108, 235);
+
+            ggbMenuOption.Visible = false;
+            openChildForm(new FormExtension());
         }
     }
 }

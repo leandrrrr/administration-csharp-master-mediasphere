@@ -68,10 +68,12 @@
             gbtnAjouter = new Guna.UI2.WinForms.Guna2Button();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             gcbRessources = new Guna.UI2.WinForms.Guna2ComboBox();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)bsCategories).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsRessources).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsEtats).BeginInit();
             ggbInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // bsRessources
@@ -161,7 +163,7 @@
             gtbIsbn.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             gtbIsbn.Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
             gtbIsbn.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            gtbIsbn.Location = new Point(582, 85);
+            gtbIsbn.Location = new Point(314, 85);
             gtbIsbn.Margin = new Padding(3, 4, 3, 4);
             gtbIsbn.Name = "gtbIsbn";
             gtbIsbn.PasswordChar = '\0';
@@ -177,6 +179,7 @@
             ggbInfo.Anchor = AnchorStyles.Top;
             ggbInfo.BorderColor = Color.White;
             ggbInfo.BorderRadius = 6;
+            ggbInfo.Controls.Add(pictureBox1);
             ggbInfo.Controls.Add(gcbCategories);
             ggbInfo.Controls.Add(gtbTitre);
             ggbInfo.Controls.Add(gtbImage);
@@ -249,7 +252,7 @@
             gtbImage.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             gtbImage.Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
             gtbImage.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            gtbImage.Location = new Point(314, 85);
+            gtbImage.Location = new Point(582, 85);
             gtbImage.Margin = new Padding(3, 4, 3, 4);
             gtbImage.Name = "gtbImage";
             gtbImage.PasswordChar = '\0';
@@ -258,6 +261,7 @@
             gtbImage.ShadowDecoration.CustomizableEdges = customizableEdges9;
             gtbImage.Size = new Size(240, 54);
             gtbImage.TabIndex = 36;
+            gtbImage.TextChanged += gtbImage_TextChanged;
             // 
             // gtbAnnee
             // 
@@ -365,6 +369,16 @@
             gcbRessources.TabIndex = 38;
             gcbRessources.SelectedIndexChanged += gcbRessources_SelectedIndexChanged;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.White;
+            pictureBox1.Location = new Point(732, 166);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(126, 158);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 45;
+            pictureBox1.TabStop = false;
+            // 
             // FormGestionRessources
             // 
             AutoScaleDimensions = new SizeF(9F, 19F);
@@ -393,6 +407,7 @@
             ((System.ComponentModel.ISupportInitialize)bsEtats).EndInit();
             ggbInfo.ResumeLayout(false);
             ggbInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -421,5 +436,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2ComboBox gcbCategories;
         private Guna.UI2.WinForms.Guna2ComboBox gcbRessources;
+        private PictureBox pictureBox1;
     }
 }
