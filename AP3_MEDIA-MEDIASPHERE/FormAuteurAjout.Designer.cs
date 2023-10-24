@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
@@ -47,14 +48,17 @@
             lbRessources = new ListBox();
             gdgvAuteurs = new Guna.UI2.WinForms.Guna2DataGridView();
             ggbMenuStrip = new Guna.UI2.WinForms.Guna2GroupBox();
+            label3 = new Label();
             gbtAjouter = new Guna.UI2.WinForms.Guna2Button();
             gtbLibelle = new Guna.UI2.WinForms.Guna2TextBox();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             gbtHelp = new Guna.UI2.WinForms.Guna2CircleButton();
             guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            bsRessource = new BindingSource(components);
             ((System.ComponentModel.ISupportInitialize)gdgvAuteurs).BeginInit();
             ggbMenuStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)bsRessource).BeginInit();
             SuspendLayout();
             // 
             // lbRessources
@@ -127,6 +131,7 @@
             ggbMenuStrip.Anchor = AnchorStyles.Top;
             ggbMenuStrip.BorderColor = Color.White;
             ggbMenuStrip.BorderRadius = 6;
+            ggbMenuStrip.Controls.Add(label3);
             ggbMenuStrip.Controls.Add(gbtAjouter);
             ggbMenuStrip.Controls.Add(gtbLibelle);
             ggbMenuStrip.CustomBorderColor = Color.FromArgb(94, 148, 255);
@@ -139,6 +144,18 @@
             ggbMenuStrip.Size = new Size(348, 370);
             ggbMenuStrip.TabIndex = 30;
             ggbMenuStrip.Text = "Ajout de un ou plusieurs utilisateurs";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.White;
+            label3.Font = new Font("Oxanium Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.FromArgb(193, 200, 207);
+            label3.Location = new Point(122, 86);
+            label3.Name = "label3";
+            label3.Size = new Size(103, 21);
+            label3.TabIndex = 5;
+            label3.Text = "Ressource";
             // 
             // gbtAjouter
             // 
@@ -261,10 +278,10 @@
             Controls.Add(gbtHelp);
             Controls.Add(guna2Button1);
             Controls.Add(ggbMenuStrip);
-            Controls.Add(gdgvAuteurs);
             Controls.Add(lbRessources);
-            Controls.Add(guna2GroupBox1);
             Controls.Add(guna2GroupBox2);
+            Controls.Add(gdgvAuteurs);
+            Controls.Add(guna2GroupBox1);
             Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormAuteurAjout";
@@ -272,6 +289,8 @@
             Load += FormAuteurAjout_Load;
             ((System.ComponentModel.ISupportInitialize)gdgvAuteurs).EndInit();
             ggbMenuStrip.ResumeLayout(false);
+            ggbMenuStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)bsRessource).EndInit();
             ResumeLayout(false);
         }
 
@@ -285,5 +304,7 @@
         private Guna.UI2.WinForms.Guna2CircleButton gbtHelp;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
+        private Label label3;
+        private BindingSource bsRessource;
     }
 }

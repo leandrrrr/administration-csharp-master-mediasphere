@@ -34,7 +34,6 @@ namespace AP3_MEDIA
             remplirListeCategories();
             gbtModifier.Enabled = false;
             gbtSupprimer.Enabled = false;
-
         }
 
         private void btnFermer_Click(object sender, EventArgs e)
