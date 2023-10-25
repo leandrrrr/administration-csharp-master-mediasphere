@@ -195,6 +195,7 @@
             gbtPlus10.Size = new Size(135, 74);
             gbtPlus10.TabIndex = 39;
             gbtPlus10.Text = "+10 Jours";
+            gbtPlus10.Click += gbtPlus10_Click;
             // 
             // gbtPlus20
             // 
@@ -213,6 +214,7 @@
             gbtPlus20.Size = new Size(135, 74);
             gbtPlus20.TabIndex = 40;
             gbtPlus20.Text = "+20 Jours";
+            gbtPlus20.Click += gbtPlus20_Click;
             // 
             // gbtPlus30
             // 
