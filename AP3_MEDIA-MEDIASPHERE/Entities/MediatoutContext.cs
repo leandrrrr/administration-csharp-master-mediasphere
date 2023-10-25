@@ -62,17 +62,22 @@ public partial class MediatoutContext : DbContext
 
         modelBuilder.Entity<AuteurRessource>(entity =>
         {
-            entity.HasKey(e => e.IdAuteur).HasName("PRIMARY");
+            entity.HasKey(e => new { e.IdRessource, e.IdAuteur })
+                .HasName("PRIMARY")
+                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
             entity.ToTable("auteur_ressource");
 
-            entity.Property(e => e.IdAuteur)
-                .ValueGeneratedNever()
-                .HasColumnType("int(11)")
-                .HasColumnName("idAuteur");
+            entity.HasIndex(e => e.IdAuteur, "idAuteur");
+
+            entity.HasIndex(e => e.IdRessource, "idRessource");
+
             entity.Property(e => e.IdRessource)
                 .HasColumnType("int(11)")
                 .HasColumnName("idRessource");
+            entity.Property(e => e.IdAuteur)
+                .HasColumnType("int(11)")
+                .HasColumnName("idAuteur");
         });
 
         modelBuilder.Entity<Categorie>(entity =>
@@ -119,6 +124,10 @@ public partial class MediatoutContext : DbContext
             entity.Property(e => e.Dureeemprunt)
                 .HasColumnType("int(11)")
                 .HasColumnName("dureeemprunt");
+            entity.Property(e => e.Extension)
+                .HasDefaultValueSql("'0'")
+                .HasColumnType("int(2)")
+                .HasColumnName("extension");
 
             entity.HasOne(d => d.IdemprunteurNavigation).WithMany(p => p.Emprunters)
                 .HasForeignKey(d => d.Idemprunteur)
@@ -217,8 +226,6 @@ public partial class MediatoutContext : DbContext
 
             entity.HasIndex(e => e.Idcategorie, "i_fk_ressource_categorie1");
 
-            entity.HasIndex(e => e.IdAuteur, "idAuteur");
-
             entity.Property(e => e.Idressource)
                 .HasColumnType("int(11)")
                 .HasColumnName("idressource");
@@ -228,9 +235,6 @@ public partial class MediatoutContext : DbContext
             entity.Property(e => e.Description)
                 .HasMaxLength(255)
                 .HasColumnName("description");
-            entity.Property(e => e.IdAuteur)
-                .HasColumnType("int(11)")
-                .HasColumnName("idAuteur");
             entity.Property(e => e.Idcategorie)
                 .HasColumnType("int(11)")
                 .HasColumnName("idcategorie");

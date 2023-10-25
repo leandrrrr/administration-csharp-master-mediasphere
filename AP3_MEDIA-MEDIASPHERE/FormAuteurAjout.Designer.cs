@@ -47,6 +47,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lbRessources = new ListBox();
             gdgvAuteurs = new Guna.UI2.WinForms.Guna2DataGridView();
+            selectAuteurs = new DataGridViewCheckBoxColumn();
             ggbMenuStrip = new Guna.UI2.WinForms.Guna2GroupBox();
             label3 = new Label();
             gbtAjouter = new Guna.UI2.WinForms.Guna2Button();
@@ -56,9 +57,14 @@
             guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             bsRessource = new BindingSource(components);
+            bsAuteur = new BindingSource(components);
+            label1 = new Label();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)gdgvAuteurs).BeginInit();
             ggbMenuStrip.SuspendLayout();
+            guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bsRessource).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bsAuteur).BeginInit();
             SuspendLayout();
             // 
             // lbRessources
@@ -73,6 +79,7 @@
             lbRessources.Name = "lbRessources";
             lbRessources.Size = new Size(274, 336);
             lbRessources.TabIndex = 17;
+            lbRessources.SelectedIndexChanged += lbRessources_SelectedIndexChanged;
             // 
             // gdgvAuteurs
             // 
@@ -88,21 +95,22 @@
             gdgvAuteurs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             gdgvAuteurs.ColumnHeadersHeight = 4;
             gdgvAuteurs.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            gdgvAuteurs.Columns.AddRange(new DataGridViewColumn[] { selectAuteurs });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             gdgvAuteurs.DefaultCellStyle = dataGridViewCellStyle3;
             gdgvAuteurs.GridColor = Color.FromArgb(231, 229, 255);
-            gdgvAuteurs.Location = new Point(687, 69);
+            gdgvAuteurs.Location = new Point(687, 99);
             gdgvAuteurs.Name = "gdgvAuteurs";
             gdgvAuteurs.RowHeadersVisible = false;
             gdgvAuteurs.RowHeadersWidth = 51;
             gdgvAuteurs.RowTemplate.Height = 29;
-            gdgvAuteurs.Size = new Size(326, 338);
+            gdgvAuteurs.Size = new Size(326, 308);
             gdgvAuteurs.TabIndex = 20;
             gdgvAuteurs.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             gdgvAuteurs.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -125,6 +133,12 @@
             gdgvAuteurs.ThemeStyle.RowsStyle.Height = 29;
             gdgvAuteurs.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             gdgvAuteurs.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            // 
+            // selectAuteurs
+            // 
+            selectAuteurs.HeaderText = "X";
+            selectAuteurs.MinimumWidth = 6;
+            selectAuteurs.Name = "selectAuteurs";
             // 
             // ggbMenuStrip
             // 
@@ -174,6 +188,7 @@
             gbtAjouter.Size = new Size(310, 59);
             gbtAjouter.TabIndex = 4;
             gbtAjouter.Text = "Ajouter";
+            gbtAjouter.Click += gbtAjouter_Click;
             // 
             // gtbLibelle
             // 
@@ -199,6 +214,7 @@
             gtbLibelle.Size = new Size(310, 46);
             gtbLibelle.TabIndex = 1;
             gtbLibelle.TextAlign = HorizontalAlignment.Center;
+            gtbLibelle.TextChanged += gtbLibelle_TextChanged;
             // 
             // guna2Button1
             // 
@@ -242,6 +258,8 @@
             guna2GroupBox1.Anchor = AnchorStyles.Top;
             guna2GroupBox1.BorderColor = Color.White;
             guna2GroupBox1.BorderRadius = 4;
+            guna2GroupBox1.Controls.Add(label2);
+            guna2GroupBox1.Controls.Add(label1);
             guna2GroupBox1.CustomBorderColor = Color.White;
             guna2GroupBox1.CustomizableEdges = customizableEdges10;
             guna2GroupBox1.Font = new Font("Oxanium Medium", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
@@ -269,6 +287,34 @@
             guna2GroupBox2.TabIndex = 33;
             guna2GroupBox2.TextAlign = HorizontalAlignment.Center;
             // 
+            // bsRessource
+            // 
+            bsRessource.CurrentChanged += bsRessource_CurrentChanged;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.White;
+            label1.Font = new Font("Oxanium Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.FromArgb(193, 200, 207);
+            label1.Location = new Point(79, 6);
+            label1.Name = "label1";
+            label1.Size = new Size(50, 21);
+            label1.TabIndex = 6;
+            label1.Text = "Nom";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.White;
+            label2.Font = new Font("Oxanium Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.FromArgb(193, 200, 207);
+            label2.Location = new Point(197, 6);
+            label2.Name = "label2";
+            label2.Size = new Size(78, 21);
+            label2.TabIndex = 34;
+            label2.Text = "Prenom";
+            // 
             // FormAuteurAjout
             // 
             AutoScaleDimensions = new SizeF(9F, 19F);
@@ -290,7 +336,10 @@
             ((System.ComponentModel.ISupportInitialize)gdgvAuteurs).EndInit();
             ggbMenuStrip.ResumeLayout(false);
             ggbMenuStrip.PerformLayout();
+            guna2GroupBox1.ResumeLayout(false);
+            guna2GroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)bsRessource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bsAuteur).EndInit();
             ResumeLayout(false);
         }
 
@@ -306,5 +355,9 @@
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
         private Label label3;
         private BindingSource bsRessource;
+        private BindingSource bsAuteur;
+        private DataGridViewCheckBoxColumn selectAuteurs;
+        private Label label2;
+        private Label label1;
     }
 }

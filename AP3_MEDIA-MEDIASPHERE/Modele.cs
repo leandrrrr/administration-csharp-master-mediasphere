@@ -159,6 +159,31 @@ namespace AP3_MEDIA
             return vretour;
         }
 
+        public static bool AjoutAuteurs(int idRessource, int idAuteur)
+        {
+            AuteurRessource uneExemplaire;
+            bool vretour = true;
+            try
+            {
+                // ajout dans la table Ressource
+                int timeStamp = (int)((DateTimeOffset)DateTime.UtcNow).ToUnixTimeSeconds();
+                uneExemplaire = new AuteurRessource();
+
+                uneExemplaire.IdRessource = idRessource;
+                uneExemplaire.IdAuteur= idAuteur;
+
+                monModele.AuteurRessources.Add(uneExemplaire);
+                monModele.SaveChanges();
+
+            }
+            catch (Exception ex)
+            {
+                vretour = false;
+                MessageBox.Show(ex.Message.ToString());
+            }
+            return vretour;
+        }
+
         /// <summary>
         /// Fonction qui retourne l'identifiant de la dernière ressource
         /// </summary>

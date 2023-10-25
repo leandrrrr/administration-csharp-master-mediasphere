@@ -17,8 +17,11 @@ public partial class Emprunter
 
     public DateTime? Dateretour { get; set; }
 
+    public int? Extension { get; set; }
+
     public virtual Exemplaire Id { get; set; } = null!;
 
     public virtual Emprunteur IdemprunteurNavigation { get; set; } = null!;
     public virtual Ressource IdRessourceNavigation { get; set; } = null!;
+
 }

@@ -9,8 +9,6 @@ public partial class Ressource
 
     public int Idcategorie { get; set; }
 
-    public int? IdAuteur { get; set; }
-
     public string Titre { get; set; } = null!;
 
     public string? Description { get; set; }
