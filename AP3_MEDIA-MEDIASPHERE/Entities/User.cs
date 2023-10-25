@@ -14,4 +14,6 @@ public partial class User
     public string? MailUser { get; set; }
 
     public string? MdpUser { get; set; }
+
+    public int IdAcces { get; set; }
 }

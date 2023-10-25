@@ -62,7 +62,7 @@ namespace AP3_MEDIA
 
         private void gbtHelp_Click(object sender, EventArgs e)
         {
-            FormPopDGV formPopDGV = new FormPopDGV("Aucun Aide");
+            FormPopDGV formPopDGV = new FormPopDGV("Cette page ne sert pas a cree un auteur mais a referancer les auteurs pour une ressource");
             formPopDGV.Show();
         }
 

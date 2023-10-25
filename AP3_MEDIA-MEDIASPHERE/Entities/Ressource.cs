@@ -24,4 +24,6 @@ public partial class Ressource
     public virtual ICollection<Exemplaire> Exemplaires { get; set; } = new List<Exemplaire>();
 
     public virtual Categorie IdcategorieNavigation { get; set; } = null!;
+
+
 }

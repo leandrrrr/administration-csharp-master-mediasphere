@@ -237,6 +237,7 @@
             ggbMenuStrip.Size = new Size(1028, 76);
             ggbMenuStrip.TabIndex = 3;
             ggbMenuStrip.TextAlign = HorizontalAlignment.Center;
+            ggbMenuStrip.VisibleChanged += ggbMenuStrip_VisibleChanged;
             // 
             // gbtExtension
             // 
@@ -446,6 +447,7 @@
             guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             guna2CircleButton2.Size = new Size(51, 49);
             guna2CircleButton2.TabIndex = 11;
+            guna2CircleButton2.Click += guna2CircleButton2_Click;
             // 
             // guna2CircleButton1
             // 

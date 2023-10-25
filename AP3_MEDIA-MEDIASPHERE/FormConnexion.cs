@@ -18,6 +18,8 @@ namespace AP3_MEDIA
     public partial class FormConnexion : Form
     {
 
+
+
         private ToolsLeandre ToolsL = new ToolsLeandre();
         private FormMenu parentForm;
         public FormConnexion(FormMenu parentForm)
@@ -47,20 +49,25 @@ namespace AP3_MEDIA
 
         }
 
+        
+
         private void gbtExemplaires_Click(object sender, EventArgs e)
         {
             var connexionAvecID1 = Modele.getListUsers().Where(x => x.MailUser == gbtId.Text);
             try
             {
                 string mdpBcrypt = connexionAvecID1.Select(x => x.MdpUser).FirstOrDefault();
+                int accesGeted = connexionAvecID1.Select(x => x.IdAcces).FirstOrDefault();
+
                 bool motDePasseCorrect = BCrypt.Net.BCrypt.Verify(gtbMdp.Text, mdpBcrypt);
                 if (motDePasseCorrect)
                 {
+                    parentForm.droitAcces = accesGeted;
+
                     parentForm.ggbMenuStrip.Visible = true;
                     parentForm.ggbMenuPlus.Visible = true;
                     parentForm.gbtClose.Visible = true;
                     parentForm.gcbHome.Visible = true;
-
 
 
 

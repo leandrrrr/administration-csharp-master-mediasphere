@@ -1,3 +1,5 @@
+using AP3_MEDIA.Libs;
+using Guna.UI2.WinForms;
 using System.Diagnostics;
 using System.Windows.Forms;
 
@@ -5,6 +7,10 @@ namespace AP3_MEDIA
 {
     public partial class FormMenu : Form
     {
+        private ToolsLeandre ToolsL = new ToolsLeandre();
+
+        public int droitAcces = 0;
+        public string phraseInfo = "vous etes en mode developeur";
 
         bool DevMode = true;
         string menuOption = "";
@@ -50,6 +56,73 @@ namespace AP3_MEDIA
             guna2Button3.FillColor = Color.FromArgb(colorHold1, colorHold2, colorHold3);
             guna2Button4.FillColor = Color.FromArgb(colorHold1, colorHold2, colorHold3);
             guna2Button5.FillColor = Color.FromArgb(colorHold1, colorHold2, colorHold3);
+        }
+
+
+        public void fullAcces()
+        {
+            gbtRess.Enabled = true;
+            gbtEmprunteurs.Enabled = true;
+            gbtCategories.Enabled = true;
+            gbtExemplaires.Enabled = true;
+            guna2Button1.Enabled = true;
+            gbtExtension.Enabled = true;
+
+        }
+        public void initAcces(int acces)
+        {
+            switch (acces)
+            {
+                //!!DEV MODE!!
+                case 0:
+                    fullAcces();
+                    break;
+                //FULL acces
+                case 1:
+                    fullAcces();
+                    phraseInfo = "vous avez acces a tout les onglets de l'app";
+                    break;
+                //ressource
+                case 2:
+                    fullAcces();
+                    gbtEmprunteurs.Enabled = false;
+                    gbtExtension.Enabled = false;
+                    phraseInfo = "vous ne pouvez gestionner que les entites referente au ressources";
+
+                    break;
+                //emprunts
+                case 3:
+                    fullAcces();
+                    gbtRess.Enabled = false;
+                    gbtEmprunteurs.Enabled = false;
+                    gbtCategories.Enabled = false;
+                    gbtExemplaires.Enabled = false;
+                    guna2Button1.Enabled = false;
+                    phraseInfo = "vous ne pouvez gestionner que les entites referente au prets";
+                    break;
+                //emprunteur
+                case 4:
+                    fullAcces();
+                    gbtRess.Enabled = false;
+                    gbtCategories.Enabled = false;
+                    gbtExemplaires.Enabled = false;
+                    guna2Button1.Enabled = false;
+                    gbtExtension.Enabled = false;
+                    phraseInfo = "vous ne pouvez gestionner que les entites referente au emprunteurs";
+                    break;
+                //noacces
+                case 5:
+                //no acces
+                default:
+                    gbtRess.Enabled = false;
+                    gbtEmprunteurs.Enabled = false;
+                    gbtCategories.Enabled = false;
+                    gbtExemplaires.Enabled = false;
+                    guna2Button1.Enabled = false;
+                    gbtExtension.Enabled = false;
+                    phraseInfo = "vous n'avez aucun droit, veillez contacter votre supérieure";
+                    break;
+            }
         }
 
         private void qUITTERToolStripMenuItem_Click(object sender, EventArgs e)
@@ -381,6 +454,17 @@ namespace AP3_MEDIA
 
             ggbMenuOption.Visible = false;
             openChildForm(new FormExtension());
+        }
+
+        private void ggbMenuStrip_VisibleChanged(object sender, EventArgs e)
+        {
+            initAcces(droitAcces);
+        }
+
+        private void guna2CircleButton2_Click(object sender, EventArgs e)
+        {
+            FormPopDGV formPopDGV = new FormPopDGV(phraseInfo);
+            ToolsL.waitingForm(formPopDGV, 1000);
         }
     }
 }

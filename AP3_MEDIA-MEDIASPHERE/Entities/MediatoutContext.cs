@@ -15,6 +15,8 @@ public partial class MediatoutContext : DbContext
     {
     }
 
+    public virtual DbSet<Acce> Acces { get; set; }
+
     public virtual DbSet<Auteur> Auteurs { get; set; }
 
     public virtual DbSet<AuteurRessource> AuteurRessources { get; set; }
@@ -43,6 +45,20 @@ public partial class MediatoutContext : DbContext
             .UseCollation("utf8mb4_general_ci")
             .HasCharSet("utf8mb4");
 
+        modelBuilder.Entity<Acce>(entity =>
+        {
+            entity.HasKey(e => e.IdAcces).HasName("PRIMARY");
+
+            entity.ToTable("acces");
+
+            entity.Property(e => e.IdAcces)
+                .HasColumnType("int(11)")
+                .HasColumnName("idAcces");
+            entity.Property(e => e.NomAcces)
+                .HasMaxLength(69)
+                .HasColumnName("nomAcces");
+        });
+
         modelBuilder.Entity<Auteur>(entity =>
         {
             entity.HasKey(e => e.IdAuteur).HasName("PRIMARY");
@@ -67,8 +83,6 @@ public partial class MediatoutContext : DbContext
                 .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
             entity.ToTable("auteur_ressource");
-
-            entity.HasIndex(e => e.IdAuteur, "idAuteur");
 
             entity.HasIndex(e => e.IdRessource, "idRessource");
 
@@ -264,12 +278,17 @@ public partial class MediatoutContext : DbContext
 
             entity.ToTable("User");
 
+            entity.HasIndex(e => e.IdAcces, "idAcces");
+
             entity.HasIndex(e => e.MailUser, "mailUser").IsUnique();
 
             entity.Property(e => e.IdUser)
-                .ValueGeneratedNever()
                 .HasColumnType("int(5)")
                 .HasColumnName("idUser");
+            entity.Property(e => e.IdAcces)
+                .HasDefaultValueSql("'5'")
+                .HasColumnType("int(11)")
+                .HasColumnName("idAcces");
             entity.Property(e => e.MailUser)
                 .HasMaxLength(200)
                 .HasColumnName("mailUser");

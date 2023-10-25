@@ -55,11 +55,11 @@
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             gbtHelp = new Guna.UI2.WinForms.Guna2CircleButton();
             guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            label2 = new Label();
+            label1 = new Label();
             guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             bsRessource = new BindingSource(components);
             bsAuteur = new BindingSource(components);
-            label1 = new Label();
-            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)gdgvAuteurs).BeginInit();
             ggbMenuStrip.SuspendLayout();
             guna2GroupBox1.SuspendLayout();
@@ -157,7 +157,7 @@
             ggbMenuStrip.ShadowDecoration.CustomizableEdges = customizableEdges6;
             ggbMenuStrip.Size = new Size(348, 370);
             ggbMenuStrip.TabIndex = 30;
-            ggbMenuStrip.Text = "Ajout de un ou plusieurs utilisateurs";
+            ggbMenuStrip.Text = "Ajout d'auteurs a une ressource";
             // 
             // label3
             // 
@@ -271,6 +271,30 @@
             guna2GroupBox1.TabIndex = 32;
             guna2GroupBox1.TextAlign = HorizontalAlignment.Center;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.White;
+            label2.Font = new Font("Oxanium Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.FromArgb(193, 200, 207);
+            label2.Location = new Point(236, 6);
+            label2.Name = "label2";
+            label2.Size = new Size(78, 21);
+            label2.TabIndex = 34;
+            label2.Text = "Prenom";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.White;
+            label1.Font = new Font("Oxanium Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.FromArgb(193, 200, 207);
+            label1.Location = new Point(118, 6);
+            label1.Name = "label1";
+            label1.Size = new Size(50, 21);
+            label1.TabIndex = 6;
+            label1.Text = "Nom";
+            // 
             // guna2GroupBox2
             // 
             guna2GroupBox2.Anchor = AnchorStyles.Top;
@@ -290,30 +314,6 @@
             // bsRessource
             // 
             bsRessource.CurrentChanged += bsRessource_CurrentChanged;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.White;
-            label1.Font = new Font("Oxanium Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.FromArgb(193, 200, 207);
-            label1.Location = new Point(79, 6);
-            label1.Name = "label1";
-            label1.Size = new Size(50, 21);
-            label1.TabIndex = 6;
-            label1.Text = "Nom";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.White;
-            label2.Font = new Font("Oxanium Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.FromArgb(193, 200, 207);
-            label2.Location = new Point(197, 6);
-            label2.Name = "label2";
-            label2.Size = new Size(78, 21);
-            label2.TabIndex = 34;
-            label2.Text = "Prenom";
             // 
             // FormAuteurAjout
             // 
