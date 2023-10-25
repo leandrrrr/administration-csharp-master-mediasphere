@@ -139,14 +139,14 @@ namespace AP3_MEDIA
             {
                 System.Type type = bsRessources.Current.GetType();
                 int idR = (int)type.GetProperty("Idemprunteur").GetValue(bsRessources.Current, null);
-                List<Emprunter> lesExemplaires = Modele.listeEmpruntsParEmpruteurs(idR);
+                List<Emprunter> lesExemplaires = Modele.listeEmpruntsParEmpruteursWhere(idR);
                 if (lesExemplaires.Count != 0)
                 {
                     bsExemplaires.DataSource = (lesExemplaires).Select(x => new
                     {
                         x.IdRessourceNavigation.Titre,
                         x.Dureeemprunt,
-                        Dateretour = (DateTime.Now < x.Dateretour) ? "En Cours" : "Archiver"
+                        x.Dateretour
                     });
 
                     dgvExemplaires.DataSource = bsExemplaires;

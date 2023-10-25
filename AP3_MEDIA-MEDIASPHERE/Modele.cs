@@ -90,7 +90,12 @@ namespace AP3_MEDIA
             List<Emprunter> lesEx = monModele.Emprunters.Where(p => p.Idemprunteur == idR).Include(p => p.IdRessourceNavigation).ToList();
             return lesEx;
         }
-        
+        public static List<Emprunter> listeEmpruntsParEmpruteursWhere(int idR)
+        {
+            List<Emprunter> lesEx = monModele.Emprunters.Where(p => p.Idemprunteur == idR && DateTime.Now < p.Dateretour && p.Extension == 0).Include(p => p.IdRessourceNavigation).ToList();
+            return lesEx;
+        }
+
 
 
         /// <summary>
@@ -234,6 +239,33 @@ namespace AP3_MEDIA
             return vretour;
         }
 
+        public static bool ModificationEmprunts(int idE, int idR, int idX, DateTime dateDeb,int timeAdd)
+        {
+            Emprunter uE;
+            bool vretour = true;
+            try
+            {
+                // récupération de la ressource à modifier
+                uE = RecupererEmprunter(idE,idR,idX,dateDeb);
+
+                // mise à jour des champs
+                DateTime dateRetour = Convert.ToDateTime(uE.Dateretour);
+                dateRetour.AddDays(timeAdd);
+                uE.Dateretour = dateRetour;
+                uE.Extension = 1;
+                uE.Dureeemprunt = uE.Dureeemprunt + timeAdd;
+
+                monModele.SaveChanges();
+
+            }
+            catch (Exception ex)
+            {
+                vretour = false;
+                MessageBox.Show(ex.Message.ToString());
+            }
+            return vretour;
+        }
+
         /// <summary>
         /// Fonction qui retourne l'objet Ressoutce correspondant à son identifiant passé en paramètre
         /// </summary>
@@ -245,6 +277,20 @@ namespace AP3_MEDIA
             try
             {
                 uneRessource = monModele.Ressources.First(x => x.Idressource == idR);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+            return uneRessource;
+        }
+
+        public static Emprunter RecupererEmprunter(int idE, int idR, int idX ,DateTime date )
+        {
+            Emprunter uneRessource = new Emprunter();
+            try
+            {
+                uneRessource = monModele.Emprunters.First(x => x.Idemprunteur == idE && x.Idressource == idR && x.Idexemplaire == idX && x.Datedebutemprunt == date);
             }
             catch (Exception ex)
             {

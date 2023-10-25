@@ -25,23 +25,31 @@ namespace AP3_MEDIA
 
         public void lbListeEmpruntsEmprunteur()
         {
+            
             int id = Convert.ToInt32(gcbEmprunteurs.SelectedValue);
-
-            // remplir la comboBox des ressources (si modification)
-            lbEmprunt.ValueMember = "idemprunter";    //permet de stocker l'identifiant
-            lbEmprunt.DisplayMember = "nomemprunt";
-            bsEmprunt.DataSource = Modele.listeEmpruntsParEmpruteurs(id);
             List<Emprunter> lesEmprunt = Modele.listeEmpruntsParEmpruteurs(id);
-
-            bsEmprunt.DataSource = (lesEmprunt).Select(x => new
+            if (lesEmprunt.Count != 0)
             {
-                x.IdRessourceNavigation.Titre,
-                x.Dureeemprunt,
-                Dateretour = (DateTime.Now < x.Dateretour) ? "En Cours" : "Archiver"
-            });
+                gdgvEmprunt.Visible=true;
+                bsEmprunt.DataSource = (lesEmprunt).Select(x => new
+                {
+                    x.IdRessourceNavigation.Image,
+                    x.Id,
+                    x.IdRessourceNavigation.Titre,
+                    x.Dureeemprunt,
+                });
 
 
-            lbEmprunt.DataSource = bsEmprunt;
+                gdgvEmprunt.DataSource = bsEmprunt;
+            }
+            else
+            {
+                gdgvEmprunt.Visible = false;
+
+            }
+
+
+
         }
         public FormExtension()
         {
@@ -71,6 +79,8 @@ namespace AP3_MEDIA
 
         private void FormExtension_Load(object sender, EventArgs e)
         {
+            gdgvEmprunt.Visible = false;
+
             remplirListeEmprunteurs();
 
             string imageUrl = "http://mediatout.florianjaunet.fr/public/assets/tof.png";
@@ -89,6 +99,32 @@ namespace AP3_MEDIA
         private void gcbEmprunteurs_SelectedIndexChanged(object sender, EventArgs e)
         {
             lbListeEmpruntsEmprunteur();
+        }
+
+        private void gdgvEmprunt_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (gdgvEmprunt.CurrentCell.Value != null)
+            {
+                try
+                {
+                    string cellValue = gdgvEmprunt.CurrentCell.Value.ToString();
+
+
+
+                    string imageUrl = "http://mediatout.florianjaunet.fr/public/assets/" + cellValue;
+
+                    try
+                    {
+                        Image image = Image.FromStream(new System.Net.WebClient().OpenRead(imageUrl));
+                        pictureBox1.Image = image;
+                    }
+                    catch (Exception ex)
+                    {
+                        
+                    }
+                }
+                catch (Exception exx) { }
+            }
         }
     }
 }
