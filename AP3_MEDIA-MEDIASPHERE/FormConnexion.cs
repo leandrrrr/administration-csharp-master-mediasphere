@@ -10,12 +10,14 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using BCrypt.Net;
 using AP3_MEDIA.Libs;
+using Guna.UI2.WinForms;
 
 
 namespace AP3_MEDIA
 {
     public partial class FormConnexion : Form
     {
+
         private ToolsLeandre ToolsL = new ToolsLeandre();
         private FormMenu parentForm;
         public FormConnexion(FormMenu parentForm)
@@ -41,6 +43,7 @@ namespace AP3_MEDIA
 
         private void FormConnexion_Load(object sender, EventArgs e)
         {
+            gtbMdp.UseSystemPasswordChar = true;
 
         }
 
@@ -79,6 +82,25 @@ namespace AP3_MEDIA
         private void gbtClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void guna2ImageRadioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ImageCheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (guna2ImageCheckBox1.Checked)
+            {
+                // Si le bouton radio est coché, afficher le mot de passe, sinon le masquer.
+                gtbMdp.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                gtbMdp.UseSystemPasswordChar = true;
+
+            }
         }
     }
 }

@@ -363,6 +363,16 @@ namespace AP3_MEDIA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mediatout_logo_removebg_preview_transformed {
+            get {
+                object obj = ResourceManager.GetObject("mediatout_logo-removebg-preview-transformed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Sans_titre {
             get {
                 object obj = ResourceManager.GetObject("Sans titre", resourceCulture);
