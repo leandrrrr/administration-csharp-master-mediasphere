@@ -93,8 +93,7 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             gdgvEmprunt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            gdgvEmprunt.ColumnHeadersHeight = 4;
-            gdgvEmprunt.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            gdgvEmprunt.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             gdgvEmprunt.Columns.AddRange(new DataGridViewColumn[] { selectAuteurs });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
@@ -105,12 +104,12 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             gdgvEmprunt.DefaultCellStyle = dataGridViewCellStyle3;
             gdgvEmprunt.GridColor = Color.FromArgb(231, 229, 255);
-            gdgvEmprunt.Location = new Point(3, 25);
+            gdgvEmprunt.Location = new Point(3, 9);
             gdgvEmprunt.Name = "gdgvEmprunt";
             gdgvEmprunt.RowHeadersVisible = false;
             gdgvEmprunt.RowHeadersWidth = 51;
             gdgvEmprunt.RowTemplate.Height = 29;
-            gdgvEmprunt.Size = new Size(484, 354);
+            gdgvEmprunt.Size = new Size(484, 370);
             gdgvEmprunt.TabIndex = 45;
             gdgvEmprunt.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             gdgvEmprunt.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -123,8 +122,8 @@
             gdgvEmprunt.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
             gdgvEmprunt.ThemeStyle.HeaderStyle.Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
             gdgvEmprunt.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            gdgvEmprunt.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            gdgvEmprunt.ThemeStyle.HeaderStyle.Height = 4;
+            gdgvEmprunt.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            gdgvEmprunt.ThemeStyle.HeaderStyle.Height = 25;
             gdgvEmprunt.ThemeStyle.ReadOnly = false;
             gdgvEmprunt.ThemeStyle.RowsStyle.BackColor = Color.White;
             gdgvEmprunt.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
@@ -258,7 +257,7 @@
             // 
             pictureBox1.Location = new Point(718, 59);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(298, 382);
+            pictureBox1.Size = new Size(282, 382);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 44;
             pictureBox1.TabStop = false;

@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Net.Mime.MediaTypeNames;
+
 
 namespace AP3_MEDIA
 {
@@ -49,6 +49,10 @@ namespace AP3_MEDIA
                 gdgvEmprunt.Columns["Idressource"].Visible = false;
                 gdgvEmprunt.Columns["Idexemplaire"].Visible = false;
                 gdgvEmprunt.Columns["Idemprunteur"].Visible = false;
+                gdgvEmprunt.Columns["Image"].Visible = false;
+                gdgvEmprunt.Columns["selectAuteurs"].Width = 50;
+
+
 
 
 
@@ -125,48 +129,70 @@ namespace AP3_MEDIA
             remplirListeEmprunteurs();
             gdgvEmprunt.Visible = false;
 
-            /*
 
-            string imageUrl = "http://mediatout.florianjaunet.fr/public/assets/tof.png";
 
-            try
-            {
-                Image image = Image.FromStream(new System.Net.WebClient().OpenRead(imageUrl));
-                pictureBox1.Image = image;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erreur lors du chargement de l'image : " + ex.Message);
-            }
-            */
+            
+
         }
 
         private void gcbEmprunteurs_SelectedIndexChanged(object sender, EventArgs e)
         {
             lbListeEmpruntsEmprunteur();
         }
+        int ExtractRowIndexFromCellName(string cellName)
+        {
+            string searchStr = "RowIndex=";
+            int index = cellName.IndexOf(searchStr);
 
+            if (index != -1)
+            {
+                string numberPart = cellName.Substring(index + searchStr.Length);
+                int endIndex = numberPart.IndexOf('}');
+
+                if (endIndex != -1)
+                {
+                    numberPart = numberPart.Substring(0, endIndex); // Exclure la parenthèse
+                    if (int.TryParse(numberPart, out int rowIndex))
+                    {
+                        return rowIndex;
+                    }
+                }
+            }
+
+            return -1; // Si aucun chiffre n'est trouvé dans le nom de la cellule
+        }
         private void gdgvEmprunt_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            object uwu = gdgvEmprunt.CurrentCell.Value;
             if (gdgvEmprunt.CurrentCell.Value != null)
             {
-                /*
-                     string cellValue = gdgvEmprunt.CurrentCell.Value.ToString();
+
+                // Obtenez l'index de la ligne sélectionnée
+                object rowIndex = gdgvEmprunt.CurrentCell;
+                // Récupérez l'indice de la ligne sélectionnée
+                string indexFn = rowIndex.ToString();
+
+                int superRow = ExtractRowIndexFromCellName(indexFn)
+
+;
+
+                // Récupérez la valeur de la colonne "Image" pour la ligne sélectionnée
+                string imageText = gdgvEmprunt.Rows[superRow].Cells["Image"].Value.ToString();
 
 
 
 
-                     string imageUrl = "http://mediatout.florianjaunet.fr/public/assets/" + cellValue;
+                string imageUrl = "http://mediatout.florianjaunet.fr/public/assets/" + imageText;
 
-                     try
-                     {
-                         Image image = Image.FromStream(new System.Net.WebClient().OpenRead(imageUrl));
-                         pictureBox1.Image = image;
-                     }
-                     catch (Exception ex)
-                     {
+                try
+                {
+                    Image image = Image.FromStream(new System.Net.WebClient().OpenRead(imageUrl));
+                    pictureBox1.Image = image;
+                }
+                catch (Exception ex)
+                {
 
-                     }*/
+                }
 
             }
         }
