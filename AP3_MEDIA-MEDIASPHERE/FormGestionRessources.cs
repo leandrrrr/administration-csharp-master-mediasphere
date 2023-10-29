@@ -242,6 +242,8 @@ namespace AP3_MEDIA
                             {
                                 FormPopDGV formPopDGV = new FormPopDGV("AJOUT EFFECTUÉ !");
                                 formPopDGV.Show();
+                                
+
                                 Annuler();
                             }
                         }
@@ -260,6 +262,8 @@ namespace AP3_MEDIA
                             ggbInfo.Visible = false;
                             gbtnAjouter.Visible = false;
                             gcbRessources.SelectedIndex = -1;
+                            remplirListeRessources();
+
                             // Annuler();
                         }
                     }
@@ -272,6 +276,9 @@ namespace AP3_MEDIA
                             ggbInfo.Visible = false;
                             gbtnAjouter.Visible = false;
                             gcbRessources.SelectedIndex = -1;
+
+                            remplirListeRessources();
+
                             // Annuler();
                         }
                     }
