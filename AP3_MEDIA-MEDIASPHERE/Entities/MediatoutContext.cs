@@ -23,6 +23,8 @@ public partial class MediatoutContext : DbContext
 
     public virtual DbSet<Categorie> Categories { get; set; }
 
+    public virtual DbSet<Commentaire> Commentaires { get; set; }
+
     public virtual DbSet<Emprunter> Emprunters { get; set; }
 
     public virtual DbSet<Emprunteur> Emprunteurs { get; set; }
@@ -84,7 +86,9 @@ public partial class MediatoutContext : DbContext
 
             entity.ToTable("auteur_ressource");
 
-            entity.HasIndex(e => e.IdRessource, "idRessource");
+            entity.HasIndex(e => e.IdAuteur, "AutRess_idAuteur");
+
+            entity.HasIndex(e => e.IdRessource, "AutRess_idRessource");
 
             entity.Property(e => e.IdRessource)
                 .HasColumnType("int(11)")
@@ -92,6 +96,20 @@ public partial class MediatoutContext : DbContext
             entity.Property(e => e.IdAuteur)
                 .HasColumnType("int(11)")
                 .HasColumnName("idAuteur");
+            entity.Property(e => e.DateEnregistrement)
+                .HasDefaultValueSql("current_timestamp()")
+                .HasColumnType("datetime")
+                .HasColumnName("dateEnregistrement");
+
+            entity.HasOne(d => d.IdAuteurNavigation).WithMany(p => p.AuteurRessources)
+                .HasForeignKey(d => d.IdAuteur)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("AutRess_idAuteur");
+
+            entity.HasOne(d => d.IdRessourceNavigation).WithMany(p => p.AuteurRessources)
+                .HasForeignKey(d => d.IdRessource)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("AutRess_idRessource");
         });
 
         modelBuilder.Entity<Categorie>(entity =>
@@ -106,6 +124,43 @@ public partial class MediatoutContext : DbContext
             entity.Property(e => e.Libellecategorie)
                 .HasMaxLength(128)
                 .HasColumnName("libellecategorie");
+        });
+
+        modelBuilder.Entity<Commentaire>(entity =>
+        {
+            entity.HasKey(e => e.IdCommentaire).HasName("PRIMARY");
+
+            entity.ToTable("commentaire");
+
+            entity.HasIndex(e => e.IdRessource, "FK_commentaire_ressource");
+
+            entity.HasIndex(e => e.IdUtilisateur, "FK_commentaire_utilisateur");
+
+            entity.Property(e => e.IdCommentaire)
+                .HasColumnType("int(11)")
+                .HasColumnName("idCommentaire");
+            entity.Property(e => e.Contenu)
+                .HasMaxLength(255)
+                .HasColumnName("contenu");
+            entity.Property(e => e.DateCreation)
+                .HasColumnType("datetime")
+                .HasColumnName("dateCreation");
+            entity.Property(e => e.IdRessource)
+                .HasColumnType("int(11)")
+                .HasColumnName("idRessource");
+            entity.Property(e => e.IdUtilisateur)
+                .HasColumnType("int(11)")
+                .HasColumnName("idUtilisateur");
+
+            entity.HasOne(d => d.IdRessourceNavigation).WithMany(p => p.Commentaires)
+                .HasForeignKey(d => d.IdRessource)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_commentaire_ressource");
+
+            entity.HasOne(d => d.IdUtilisateurNavigation).WithMany(p => p.Commentaires)
+                .HasForeignKey(d => d.IdUtilisateur)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_commentaire_utilisateur");
         });
 
         modelBuilder.Entity<Emprunter>(entity =>

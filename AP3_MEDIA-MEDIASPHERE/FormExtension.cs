@@ -105,6 +105,7 @@ namespace AP3_MEDIA
         private void guna2Button4_Click(object sender, EventArgs e)
         {
             Ryōiki_Tenkai(30);
+            lbListeEmpruntsEmprunteur();
         }
 
         private void gbtClose_Click(object sender, EventArgs e)
@@ -200,11 +201,13 @@ namespace AP3_MEDIA
         private void gbtPlus10_Click(object sender, EventArgs e)
         {
             Ryōiki_Tenkai(10);
+            lbListeEmpruntsEmprunteur();
         }
 
         private void gbtPlus20_Click(object sender, EventArgs e)
         {
             Ryōiki_Tenkai(20);
+            lbListeEmpruntsEmprunteur();
         }
     }
 }

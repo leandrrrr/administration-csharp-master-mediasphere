@@ -10,4 +10,6 @@ public partial class Auteur
     public string NomAuteur { get; set; } = null!;
 
     public string PrenomAuteur { get; set; } = null!;
+
+    public virtual ICollection<AuteurRessource> AuteurRessources { get; set; } = new List<AuteurRessource>();
 }

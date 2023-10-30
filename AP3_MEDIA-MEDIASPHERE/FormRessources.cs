@@ -281,11 +281,13 @@ namespace AP3_MEDIA
 
         private void voirLesAuteursToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            /*
             if (etatForm == "ressources")
             {
                 System.Type type = bsRessources.Current.GetType();
                 int idR = (int)type.GetProperty("Idressource").GetValue(bsRessources.Current, null);
                 List<AuteurRessource> lesExemplaires = Modele.listeAuteursParRessource(idR);
+                
                 if (lesExemplaires.Count != 0)
                 {
                     bsExemplaires.DataSource = (lesExemplaires).Select(x => new
@@ -308,7 +310,9 @@ namespace AP3_MEDIA
                     dgvExemplaires.Visible = false;
                     MessageBox.Show("Pas d'exemplaire pour cette ressource");
                 }
+            
             }
+            */
         }
     }
 }

@@ -21,9 +21,11 @@ public partial class Ressource
 
     public string? Langue { get; set; }
 
+    public virtual ICollection<AuteurRessource> AuteurRessources { get; set; } = new List<AuteurRessource>();
+
+    public virtual ICollection<Commentaire> Commentaires { get; set; } = new List<Commentaire>();
+
     public virtual ICollection<Exemplaire> Exemplaires { get; set; } = new List<Exemplaire>();
 
     public virtual Categorie IdcategorieNavigation { get; set; } = null!;
-
-
 }
