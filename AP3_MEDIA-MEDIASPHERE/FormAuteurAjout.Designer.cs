@@ -32,39 +32,52 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lbRessources = new ListBox();
             gdgvAuteurs = new Guna.UI2.WinForms.Guna2DataGridView();
             selectAuteurs = new DataGridViewCheckBoxColumn();
             ggbMenuStrip = new Guna.UI2.WinForms.Guna2GroupBox();
+            guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
+            guna2GroupBox4 = new Guna.UI2.WinForms.Guna2GroupBox();
+            gdgvAuteurRessources = new Guna.UI2.WinForms.Guna2DataGridView();
+            gtbLibelle = new Guna.UI2.WinForms.Guna2TextBox();
             label3 = new Label();
             gbtAjouter = new Guna.UI2.WinForms.Guna2Button();
-            gtbLibelle = new Guna.UI2.WinForms.Guna2TextBox();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             gbtHelp = new Guna.UI2.WinForms.Guna2CircleButton();
             guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-            label2 = new Label();
-            label1 = new Label();
             guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             bsRessource = new BindingSource(components);
             bsAuteur = new BindingSource(components);
+            bsAuteurRessource = new BindingSource(components);
             ((System.ComponentModel.ISupportInitialize)gdgvAuteurs).BeginInit();
             ggbMenuStrip.SuspendLayout();
+            guna2GroupBox3.SuspendLayout();
+            guna2GroupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)gdgvAuteurRessources).BeginInit();
             guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bsRessource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsAuteur).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bsAuteurRessource).BeginInit();
             SuspendLayout();
             // 
             // lbRessources
@@ -87,30 +100,30 @@
             gdgvAuteurs.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle2.Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.Font = new Font("Oxanium Medium", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = Color.White;
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             gdgvAuteurs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            gdgvAuteurs.ColumnHeadersHeight = 4;
+            gdgvAuteurs.ColumnHeadersHeight = 25;
             gdgvAuteurs.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             gdgvAuteurs.Columns.AddRange(new DataGridViewColumn[] { selectAuteurs });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle3.Font = new Font("Oxanium Medium", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(125, 137, 149);
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             gdgvAuteurs.DefaultCellStyle = dataGridViewCellStyle3;
             gdgvAuteurs.GridColor = Color.FromArgb(231, 229, 255);
-            gdgvAuteurs.Location = new Point(687, 99);
+            gdgvAuteurs.Location = new Point(3, 4);
             gdgvAuteurs.Name = "gdgvAuteurs";
             gdgvAuteurs.RowHeadersVisible = false;
-            gdgvAuteurs.RowHeadersWidth = 51;
+            gdgvAuteurs.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             gdgvAuteurs.RowTemplate.Height = 29;
-            gdgvAuteurs.Size = new Size(326, 308);
+            gdgvAuteurs.Size = new Size(326, 334);
             gdgvAuteurs.TabIndex = 20;
             gdgvAuteurs.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             gdgvAuteurs.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -124,7 +137,7 @@
             gdgvAuteurs.ThemeStyle.HeaderStyle.Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
             gdgvAuteurs.ThemeStyle.HeaderStyle.ForeColor = Color.White;
             gdgvAuteurs.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            gdgvAuteurs.ThemeStyle.HeaderStyle.Height = 4;
+            gdgvAuteurs.ThemeStyle.HeaderStyle.Height = 25;
             gdgvAuteurs.ThemeStyle.ReadOnly = false;
             gdgvAuteurs.ThemeStyle.RowsStyle.BackColor = Color.White;
             gdgvAuteurs.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
@@ -145,19 +158,138 @@
             ggbMenuStrip.Anchor = AnchorStyles.Top;
             ggbMenuStrip.BorderColor = Color.White;
             ggbMenuStrip.BorderRadius = 6;
+            ggbMenuStrip.Controls.Add(guna2GroupBox3);
             ggbMenuStrip.Controls.Add(label3);
             ggbMenuStrip.Controls.Add(gbtAjouter);
-            ggbMenuStrip.Controls.Add(gtbLibelle);
             ggbMenuStrip.CustomBorderColor = Color.FromArgb(94, 148, 255);
-            ggbMenuStrip.CustomizableEdges = customizableEdges5;
+            ggbMenuStrip.CustomizableEdges = customizableEdges9;
             ggbMenuStrip.Font = new Font("Oxanium Medium", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             ggbMenuStrip.ForeColor = Color.White;
             ggbMenuStrip.Location = new Point(330, 45);
             ggbMenuStrip.Name = "ggbMenuStrip";
-            ggbMenuStrip.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            ggbMenuStrip.ShadowDecoration.CustomizableEdges = customizableEdges10;
             ggbMenuStrip.Size = new Size(348, 370);
             ggbMenuStrip.TabIndex = 30;
             ggbMenuStrip.Text = "Ajout d'auteurs a une ressource";
+            // 
+            // guna2GroupBox3
+            // 
+            guna2GroupBox3.Anchor = AnchorStyles.Top;
+            guna2GroupBox3.BackColor = Color.White;
+            guna2GroupBox3.BorderColor = Color.White;
+            guna2GroupBox3.BorderRadius = 6;
+            guna2GroupBox3.Controls.Add(guna2GroupBox4);
+            guna2GroupBox3.Controls.Add(gtbLibelle);
+            guna2GroupBox3.CustomBorderColor = Color.FromArgb(154, 206, 234);
+            guna2GroupBox3.CustomizableEdges = customizableEdges5;
+            guna2GroupBox3.FillColor = Color.WhiteSmoke;
+            guna2GroupBox3.Font = new Font("Oxanium Medium", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            guna2GroupBox3.ForeColor = Color.White;
+            guna2GroupBox3.Location = new Point(20, 43);
+            guna2GroupBox3.Name = "guna2GroupBox3";
+            guna2GroupBox3.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2GroupBox3.Size = new Size(310, 252);
+            guna2GroupBox3.TabIndex = 31;
+            guna2GroupBox3.Text = "Ressource Séléctionné";
+            guna2GroupBox3.TextAlign = HorizontalAlignment.Center;
+            // 
+            // guna2GroupBox4
+            // 
+            guna2GroupBox4.Anchor = AnchorStyles.Top;
+            guna2GroupBox4.BackColor = Color.WhiteSmoke;
+            guna2GroupBox4.BorderColor = Color.White;
+            guna2GroupBox4.BorderRadius = 4;
+            guna2GroupBox4.Controls.Add(gdgvAuteurRessources);
+            guna2GroupBox4.CustomBorderColor = Color.White;
+            guna2GroupBox4.CustomizableEdges = customizableEdges1;
+            guna2GroupBox4.Font = new Font("Oxanium Medium", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            guna2GroupBox4.ForeColor = Color.FromArgb(125, 137, 149);
+            guna2GroupBox4.Location = new Point(16, 97);
+            guna2GroupBox4.Name = "guna2GroupBox4";
+            guna2GroupBox4.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2GroupBox4.Size = new Size(278, 140);
+            guna2GroupBox4.TabIndex = 33;
+            guna2GroupBox4.TextAlign = HorizontalAlignment.Center;
+            // 
+            // gdgvAuteurRessources
+            // 
+            dataGridViewCellStyle4.BackColor = Color.White;
+            gdgvAuteurRessources.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle5.Font = new Font("Oxanium Medium", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            gdgvAuteurRessources.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            gdgvAuteurRessources.ColumnHeadersHeight = 25;
+            gdgvAuteurRessources.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            gdgvAuteurRessources.ColumnHeadersVisible = false;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Oxanium Medium", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = Color.FromArgb(125, 137, 149);
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            gdgvAuteurRessources.DefaultCellStyle = dataGridViewCellStyle6;
+            gdgvAuteurRessources.GridColor = Color.FromArgb(231, 229, 255);
+            gdgvAuteurRessources.Location = new Point(3, 0);
+            gdgvAuteurRessources.Name = "gdgvAuteurRessources";
+            gdgvAuteurRessources.RowHeadersVisible = false;
+            gdgvAuteurRessources.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            gdgvAuteurRessources.RowTemplate.Height = 29;
+            gdgvAuteurRessources.Size = new Size(272, 143);
+            gdgvAuteurRessources.TabIndex = 20;
+            gdgvAuteurRessources.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            gdgvAuteurRessources.ThemeStyle.AlternatingRowsStyle.Font = null;
+            gdgvAuteurRessources.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            gdgvAuteurRessources.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            gdgvAuteurRessources.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            gdgvAuteurRessources.ThemeStyle.BackColor = Color.White;
+            gdgvAuteurRessources.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            gdgvAuteurRessources.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            gdgvAuteurRessources.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            gdgvAuteurRessources.ThemeStyle.HeaderStyle.Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            gdgvAuteurRessources.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            gdgvAuteurRessources.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            gdgvAuteurRessources.ThemeStyle.HeaderStyle.Height = 25;
+            gdgvAuteurRessources.ThemeStyle.ReadOnly = false;
+            gdgvAuteurRessources.ThemeStyle.RowsStyle.BackColor = Color.White;
+            gdgvAuteurRessources.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            gdgvAuteurRessources.ThemeStyle.RowsStyle.Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            gdgvAuteurRessources.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            gdgvAuteurRessources.ThemeStyle.RowsStyle.Height = 29;
+            gdgvAuteurRessources.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            gdgvAuteurRessources.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            gdgvAuteurRessources.CellContentClick += guna2DataGridView1_CellContentClick;
+            // 
+            // gtbLibelle
+            // 
+            gtbLibelle.BackColor = Color.WhiteSmoke;
+            gtbLibelle.BorderRadius = 6;
+            gtbLibelle.CustomizableEdges = customizableEdges3;
+            gtbLibelle.DefaultText = "";
+            gtbLibelle.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            gtbLibelle.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            gtbLibelle.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            gtbLibelle.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            gtbLibelle.Enabled = false;
+            gtbLibelle.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gtbLibelle.Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            gtbLibelle.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            gtbLibelle.Location = new Point(4, 44);
+            gtbLibelle.Margin = new Padding(3, 4, 3, 4);
+            gtbLibelle.Name = "gtbLibelle";
+            gtbLibelle.PasswordChar = '\0';
+            gtbLibelle.PlaceholderText = "";
+            gtbLibelle.SelectedText = "";
+            gtbLibelle.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            gtbLibelle.Size = new Size(303, 46);
+            gtbLibelle.TabIndex = 1;
+            gtbLibelle.TextAlign = HorizontalAlignment.Center;
+            gtbLibelle.TextChanged += gtbLibelle_TextChanged;
             // 
             // label3
             // 
@@ -175,52 +307,26 @@
             // 
             gbtAjouter.BackColor = Color.White;
             gbtAjouter.BorderRadius = 6;
-            gbtAjouter.CustomizableEdges = customizableEdges1;
+            gbtAjouter.CustomizableEdges = customizableEdges7;
             gbtAjouter.DisabledState.BorderColor = Color.DarkGray;
             gbtAjouter.DisabledState.CustomBorderColor = Color.DarkGray;
             gbtAjouter.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             gbtAjouter.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             gbtAjouter.Font = new Font("Oxanium Medium", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             gbtAjouter.ForeColor = Color.White;
-            gbtAjouter.Location = new Point(20, 216);
+            gbtAjouter.Location = new Point(20, 301);
             gbtAjouter.Name = "gbtAjouter";
-            gbtAjouter.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            gbtAjouter.ShadowDecoration.CustomizableEdges = customizableEdges8;
             gbtAjouter.Size = new Size(310, 59);
             gbtAjouter.TabIndex = 4;
             gbtAjouter.Text = "Ajouter";
             gbtAjouter.Click += gbtAjouter_Click;
             // 
-            // gtbLibelle
-            // 
-            gtbLibelle.BackColor = Color.White;
-            gtbLibelle.BorderRadius = 6;
-            gtbLibelle.CustomizableEdges = customizableEdges3;
-            gtbLibelle.DefaultText = "";
-            gtbLibelle.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            gtbLibelle.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            gtbLibelle.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            gtbLibelle.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            gtbLibelle.Enabled = false;
-            gtbLibelle.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            gtbLibelle.Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            gtbLibelle.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            gtbLibelle.Location = new Point(20, 111);
-            gtbLibelle.Margin = new Padding(3, 4, 3, 4);
-            gtbLibelle.Name = "gtbLibelle";
-            gtbLibelle.PasswordChar = '\0';
-            gtbLibelle.PlaceholderText = "";
-            gtbLibelle.SelectedText = "";
-            gtbLibelle.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            gtbLibelle.Size = new Size(310, 46);
-            gtbLibelle.TabIndex = 1;
-            gtbLibelle.TextAlign = HorizontalAlignment.Center;
-            gtbLibelle.TextChanged += gtbLibelle_TextChanged;
-            // 
             // guna2Button1
             // 
             guna2Button1.BackColor = Color.FromArgb(154, 206, 234);
             guna2Button1.BorderRadius = 6;
-            guna2Button1.CustomizableEdges = customizableEdges7;
+            guna2Button1.CustomizableEdges = customizableEdges11;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
             guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -229,7 +335,7 @@
             guna2Button1.ForeColor = Color.White;
             guna2Button1.Location = new Point(881, 447);
             guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges12;
             guna2Button1.Size = new Size(135, 58);
             guna2Button1.TabIndex = 5;
             guna2Button1.Text = "Fermer";
@@ -247,7 +353,7 @@
             gbtHelp.ImageSize = new Size(27, 27);
             gbtHelp.Location = new Point(976, 12);
             gbtHelp.Name = "gbtHelp";
-            gbtHelp.ShadowDecoration.CustomizableEdges = customizableEdges9;
+            gbtHelp.ShadowDecoration.CustomizableEdges = customizableEdges13;
             gbtHelp.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             gbtHelp.Size = new Size(40, 40);
             gbtHelp.TabIndex = 31;
@@ -258,42 +364,17 @@
             guna2GroupBox1.Anchor = AnchorStyles.Top;
             guna2GroupBox1.BorderColor = Color.White;
             guna2GroupBox1.BorderRadius = 4;
-            guna2GroupBox1.Controls.Add(label2);
-            guna2GroupBox1.Controls.Add(label1);
+            guna2GroupBox1.Controls.Add(gdgvAuteurs);
             guna2GroupBox1.CustomBorderColor = Color.White;
-            guna2GroupBox1.CustomizableEdges = customizableEdges10;
+            guna2GroupBox1.CustomizableEdges = customizableEdges14;
             guna2GroupBox1.Font = new Font("Oxanium Medium", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             guna2GroupBox1.ForeColor = Color.FromArgb(125, 137, 149);
             guna2GroupBox1.Location = new Point(684, 69);
             guna2GroupBox1.Name = "guna2GroupBox1";
-            guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges11;
+            guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges15;
             guna2GroupBox1.Size = new Size(332, 338);
             guna2GroupBox1.TabIndex = 32;
             guna2GroupBox1.TextAlign = HorizontalAlignment.Center;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.White;
-            label2.Font = new Font("Oxanium Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.FromArgb(193, 200, 207);
-            label2.Location = new Point(236, 6);
-            label2.Name = "label2";
-            label2.Size = new Size(78, 21);
-            label2.TabIndex = 34;
-            label2.Text = "Prenom";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.White;
-            label1.Font = new Font("Oxanium Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.FromArgb(193, 200, 207);
-            label1.Location = new Point(118, 6);
-            label1.Name = "label1";
-            label1.Size = new Size(50, 21);
-            label1.TabIndex = 6;
-            label1.Text = "Nom";
             // 
             // guna2GroupBox2
             // 
@@ -301,12 +382,12 @@
             guna2GroupBox2.BorderColor = Color.White;
             guna2GroupBox2.BorderRadius = 4;
             guna2GroupBox2.CustomBorderColor = Color.White;
-            guna2GroupBox2.CustomizableEdges = customizableEdges12;
+            guna2GroupBox2.CustomizableEdges = customizableEdges16;
             guna2GroupBox2.Font = new Font("Oxanium Medium", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             guna2GroupBox2.ForeColor = Color.FromArgb(125, 137, 149);
             guna2GroupBox2.Location = new Point(44, 69);
             guna2GroupBox2.Name = "guna2GroupBox2";
-            guna2GroupBox2.ShadowDecoration.CustomizableEdges = customizableEdges13;
+            guna2GroupBox2.ShadowDecoration.CustomizableEdges = customizableEdges17;
             guna2GroupBox2.Size = new Size(280, 336);
             guna2GroupBox2.TabIndex = 33;
             guna2GroupBox2.TextAlign = HorizontalAlignment.Center;
@@ -326,7 +407,6 @@
             Controls.Add(ggbMenuStrip);
             Controls.Add(lbRessources);
             Controls.Add(guna2GroupBox2);
-            Controls.Add(gdgvAuteurs);
             Controls.Add(guna2GroupBox1);
             Font = new Font("Oxanium", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
@@ -336,10 +416,13 @@
             ((System.ComponentModel.ISupportInitialize)gdgvAuteurs).EndInit();
             ggbMenuStrip.ResumeLayout(false);
             ggbMenuStrip.PerformLayout();
+            guna2GroupBox3.ResumeLayout(false);
+            guna2GroupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)gdgvAuteurRessources).EndInit();
             guna2GroupBox1.ResumeLayout(false);
-            guna2GroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)bsRessource).EndInit();
             ((System.ComponentModel.ISupportInitialize)bsAuteur).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bsAuteurRessource).EndInit();
             ResumeLayout(false);
         }
 
@@ -357,7 +440,9 @@
         private BindingSource bsRessource;
         private BindingSource bsAuteur;
         private DataGridViewCheckBoxColumn selectAuteurs;
-        private Label label2;
-        private Label label1;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox3;
+        private Guna.UI2.WinForms.Guna2DataGridView gdgvAuteurRessources;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox4;
+        private BindingSource bsAuteurRessource;
     }
 }

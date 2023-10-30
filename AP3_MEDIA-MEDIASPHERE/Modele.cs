@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AP3_MEDIA.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace AP3_MEDIA
@@ -95,6 +96,12 @@ namespace AP3_MEDIA
         public static List<Emprunter> listeEmpruntsParEmpruteursWhere(int idR)
         {
             List<Emprunter> lesEx = monModele.Emprunters.Where(p => p.Idemprunteur == idR && DateTime.Now < p.Dateretour && p.Extension == 0).Include(p => p.IdRessourceNavigation).ToList();
+            return lesEx;
+        }
+
+        public static List<AuteurRessource> listeAuteursParRessourceSkipAuteurs(int idR)
+        {
+            List<AuteurRessource> lesEx = monModele.AuteurRessources.Include(p => p.IdAuteurNavigation).Where(p => p.IdRessource != idR).ToList();
             return lesEx;
         }
 

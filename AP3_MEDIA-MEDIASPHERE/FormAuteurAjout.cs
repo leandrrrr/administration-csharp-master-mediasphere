@@ -35,6 +35,8 @@ namespace AP3_MEDIA
         }
         public void remplirDgvAuteur()
         {
+            Ressource R = (Ressource)bsRessource.Current;
+
             bsAuteur.DataSource = Modele.getListAuteurs().Select(x => new
             {
                 x.IdAuteur,
@@ -48,11 +50,28 @@ namespace AP3_MEDIA
 
             gdgvAuteurs.Columns["IdAuteur"].Visible = false;
         }
+        public void remplirDgvAuteurDeRessource()
+        {
+            Ressource R = (Ressource)bsRessource.Current;
+
+            bsAuteurRessource.DataSource = Modele.listeAuteursParRessource(R.Idressource).Select(x => new
+            {
+
+                x.IdAuteurNavigation.PrenomAuteur,
+                x.IdAuteurNavigation.NomAuteur
+
+
+            }).OrderBy(x => x.NomAuteur).ToList();
+
+            gdgvAuteurRessources.DataSource = bsAuteurRessource;
+
+        }
 
         private void FormAuteurAjout_Load(object sender, EventArgs e)
         {
             remplirListeRessource();
-            remplirDgvAuteur();
+            remplirDgvAuteurDeRessource();
+
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -80,6 +99,9 @@ namespace AP3_MEDIA
 
                 // mise à jour du libellé 
                 gtbLibelle.Text = C.Titre;
+
+                remplirDgvAuteur();
+                remplirDgvAuteurDeRessource();
             }
         }
 
@@ -92,12 +114,18 @@ namespace AP3_MEDIA
                 if (Convert.ToBoolean(row.Cells["selectAuteurs"].Value)) // Vérifie si la case à cocher est cochée
                 {
 
+                    try
+                    {
 
-
-                    int id = Convert.ToInt32(row.Cells["IdAuteur"].Value); // Récupère l'identifiant unique de la ligne
-                    MessageBox.Show(id + "/ " + R.Idressource);
-                    Modele.AjoutAuteurs(R.Idressource, id);
-
+                        int id = Convert.ToInt32(row.Cells["IdAuteur"].Value); // Récupère l'identifiant unique de la ligne
+                        MessageBox.Show(id + "/ " + R.Idressource);
+                        Modele.AjoutAuteurs(R.Idressource, id);
+                    }
+                    catch
+                    {
+                        FormPopDGV formPopDGV = new FormPopDGV("Un auteur ne peut pas etre ajouter deux fois a une ressource ! (" + row.Cells["PrenomAuteur"].Value + ")");
+                        formPopDGV.Show();
+                    }
 
 
 
@@ -110,6 +138,11 @@ namespace AP3_MEDIA
         private void lbRessources_SelectedIndexChanged(object sender, EventArgs e)
         {
             bsRessource_CurrentChanged(sender, e);
+
+        }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
