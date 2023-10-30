@@ -281,7 +281,7 @@ namespace AP3_MEDIA
 
         private void voirLesAuteursToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*
+            
             if (etatForm == "ressources")
             {
                 System.Type type = bsRessources.Current.GetType();
@@ -312,7 +312,7 @@ namespace AP3_MEDIA
                 }
             
             }
-            */
+            
         }
     }
 }

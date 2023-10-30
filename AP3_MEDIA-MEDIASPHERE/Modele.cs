@@ -80,7 +80,13 @@ namespace AP3_MEDIA
             List<Exemplaire> lesEx = monModele.Exemplaires.Where(p => p.Idressource == idR).Include(p=> p.IdetatNavigation).ToList();
             return lesEx;
         }
-        
+
+        public static List<AuteurRessource> listeAuteursParRessource(int idR)
+        {
+            List<AuteurRessource> lesEx = monModele.AuteurRessources.Where(p => p.IdRessource == idR).Include(p => p.IdAuteurNavigation).ToList();
+            return lesEx;
+        }
+
         public static List<Emprunter> listeEmpruntsParEmpruteurs(int idR)
         {
             List<Emprunter> lesEx = monModele.Emprunters.Where(p => p.Idemprunteur == idR).Include(p => p.IdRessourceNavigation).ToList();
