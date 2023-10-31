@@ -139,7 +139,7 @@ namespace AP3_MEDIA
             {
                 System.Type type = bsRessources.Current.GetType();
                 int idR = (int)type.GetProperty("Idemprunteur").GetValue(bsRessources.Current, null);
-                List<Emprunter> lesExemplaires = Modele.listeEmpruntsParEmpruteursWhere(idR);
+                List<Emprunter> lesExemplaires = Modele.listeEmpruntsParEmpruteurs(idR);
                 if (lesExemplaires.Count != 0)
                 {
                     bsExemplaires.DataSource = (lesExemplaires).Select(x => new
