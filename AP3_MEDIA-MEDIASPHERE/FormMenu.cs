@@ -56,6 +56,7 @@ namespace AP3_MEDIA
             guna2Button3.FillColor = Color.FromArgb(colorHold1, colorHold2, colorHold3);
             guna2Button4.FillColor = Color.FromArgb(colorHold1, colorHold2, colorHold3);
             guna2Button5.FillColor = Color.FromArgb(colorHold1, colorHold2, colorHold3);
+            guna2Button6.FillColor = Color.FromArgb(colorHold1, colorHold2, colorHold3);
         }
 
 
@@ -277,6 +278,8 @@ namespace AP3_MEDIA
             guna2Button3.Enabled = true;//add
             guna2Button4.Enabled = true;//edit
             guna2Button5.Enabled = true;//delete
+            guna2Button6.Visible = true;//auteur ressource add
+
 
 
 
@@ -291,9 +294,10 @@ namespace AP3_MEDIA
             ggbMenuOption.Visible = true;
             menuOption = "auteur";
             guna2Button2.Enabled = true;//list
-            guna2Button3.Enabled = true;//add
+            guna2Button3.Enabled = false;//add
             guna2Button4.Enabled = false;//edit
             guna2Button5.Enabled = false;//delete
+            guna2Button6.Visible = false;//auteur ressource add
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
@@ -465,6 +469,26 @@ namespace AP3_MEDIA
         {
             FormPopDGV formPopDGV = new FormPopDGV(phraseInfo);
             ToolsL.waitingForm(formPopDGV, 1000);
+        }
+
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+            resetMenuOptionColor();
+            guna2Button6.FillColor = Color.FromArgb(64, 108, 235);
+            //auteursRessource add
+            switch (menuOption)
+            {
+                case ("ressource"):
+                    openChildForm(new FormAuteurAjout());
+
+                    break;
+                case ("auteur"):
+                    openChildForm(new FormAuteurAjout());
+                    break;
+                default:
+
+                    break;
+            }
         }
     }
 }
