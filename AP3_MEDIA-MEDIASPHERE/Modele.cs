@@ -248,7 +248,7 @@ namespace AP3_MEDIA
             return vretour;
         }
 
-        public static bool ModificationEmprunts(int idE, int idR, int idX, DateTime dateDeb,int timeAdd)
+        public static bool ModificationEmprunts(int idE, int idR, int idX, DateTime dateDeb,int timeAdd, DateTime dateRetour)
         {
             Emprunter uE;
             bool vretour = true;
@@ -258,7 +258,7 @@ namespace AP3_MEDIA
                 uE = RecupererEmprunter(idE,idR,idX,dateDeb);
 
                 // mise à jour des champs
-                DateTime dateRetour = Convert.ToDateTime(uE.Dateretour);
+                
                 dateRetour.AddDays(timeAdd);
                 uE.Dateretour = dateRetour;
                 uE.Extension = 1;

@@ -40,7 +40,8 @@ namespace AP3_MEDIA
                     x.Idexemplaire,
                     x.Idemprunteur,
                     x.Datedebutemprunt,
-                    x.IdRessourceNavigation.Titre
+                    x.IdRessourceNavigation.Titre,
+                    x.Dateretour
 
                 });
 
@@ -51,6 +52,8 @@ namespace AP3_MEDIA
                 gdgvEmprunt.Columns["Idemprunteur"].Visible = false;
                 gdgvEmprunt.Columns["Image"].Visible = false;
                 gdgvEmprunt.Columns["selectAuteurs"].Width = 50;
+                gdgvEmprunt.Columns["Dateretour"].Visible = false;
+
 
 
 
@@ -80,11 +83,13 @@ namespace AP3_MEDIA
                     int idR = Convert.ToInt32(row.Cells["Idressource"].Value); // Récupère l'identifiant unique de la ligne
                     int idX = Convert.ToInt32(row.Cells["Idexemplaire"].Value); // Récupère l'identifiant unique de la ligne
                     DateTime iddate = Convert.ToDateTime(row.Cells["Datedebutemprunt"].Value); // Récupère l'identifiant unique de la ligne
+                    DateTime idDateRetour = Convert.ToDateTime(row.Cells["dateretour"].Value); // Récupère l'identifiant unique de la ligne
+                    idDateRetour = idDateRetour.AddDays(AddTimeTOADDDDDDD);
 
 
 
 
-                    if (Modele.ModificationEmprunts(idE, idR, idX, iddate, AddTimeTOADDDDDDD))
+                    if (Modele.ModificationEmprunts(idE, idR, idX, iddate, AddTimeTOADDDDDDD,idDateRetour))
                     {
                         MessageBox.Show("extension extensionner");
                     }
