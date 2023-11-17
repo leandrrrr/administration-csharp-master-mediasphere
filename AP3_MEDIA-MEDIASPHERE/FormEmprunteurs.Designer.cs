@@ -37,6 +37,7 @@
             contextMenuStrip1 = new ContextMenuStrip(components);
             voirLesEmpruntsToolStripMenuItem = new ToolStripMenuItem();
             bsEmprunts = new BindingSource(components);
+            rendreExemplaireToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)dgvEmprunteurs).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsEmprunteurs).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvEmprunts).BeginInit();
@@ -109,21 +110,27 @@
             // contextMenuStrip1
             // 
             contextMenuStrip1.ImageScalingSize = new Size(20, 20);
-            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { voirLesEmpruntsToolStripMenuItem });
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { voirLesEmpruntsToolStripMenuItem, rendreExemplaireToolStripMenuItem });
             contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(192, 28);
+            contextMenuStrip1.Size = new Size(211, 80);
             contextMenuStrip1.Click += contextMenuStrip1_Click;
             // 
             // voirLesEmpruntsToolStripMenuItem
             // 
             voirLesEmpruntsToolStripMenuItem.Name = "voirLesEmpruntsToolStripMenuItem";
-            voirLesEmpruntsToolStripMenuItem.Size = new Size(191, 24);
+            voirLesEmpruntsToolStripMenuItem.Size = new Size(210, 24);
             voirLesEmpruntsToolStripMenuItem.Text = "voir les emprunts";
             voirLesEmpruntsToolStripMenuItem.Click += voirLesEmpruntsToolStripMenuItem_Click;
             // 
             // bsEmprunts
             // 
             bsEmprunts.CurrentChanged += bsExemplaires_CurrentChanged;
+            // 
+            // rendreExemplaireToolStripMenuItem
+            // 
+            rendreExemplaireToolStripMenuItem.Name = "rendreExemplaireToolStripMenuItem";
+            rendreExemplaireToolStripMenuItem.Size = new Size(210, 24);
+            rendreExemplaireToolStripMenuItem.Text = "Rendre exemplaire";
             // 
             // FormEmprunteurs
             // 
@@ -160,5 +167,6 @@
         private ContextMenuStrip contextMenuStrip1;
         private ToolStripMenuItem voirLesEmpruntsToolStripMenuItem;
         private BindingSource bsEmprunts;
+        private ToolStripMenuItem rendreExemplaireToolStripMenuItem;
     }
 }

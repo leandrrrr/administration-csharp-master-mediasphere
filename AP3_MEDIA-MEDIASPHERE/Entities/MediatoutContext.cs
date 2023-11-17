@@ -190,6 +190,9 @@ public partial class MediatoutContext : DbContext
             entity.Property(e => e.Dateretour)
                 .HasColumnType("datetime")
                 .HasColumnName("dateretour");
+            entity.Property(e => e.Dateretourfait)
+                .HasColumnType("datetime")
+                .HasColumnName("dateretourfait");
             entity.Property(e => e.Dureeemprunt)
                 .HasColumnType("int(11)")
                 .HasColumnName("dureeemprunt");
