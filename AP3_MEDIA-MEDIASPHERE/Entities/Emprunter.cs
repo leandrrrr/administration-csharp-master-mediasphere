@@ -19,7 +19,7 @@ public partial class Emprunter
 
     public int? Extension { get; set; }
 
-    public DateTime? Dateretourfait { get; set; }
+    public sbyte Dateretourfait { get; set; }
 
     public virtual Exemplaire Id { get; set; } = null!;
 

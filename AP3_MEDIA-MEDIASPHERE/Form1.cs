@@ -105,6 +105,39 @@ namespace AP3_MEDIA
             return -1; // Si aucun chiffre n'est trouvé dans le nom de la cellule
         }
 
+        public void Ryōiki_Tenkai(int AddTimeTOADDDDDDD)
+        {
+            foreach (DataGridViewRow row in gdgvEmprunt.Rows)
+            {
+                if (Convert.ToBoolean(row.Cells["selectAuteurs"].Value)) // Vérifie si la case à cocher est cochée
+                {
+
+
+
+                    int idE = Convert.ToInt32(row.Cells["Idemprunteur"].Value); // Récupère l'identifiant unique de la ligne
+                    int idR = Convert.ToInt32(row.Cells["Idressource"].Value); // Récupère l'identifiant unique de la ligne
+                    int idX = Convert.ToInt32(row.Cells["Idexemplaire"].Value); // Récupère l'identifiant unique de la ligne
+                    DateTime iddate = Convert.ToDateTime(row.Cells["Datedebutemprunt"].Value); // Récupère l'identifiant unique de la ligne
+                    DateTime idDateRetour = Convert.ToDateTime(row.Cells["dateretour"].Value); // Récupère l'identifiant unique de la ligne
+                    
+
+
+
+
+                    if (Modele.ModificationEmprunts(idE, idR, idX, iddate, AddTimeTOADDDDDDD, idDateRetour,1))
+                    {
+                        MessageBox.Show("exemplaire rendue");
+                    }
+
+
+
+
+                }
+            }
+
+
+        }
+
         private void gbtClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -118,7 +151,8 @@ namespace AP3_MEDIA
 
         private void gbtRendre_Click(object sender, EventArgs e)
         {
-
+            Ryōiki_Tenkai(0);
+            lbListeEmpruntsEmprunteur();
         }
 
         private void gdgvEmprunt_CellClick(object sender, DataGridViewCellEventArgs e)

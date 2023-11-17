@@ -248,7 +248,7 @@ namespace AP3_MEDIA
             return vretour;
         }
 
-        public static bool ModificationEmprunts(int idE, int idR, int idX, DateTime dateDeb,int timeAdd, DateTime dateRetour)
+        public static bool ModificationEmprunts(int idE, int idR, int idX, DateTime dateDeb,int timeAdd, DateTime dateRetour , sbyte retourFait)
         {
             Emprunter uE;
             bool vretour = true;
@@ -263,6 +263,7 @@ namespace AP3_MEDIA
                 uE.Dateretour = dateRetour;
                 uE.Extension = 1;
                 uE.Dureeemprunt = uE.Dureeemprunt + timeAdd;
+                uE.Dateretourfait = retourFait;
 
                 monModele.SaveChanges();
 
