@@ -30,7 +30,8 @@ namespace AP3_MEDIA
 
         private void FormEmprunteurs_Load(object sender, EventArgs e)
         {
-
+            rendreExemplaireToolStripMenuItem.Enabled = true;
+            rendreExemplaireToolStripMenuItem.Visible = true;
 
         }
 
@@ -58,6 +59,11 @@ namespace AP3_MEDIA
         private void dgvEmprunteurs_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             dgvEmprunts.Visible = true;
+        }
+
+        private void rendreExemplaireToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

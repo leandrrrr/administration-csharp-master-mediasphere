@@ -36,6 +36,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             contextMenuStrip1 = new ContextMenuStrip(components);
             voirLesExemplaireToolStripMenuItem = new ToolStripMenuItem();
             voirLesAuteursToolStripMenuItem = new ToolStripMenuItem();
@@ -47,6 +49,7 @@
             ggbMenuStrip = new Guna.UI2.WinForms.Guna2GroupBox();
             ggbExemplaires = new Guna.UI2.WinForms.Guna2GroupBox();
             dgvExemplaires = new DataGridView();
+            gbtRendre = new Guna.UI2.WinForms.Guna2Button();
             contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bsRessources).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsExemplaires).BeginInit();
@@ -192,12 +195,32 @@
             dgvExemplaires.Visible = false;
             dgvExemplaires.CellContentClick += dgvExemplaires_CellContentClick_1;
             // 
+            // gbtRendre
+            // 
+            gbtRendre.BackColor = Color.FromArgb(154, 206, 234);
+            gbtRendre.BorderRadius = 6;
+            gbtRendre.CustomizableEdges = customizableEdges8;
+            gbtRendre.DisabledState.BorderColor = Color.DarkGray;
+            gbtRendre.DisabledState.CustomBorderColor = Color.DarkGray;
+            gbtRendre.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gbtRendre.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gbtRendre.Font = new Font("Oxanium Medium", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            gbtRendre.ForeColor = Color.White;
+            gbtRendre.Location = new Point(12, 447);
+            gbtRendre.Name = "gbtRendre";
+            gbtRendre.ShadowDecoration.CustomizableEdges = customizableEdges9;
+            gbtRendre.Size = new Size(135, 58);
+            gbtRendre.TabIndex = 42;
+            gbtRendre.Text = "Rendre un exemplaire ";
+            gbtRendre.Click += gbtRendre_Click;
+            // 
             // FormRessources
             // 
             AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(154, 206, 234);
             ClientSize = new Size(1028, 517);
+            Controls.Add(gbtRendre);
             Controls.Add(ggbExemplaires);
             Controls.Add(gbtHelp);
             Controls.Add(guna2Button1);
@@ -230,5 +253,6 @@
         private Guna.UI2.WinForms.Guna2GroupBox ggbExemplaires;
         private DataGridView dgvExemplaires;
         private ToolStripMenuItem voirLesAuteursToolStripMenuItem;
+        private Guna.UI2.WinForms.Guna2Button gbtRendre;
     }
 }

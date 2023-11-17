@@ -31,6 +31,7 @@ namespace AP3_MEDIA
         {
             voirLesAuteursToolStripMenuItem.Visible = true;
             voirLesExemplaireToolStripMenuItem.Visible = true;
+            gbtRendre.Visible = false;
 
             if (etatForm == "ressources")
             {
@@ -53,7 +54,7 @@ namespace AP3_MEDIA
             }
             else if (etatForm == "emprunteurs")
             {
-                voirLesAuteursToolStripMenuItem.Visible = false;
+                voirLesAuteursToolStripMenuItem.Text = "Rendre exemplaire";
 
                 voirLesExemplaireToolStripMenuItem.Text = "voir les emprunts";
                 bsRessources.DataSource = Modele.getListEmprunteur().Select(x => new
@@ -69,6 +70,8 @@ namespace AP3_MEDIA
                 dgvRessources.DataSource = bsRessources;
 
                 dgvRessources.Columns["Idemprunteur"].Visible = false;
+                gbtRendre.Visible = true;
+
             }
 
             else if (etatForm == "auteurs")
@@ -281,13 +284,13 @@ namespace AP3_MEDIA
 
         private void voirLesAuteursToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
             if (etatForm == "ressources")
             {
                 System.Type type = bsRessources.Current.GetType();
                 int idR = (int)type.GetProperty("Idressource").GetValue(bsRessources.Current, null);
                 List<AuteurRessource> lesExemplaires = Modele.listeAuteursParRessource(idR);
-                
+
                 if (lesExemplaires.Count != 0)
                 {
                     bsExemplaires.DataSource = (lesExemplaires).Select(x => new
@@ -310,9 +313,20 @@ namespace AP3_MEDIA
                     dgvExemplaires.Visible = false;
                     MessageBox.Show("Pas d'exemplaire pour cette ressource");
                 }
-            
+
             }
-            
+            else if (etatForm == "emprunteurs")
+            {
+                FormRetourExemplaire formRetour = new FormRetourExemplaire();
+                formRetour.Show();
+            }
+
+        }
+
+        private void gbtRendre_Click(object sender, EventArgs e)
+        {
+            FormRetourExemplaire formRetour = new FormRetourExemplaire();
+            formRetour.Show();
         }
     }
 }

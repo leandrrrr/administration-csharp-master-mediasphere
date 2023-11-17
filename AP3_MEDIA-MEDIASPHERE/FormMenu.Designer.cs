@@ -65,6 +65,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             panelPrincipal = new Panel();
+            pictureBox1 = new PictureBox();
             label1 = new Label();
             ggbMenuOption = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
@@ -87,6 +88,7 @@
             guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             ggbMenuPlus = new Guna.UI2.WinForms.Guna2GroupBox();
             panelPrincipal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ggbMenuOption.SuspendLayout();
             ggbMenuStrip.SuspendLayout();
             ggbHomeOption.SuspendLayout();
@@ -97,6 +99,7 @@
             panelPrincipal.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             panelPrincipal.BackColor = Color.FromArgb(154, 206, 234);
             panelPrincipal.BackgroundImageLayout = ImageLayout.Center;
+            panelPrincipal.Controls.Add(pictureBox1);
             panelPrincipal.Controls.Add(label1);
             panelPrincipal.Location = new Point(0, 138);
             panelPrincipal.Margin = new Padding(3, 4, 3, 4);
@@ -105,12 +108,22 @@
             panelPrincipal.TabIndex = 2;
             panelPrincipal.Paint += panelPrincipal_Paint;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.mediatout_logo_removebg_preview_transformed;
+            pictureBox1.Location = new Point(335, 94);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(393, 267);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
+            // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Oxanium", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(312, 164);
+            label1.Location = new Point(315, 54);
             label1.Name = "label1";
             label1.Size = new Size(416, 37);
             label1.TabIndex = 0;
@@ -531,6 +544,7 @@
             KeyDown += FormMenu_KeyDown;
             panelPrincipal.ResumeLayout(false);
             panelPrincipal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ggbMenuOption.ResumeLayout(false);
             ggbMenuStrip.ResumeLayout(false);
             ggbHomeOption.ResumeLayout(false);
@@ -560,5 +574,6 @@
         public Guna.UI2.WinForms.Guna2CircleButton gcbHome;
         private Guna.UI2.WinForms.Guna2Button gbtExtension;
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
+        private PictureBox pictureBox1;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -48,9 +49,13 @@
             guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             gdgvEmprunt = new Guna.UI2.WinForms.Guna2DataGridView();
             selectAuteurs = new DataGridViewCheckBoxColumn();
+            bsEmprunt = new BindingSource(components);
+            bsEmprunteur = new BindingSource(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             guna2GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)gdgvEmprunt).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bsEmprunt).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bsEmprunteur).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -79,6 +84,7 @@
             gcbEmprunteurs.ShadowDecoration.CustomizableEdges = customizableEdges2;
             gcbEmprunteurs.Size = new Size(490, 36);
             gcbEmprunteurs.TabIndex = 51;
+            gcbEmprunteurs.SelectedIndexChanged += gcbEmprunteurs_SelectedIndexChanged;
             // 
             // gbtRendre
             // 
@@ -97,6 +103,7 @@
             gbtRendre.Size = new Size(135, 74);
             gbtRendre.TabIndex = 49;
             gbtRendre.Text = "Rendre";
+            gbtRendre.Click += gbtRendre_Click;
             // 
             // gbtClose
             // 
@@ -115,6 +122,7 @@
             gbtClose.Size = new Size(135, 58);
             gbtClose.TabIndex = 47;
             gbtClose.Text = "Fermer";
+            gbtClose.Click += gbtClose_Click;
             // 
             // gbtHelp
             // 
@@ -203,6 +211,7 @@
             gdgvEmprunt.ThemeStyle.RowsStyle.Height = 29;
             gdgvEmprunt.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             gdgvEmprunt.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            gdgvEmprunt.CellClick += gdgvEmprunt_CellClick;
             // 
             // selectAuteurs
             // 
@@ -226,9 +235,12 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormRetourExemplaire";
             Text = "Retour Exemplaire";
+            Load += FormRetourExemplaire_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             guna2GroupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)gdgvEmprunt).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bsEmprunt).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bsEmprunteur).EndInit();
             ResumeLayout(false);
         }
 
@@ -242,5 +254,7 @@
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
         private Guna.UI2.WinForms.Guna2DataGridView gdgvEmprunt;
         private DataGridViewCheckBoxColumn selectAuteurs;
+        private BindingSource bsEmprunt;
+        private BindingSource bsEmprunteur;
     }
 }

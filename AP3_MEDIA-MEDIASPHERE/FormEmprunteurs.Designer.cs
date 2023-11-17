@@ -36,8 +36,8 @@
             dgvEmprunts = new DataGridView();
             contextMenuStrip1 = new ContextMenuStrip(components);
             voirLesEmpruntsToolStripMenuItem = new ToolStripMenuItem();
-            bsEmprunts = new BindingSource(components);
             rendreExemplaireToolStripMenuItem = new ToolStripMenuItem();
+            bsEmprunts = new BindingSource(components);
             ((System.ComponentModel.ISupportInitialize)dgvEmprunteurs).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsEmprunteurs).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvEmprunts).BeginInit();
@@ -122,15 +122,16 @@
             voirLesEmpruntsToolStripMenuItem.Text = "voir les emprunts";
             voirLesEmpruntsToolStripMenuItem.Click += voirLesEmpruntsToolStripMenuItem_Click;
             // 
-            // bsEmprunts
-            // 
-            bsEmprunts.CurrentChanged += bsExemplaires_CurrentChanged;
-            // 
             // rendreExemplaireToolStripMenuItem
             // 
             rendreExemplaireToolStripMenuItem.Name = "rendreExemplaireToolStripMenuItem";
             rendreExemplaireToolStripMenuItem.Size = new Size(210, 24);
             rendreExemplaireToolStripMenuItem.Text = "Rendre exemplaire";
+            rendreExemplaireToolStripMenuItem.Click += rendreExemplaireToolStripMenuItem_Click;
+            // 
+            // bsEmprunts
+            // 
+            bsEmprunts.CurrentChanged += bsExemplaires_CurrentChanged;
             // 
             // FormEmprunteurs
             // 
