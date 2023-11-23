@@ -51,6 +51,10 @@ namespace AP3_MEDIA
                 dgvRessources.DataSource = bsRessources;
                 dgvRessources.Columns["Idressource"].Visible = false;
                 dgvRessources.Columns["Idcategorie"].Visible = false;
+                dgvRessources.Columns["Libellecategorie"].HeaderText = "Categorie";
+
+
+
             }
             else if (etatForm == "emprunteurs")
             {
@@ -71,6 +75,12 @@ namespace AP3_MEDIA
 
                 dgvRessources.Columns["Idemprunteur"].Visible = false;
                 gbtRendre.Visible = true;
+                
+                dgvRessources.Columns["Nomemprunteur"].HeaderText = "Nom";
+                dgvRessources.Columns["Prenomemprunteur"].HeaderText ="Prenom";
+                dgvRessources.Columns["Datenaissance"].HeaderText = "Naissance";
+                dgvRessources.Columns["Emailemprunteur"].HeaderText = "Mail";
+                dgvRessources.Columns["Telportable"].HeaderText = "Numero";
 
             }
 

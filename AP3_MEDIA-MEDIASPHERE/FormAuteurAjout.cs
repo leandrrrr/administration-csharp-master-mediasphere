@@ -49,6 +49,8 @@ namespace AP3_MEDIA
             gdgvAuteurs.DataSource = bsAuteur;
 
             gdgvAuteurs.Columns["IdAuteur"].Visible = false;
+            gdgvAuteurs.Columns["PrenomAuteur"].HeaderText = "Prenom";
+            gdgvAuteurs.Columns["Nom"].HeaderText = "Prenom";
         }
         public void remplirDgvAuteurDeRessource()
         {
