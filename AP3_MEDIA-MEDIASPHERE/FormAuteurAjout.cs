@@ -107,6 +107,7 @@ namespace AP3_MEDIA
 
         private void gbtAjouter_Click(object sender, EventArgs e)
         {
+            bool testR = true;
             Ressource R = (Ressource)bsRessource.Current;
 
             foreach (DataGridViewRow row in gdgvAuteurs.Rows)
@@ -118,13 +119,14 @@ namespace AP3_MEDIA
                     {
 
                         int id = Convert.ToInt32(row.Cells["IdAuteur"].Value); // Récupère l'identifiant unique de la ligne
-                        MessageBox.Show(id + "/ " + R.Idressource);
+                        // MessageBox.Show(id + "/ " + R.Idressource);
                         Modele.AjoutAuteurs(R.Idressource, id);
                     }
                     catch
                     {
                         FormPopDGV formPopDGV = new FormPopDGV("Un auteur ne peut pas etre ajouter deux fois a une ressource ! (" + row.Cells["PrenomAuteur"].Value + ")");
                         formPopDGV.Show();
+                        testR = false;
                     }
 
 
@@ -132,6 +134,16 @@ namespace AP3_MEDIA
 
 
                 }
+            }
+            if (testR)
+            {
+                FormPopDGV formPopDGV = new FormPopDGV("auteur ajouté");
+                formPopDGV.Show();
+            }
+            else
+            {
+                FormPopDGV formPopDGV = new FormPopDGV("erreur");
+                formPopDGV.Show();
             }
         }
 
