@@ -43,7 +43,7 @@ namespace AP3_MEDIA
                     x.IdRessourceNavigation.Titre,
                     x.Dateretour
 
-                }).OrderBy(x => x.IdRessourceNavigation.Titre);
+                });
 
 
                 gdgvEmprunt.DataSource = bsEmprunt;
