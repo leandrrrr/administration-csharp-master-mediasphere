@@ -21,7 +21,8 @@ namespace AP3_MEDIA
 
         private void gbtHelp_Click(object sender, EventArgs e)
         {
-
+            FormPopDGV formPopDGV = new FormPopDGV("Rendre des exemplaire d'utilisateurs");
+            formPopDGV.Show();
         }
 
         private void FormRetourExemplaire_Load(object sender, EventArgs e)

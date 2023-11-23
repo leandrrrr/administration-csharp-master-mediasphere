@@ -72,6 +72,7 @@ namespace AP3_MEDIA
 
         public void Ryōiki_Tenkai(int AddTimeTOADDDDDDD)
         {
+            bool testRequete = true;
             foreach (DataGridViewRow row in gdgvEmprunt.Rows)
             {
                 if (Convert.ToBoolean(row.Cells["selectAuteurs"].Value)) // Vérifie si la case à cocher est cochée
@@ -91,13 +92,30 @@ namespace AP3_MEDIA
 
                     if (Modele.ModificationEmprunts(idE, idR, idX, iddate, AddTimeTOADDDDDDD,idDateRetour,0))
                     {
-                        MessageBox.Show("extension extensionner");
+                        
+
+                    }
+                    else
+                    {
+                        testRequete = false;
+                        FormPopDGV formPopDGV = new FormPopDGV("Ereur pour " + idE);
+                        formPopDGV.Show();
                     }
 
 
 
 
                 }
+            }
+            if (testRequete)
+            {
+                FormPopDGV formPopDGV = new FormPopDGV("Extension extenstionner");
+                formPopDGV.Show();
+            }
+            else
+            {
+                FormPopDGV formPopDGV = new FormPopDGV("Un probleme est survenue lors de l'extension");
+                formPopDGV.Show();
             }
 
 
