@@ -27,3 +27,4 @@ public partial class Emprunter
     public virtual Ressource IdRessourceNavigation { get; set; } = null!;
 
 }
+

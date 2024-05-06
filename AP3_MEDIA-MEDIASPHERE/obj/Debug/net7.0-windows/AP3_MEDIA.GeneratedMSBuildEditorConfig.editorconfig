@@ -14,4 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AP3_MEDIA
-build_property.ProjectDir = C:\Users\leandRe\source\repos\leandrrrr\administration-csharp-master-mediasphere\AP3_MEDIA-MEDIASPHERE\
+build_property.ProjectDir = C:\Users\leandRe\source\repos\administration-csharp-master-mediasphere\AP3_MEDIA-MEDIASPHERE\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

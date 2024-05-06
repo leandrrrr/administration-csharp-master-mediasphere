@@ -39,7 +39,7 @@ public partial class MediatoutContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseMySql("server=192.168.114.2;port=3306;user=APP;password=&VYP4dWHC8&4@v3b;database=mediatout", Microsoft.EntityFrameworkCore.ServerVersion.Parse("10.11.3-mariadb"));
+        => optionsBuilder.UseMySql("server=192.168.119.2;port=3306;user=user;password=user;database=mediatout", Microsoft.EntityFrameworkCore.ServerVersion.Parse("10.11.6-mariadb"));
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -151,6 +151,9 @@ public partial class MediatoutContext : DbContext
             entity.Property(e => e.IdUtilisateur)
                 .HasColumnType("int(11)")
                 .HasColumnName("idUtilisateur");
+            entity.Property(e => e.Note)
+                .HasColumnType("int(11)")
+                .HasColumnName("note");
 
             entity.HasOne(d => d.IdRessourceNavigation).WithMany(p => p.Commentaires)
                 .HasForeignKey(d => d.IdRessource)

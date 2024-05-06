@@ -13,6 +13,8 @@ public partial class Commentaire
 
     public string Contenu { get; set; } = null!;
 
+    public int Note { get; set; }
+
     public DateTime DateCreation { get; set; }
 
     public virtual Ressource IdRessourceNavigation { get; set; } = null!;

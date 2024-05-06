@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HVj0Jk5p6ftsy2IF/cbx3MTWJ/NFhf29c09T9F9Sy8ihJAQFeEktKsQZ686Hx3O1tUXBGCGPabvfEIBJE8i7kA==",
+  "dgSpecHash": "IgVkKVE6Tmo097+dy980BHOXMPbGtczxK0H5hW+2qVSw5e2clbvFzRN/svdO+BRdENrDAZ0JBBmaeuoYzBxDwA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\leandRe\\source\\repos\\leandrrrr\\administration-csharp-master-mediasphere\\AP3_MEDIA-MEDIASPHERE\\AP3_MEDIA.csproj",
+  "projectFilePath": "C:\\Users\\leandRe\\source\\repos\\administration-csharp-master-mediasphere\\AP3_MEDIA-MEDIASPHERE\\AP3_MEDIA.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\leandRe\\.nuget\\packages\\bcrypt\\1.0.0\\bcrypt.1.0.0.nupkg.sha512",
     "C:\\Users\\leandRe\\.nuget\\packages\\bcrypt.net\\0.1.0\\bcrypt.net.0.1.0.nupkg.sha512",
@@ -30,7 +30,11 @@
     "C:\\Users\\leandRe\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
     "C:\\Users\\leandRe\\.nuget\\packages\\system.management\\7.0.0\\system.management.7.0.0.nupkg.sha512",
     "C:\\Users\\leandRe\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
-    "C:\\Users\\leandRe\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
+    "C:\\Users\\leandRe\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
+    "C:\\Users\\leandRe\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.15\\microsoft.netcore.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\leandRe\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.15\\microsoft.windowsdesktop.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\leandRe\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.15\\microsoft.aspnetcore.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\leandRe\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.15\\microsoft.netcore.app.host.win-x64.7.0.15.nupkg.sha512"
   ],
   "logs": [
     {

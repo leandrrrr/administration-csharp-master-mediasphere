@@ -50,7 +50,7 @@ namespace AP3_MEDIA
 
             gdgvAuteurs.Columns["IdAuteur"].Visible = false;
             gdgvAuteurs.Columns["PrenomAuteur"].HeaderText = "Prenom";
-            gdgvAuteurs.Columns["Nom"].HeaderText = "Prenom";
+            gdgvAuteurs.Columns["nomAuteur"].HeaderText = "Nom";
         }
         public void remplirDgvAuteurDeRessource()
         {

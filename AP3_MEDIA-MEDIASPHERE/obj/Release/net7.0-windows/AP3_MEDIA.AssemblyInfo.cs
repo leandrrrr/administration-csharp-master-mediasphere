@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AP3_MEDIA")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ba9d1211c2faa1403b7b28c7e793a6e21f77da75")]
 [assembly: System.Reflection.AssemblyProductAttribute("AP3_MEDIA")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AP3_MEDIA")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
